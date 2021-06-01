@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Text;
-using ChapeauDAL;
 using ChapeauModel;
 
 
@@ -17,6 +16,68 @@ namespace ChapeauDAL
             //same here
             string connString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             dbConnection = new SqlConnection(connString);
+        }
+        public List<Bill> GetBills()
+        {
+            dbConnection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Payment", dbConnection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<Bill> billList = new List<Bill>();
+            while (reader.Read())
+            {
+                Bill bill = Readbill(reader);
+                billList.Add(bill);
+            }
+            reader.Close();
+            dbConnection.Close();
+
+            return billList;
+        }
+        public Order GetHost()
+        {
+            dbConnection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT employee_number FROM Order ", dbConnection);
+            SqlDataReader reader = cmd.ExecuteReader();
+            Order order_host = new Order();
+            while (reader.Read())
+            {
+                order_host = Readhost(reader);
+            }
+            return order_host;
+
+        }
+        private Order Readhost(SqlDataReader reader)
+        {
+            Order name = (Order)reader["employee_number"];
+            return name;
+            
+        }
+        public List<OrderItem> GetItems()
+        {
+            dbConnection.Open();
+            SqlCommand cmd = new SqlCommand("SELECT order_item_id FROM Order_Item ", dbConnection);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+        }
+        private List<OrderItem> ReadItems(SqlDataReader reader)
+        {
+
+        }
+        private Bill Readbill(SqlDataReader reader)
+        {
+            //retrieve data from all fields
+            int OrderId = (int)reader["payment_number"];
+            int BillId = (int)reader["order_number"];
+            Order host_name = GetHost();
+
+            int totalPrice = (int)reader["total_price"];
+            PaymentType Type = (PaymentType)reader["payment_type"];
+            string Feedback = (string)reader["feedback"];
+            int Tip = (int)reader["payment_tip"];
+            int Vat = (int)reader["vat"];
+
+            //return new bill object
+            return new Bill() ;
         }
     }
 }
