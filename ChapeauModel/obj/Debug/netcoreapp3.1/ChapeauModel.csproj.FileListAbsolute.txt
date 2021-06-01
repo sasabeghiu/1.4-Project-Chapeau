@@ -1,0 +1,9 @@
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.deps.json
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csprojAssemblyReference.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfoInputs.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfo.cs
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csproj.CoreCompileInputs.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.pdb

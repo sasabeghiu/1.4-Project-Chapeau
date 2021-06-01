@@ -1,0 +1,14 @@
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.deps.json
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.pdb
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.pdb
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csprojAssemblyReference.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.AssemblyInfoInputs.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.AssemblyInfo.cs
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CoreCompileInputs.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CopyComplete
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.dll
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.pdb
