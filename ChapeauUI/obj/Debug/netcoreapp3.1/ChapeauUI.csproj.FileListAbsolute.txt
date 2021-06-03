@@ -44,3 +44,16 @@ D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\Chape
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.dll
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.pdb
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.genruntimeconfig.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csprojAssemblyReference.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Login.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Payment - Copy.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Payment.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Payment_method.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Properties.Resources.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.TableOverview.resources
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.GenerateResource.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.AssemblyInfoInputs.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.AssemblyInfo.cs
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.CoreCompileInputs.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.dll
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.pdb

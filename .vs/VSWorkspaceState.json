@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ChapeauDAL",
+    "\\ChapeauLogic",
+    "\\ChapeauModel"
   ],
+  "SelectedNode": "\\ChapeauDAL\\BillDAO.cs",
   "PreviewInSolutionExplorer": false
 }

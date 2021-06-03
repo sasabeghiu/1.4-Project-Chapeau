@@ -19,15 +19,6 @@ namespace ChapeauLogic
             List<Bill> billList = billdb.GetBills();
             return billList;
         }
-        public Order GetHost()
-        {
-            Order host = billdb.GetHost();
-            return host;
-        }
-        public List<OrderItem> GetItems()
-        {
-            List<OrderItem> items = billdb.GetItems();
-            return items;
-        }
+        
     }
 }

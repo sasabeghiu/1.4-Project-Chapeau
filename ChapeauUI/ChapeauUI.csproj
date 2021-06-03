@@ -12,4 +12,25 @@
     <ProjectReference Include="..\ChapeauModel\ChapeauModel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="Payment - Copy.Designer.cs">
+      <DependentUpon>Payment.Designer.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Payment - Copy.resx">
+      <DependentUpon>Payment.resx</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>
