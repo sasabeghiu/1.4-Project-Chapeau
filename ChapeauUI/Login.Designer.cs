@@ -192,7 +192,8 @@ namespace ChapeauUI
             this.Controls.Add(this.btn_Login);
             this.Controls.Add(this.txtPin);
             this.Name = "Login";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Sign In";
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
