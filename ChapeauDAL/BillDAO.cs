@@ -36,7 +36,7 @@ namespace ChapeauDAL
         public Order GetHost()
         {
             dbConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT employee_number FROM Order ", dbConnection);
+            SqlCommand cmd = new SqlCommand("", dbConnection);
             SqlDataReader reader = cmd.ExecuteReader();
             Order order_host = new Order();
             while (reader.Read())
@@ -54,22 +54,18 @@ namespace ChapeauDAL
         }
         public List<OrderItem> GetItems()
         {
-            dbConnection.Open();
-            SqlCommand cmd = new SqlCommand("SELECT order_item_id FROM Order_Item ", dbConnection);
-            SqlDataReader reader = cmd.ExecuteReader();
+            List<OrderDAO> items_list= new OrderDAO();
+            return items_list.GetOrderItems();
 
         }
-        private List<OrderItem> ReadItems(SqlDataReader reader)
-        {
-
-        }
+      
         private Bill Readbill(SqlDataReader reader)
         {
             //retrieve data from all fields
             int OrderId = (int)reader["payment_number"];
             int BillId = (int)reader["order_number"];
             Order host_name = GetHost();
-
+            List<OrderItem> items = GetItems();
             int totalPrice = (int)reader["total_price"];
             PaymentType Type = (PaymentType)reader["payment_type"];
             string Feedback = (string)reader["feedback"];

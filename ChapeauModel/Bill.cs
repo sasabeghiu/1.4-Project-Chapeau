@@ -23,13 +23,15 @@ namespace ChapeauModel
             this.OrderId = orderId;
             this.BillId = billId;
             this.Host_name = host_name;
+            this.Items = items;
+            this.Items_price = items_price;
             this.TotalPrice = totalPrice;
             this.Type = type;
             this.Feedback = feedback;
             this.Tip = tip;
             this.Vat = vat;
-            this.Items = items;
-            this.Items_price = items_price;
+            
+            
         }
        
     }
