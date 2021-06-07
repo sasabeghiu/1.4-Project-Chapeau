@@ -3,8 +3,8 @@
     "",
     "\\ChapeauDAL",
     "\\ChapeauLogic",
-    "\\ChapeauModel"
+    "\\ChapeauUI"
   ],
-  "SelectedNode": "\\ChapeauDAL\\BillDAO.cs",
+  "SelectedNode": "\\Chapeau.sln",
   "PreviewInSolutionExplorer": false
 }

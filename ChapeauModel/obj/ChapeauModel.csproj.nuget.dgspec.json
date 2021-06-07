@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {}
+    "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+    "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "projectPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
         "packagesPath": "C:\\Users\\crgio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\obj\\",
+        "outputPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\crgio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

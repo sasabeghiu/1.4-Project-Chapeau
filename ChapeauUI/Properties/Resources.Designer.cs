@@ -59,5 +59,15 @@ namespace ChapeauUI.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Chapeau_no_bg {
+            get {
+                object obj = ResourceManager.GetObject("Chapeau no bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

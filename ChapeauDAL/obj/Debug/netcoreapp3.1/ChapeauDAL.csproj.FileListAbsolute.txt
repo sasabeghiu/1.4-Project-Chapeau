@@ -16,3 +16,9 @@ C:\Users\crgio\Source\Repos\Chapeau\ChapeauDAL\obj\Debug\netcoreapp3.1\ChapeauDA
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauDAL\obj\Debug\netcoreapp3.1\ChapeauDAL.csproj.CoreCompileInputs.cache
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauDAL\obj\Debug\netcoreapp3.1\ChapeauDAL.dll
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauDAL\obj\Debug\netcoreapp3.1\ChapeauDAL.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\bin\Debug\netcoreapp3.1\ChapeauDAL.deps.json
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\bin\Debug\netcoreapp3.1\ChapeauDAL.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\bin\Debug\netcoreapp3.1\ChapeauDAL.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauDAL\obj\Debug\netcoreapp3.1\ChapeauDAL.csproj.CopyComplete

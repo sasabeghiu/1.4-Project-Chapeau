@@ -18,3 +18,11 @@ C:\Users\crgio\Source\Repos\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\Chapeau
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CoreCompileInputs.cache
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.dll
 C:\Users\crgio\Source\Repos\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.deps.json
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CopyComplete
