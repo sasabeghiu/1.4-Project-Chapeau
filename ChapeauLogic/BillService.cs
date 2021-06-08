@@ -2,6 +2,7 @@
 using ChapeauModel;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Text;
 
 namespace ChapeauLogic
@@ -19,15 +20,22 @@ namespace ChapeauLogic
             List<Bill> billList = billdb.GetBills();
             return billList;
         }
-        public Order GetHost()
+        public List<Order> OrderItems()
         {
-            Order host = billdb.GetHost();
-            return host;
+            return billdb.OrderItems();
+            
         }
-        public List<OrderItem> GetItems()
+        public List<OrderItem> OrderOverview(DataTable dataTable)
         {
-            List<OrderItem> items = billdb.GetItems();
-            return items;
+            return billdb.OrderOverview(dataTable);
+        }
+        public int CalculateBill()
+        {
+            return billdb.CalculateBill();
+        }
+        public int VatDrinks()
+        {
+            return billdb.VatDrinks();
         }
     }
 }

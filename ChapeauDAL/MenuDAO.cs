@@ -62,7 +62,7 @@ namespace ChapeauDAL
             DateTime start = (DateTime)reader["start_time"];
             DateTime end = (DateTime)reader["end_time"];
 
-            //return new book object
+            //return new menu object
             return new Menu(id, name, start, end);
         }
     }

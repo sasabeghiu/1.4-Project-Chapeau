@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Text;
 using ChapeauModel;
+
 
 
 namespace ChapeauDAL
@@ -13,7 +15,6 @@ namespace ChapeauDAL
         private SqlConnection dbConnection;
         public BillDAO()
         {
-            //same here
             string connString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
             dbConnection = new SqlConnection(connString);
         }
@@ -33,39 +34,22 @@ namespace ChapeauDAL
 
             return billList;
         }
-        public Order GetHost()
+        public List<Order> OrderItems()
         {
-            dbConnection.Open();
-            SqlCommand cmd = new SqlCommand("", dbConnection);
-            SqlDataReader reader = cmd.ExecuteReader();
-            Order order_host = new Order();
-            while (reader.Read())
-            {
-                order_host = Readhost(reader);
-            }
-            return order_host;
+            OrderDAO order = new OrderDAO();
+            return order.GetAllOrders();
+        }
+        public List<OrderItem> OrderOverview(DataTable dataTable)
+        {
+            OrderDAO order = new OrderDAO();
+            return order.GetOrderItems(dataTable);
+        }
 
-        }
-        private Order Readhost(SqlDataReader reader)
-        {
-            Order name = (Order)reader["employee_number"];
-            return name;
-            
-        }
-        public List<OrderItem> GetItems()
-        {
-            List<OrderDAO> items_list= new OrderDAO();
-            return items_list.GetOrderItems();
-
-        }
-      
         private Bill Readbill(SqlDataReader reader)
         {
             //retrieve data from all fields
             int OrderId = (int)reader["payment_number"];
             int BillId = (int)reader["order_number"];
-            Order host_name = GetHost();
-            List<OrderItem> items = GetItems();
             int totalPrice = (int)reader["total_price"];
             PaymentType Type = (PaymentType)reader["payment_type"];
             string Feedback = (string)reader["feedback"];
@@ -73,7 +57,62 @@ namespace ChapeauDAL
             int Vat = (int)reader["vat"];
 
             //return new bill object
-            return new Bill() ;
+            return new Bill(OrderId, BillId, totalPrice, Type, Feedback, Tip, Vat);
         }
+
+
+        public void AddtoPayment(Bill Data)
+        {
+            try
+            {
+                OpenConnection();
+                string query = "INSERT INTO Payment (payment_number,total_price,payment_type,order_number,feedback,payment_tip,vat)" +
+                               "VALUES('" + Data.BillId + "','" + Data.TotalPrice + "','" + Data.Type + "','"
+                                           + Data.OrderId + "','" + Data.Feedback + "','" + Data.Tip + "','" + Data.Vat + "',') ; ";
+                SqlParameter[] sqlParameters = new SqlParameter[0];
+                ExecuteEditQuery(query, sqlParameters);
+            }
+            catch (Exception exp)
+            {
+                throw new Exception("Adding bill failed: " + exp);
+            }
+            finally
+            {
+                CloseConnection();
+            }
+
+
+        }
+        public int CalculateBill()
+        {
+            List<OrderItem> items = new List<OrderItem>();
+            int totalprice = 0;
+            foreach (OrderItem item in items)
+            {
+                int price = item.MenuItemID.Menu_Item_Price;
+                totalprice = price * item.Quantity;
+                totalprice++;
+            }
+            return totalprice;
+        }
+        public int VatDrinks()
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            int priceVat = 0;
+            foreach(OrderItem item in orderItems)
+            {
+                if (item.MenuItemID.Menu_Item_Vat == 21)
+                {
+                    priceVat = item.MenuItemID.Menu_Item_Price % 21;
+                }
+                else if(item.MenuItemID.Menu_Item_Vat == 9)
+                {
+                    priceVat = item.MenuItemID.Menu_Item_Price % 9;
+                }
+                priceVat++;
+            }
+            return priceVat;
+        }
+        
     }
 }

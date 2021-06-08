@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WpRIDUHxhv6cgRd8frsPKs8nmGPQqzpw5cDoxCa1bk+JSJi0DGK1etZ4GPmV15C+IJF0SpT/j8gMsBhKOP6pyg==",
+  "dgSpecHash": "y8uyRiaATkaT3v5uiG4Eic/mre6dWJlgXKdFXATPotPLXjcMMF+zz1Mn3E9o/W02oSQeyiyP1T9Jkw/zrGpbMQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+  "projectFilePath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\crgio\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\crgio\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6hidnqoE3dtyxdiQHPhsQu1mHrKGinNeVQn0DeIWkDN/EcmQCkECA1ekD5TcdU8iS8z5vQf8Ek0hpwDx48TNHA==",
+  "dgSpecHash": "Tbr44fQhwIFK9lb64yqFGzzUbenABD4iE2cqpdCmhLpXQFwYVxa+xrTCe8jEQFUq0JjoN4zvImZzhSd9nf6W+A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+  "projectFilePath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\crgio\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\crgio\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

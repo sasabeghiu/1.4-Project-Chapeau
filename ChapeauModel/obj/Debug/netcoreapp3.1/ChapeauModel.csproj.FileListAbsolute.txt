@@ -7,3 +7,12 @@ D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\Ch
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csproj.CoreCompileInputs.cache
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.dll
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.pdb
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csprojAssemblyReference.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfoInputs.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfo.cs
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csproj.CoreCompileInputs.cache
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.dll
+C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.pdb
+C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.deps.json
+C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
