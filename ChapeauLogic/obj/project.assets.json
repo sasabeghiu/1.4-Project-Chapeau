@@ -783,19 +783,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\crgio\\.nuget\\packages\\": {}
+    "C:\\Users\\Conor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+      "projectUniqueName": "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
       "projectName": "ChapeauLogic",
-      "projectPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-      "packagesPath": "C:\\Users\\crgio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauLogic\\obj\\",
+      "projectPath": "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+      "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
+      "outputPath": "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\crgio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -809,11 +809,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-              "projectPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+            "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+              "projectPath": "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
             },
-            "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\crgio\\source\\repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+            "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "Z:\\Projects\\Year 1\\Term4\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }
@@ -842,7 +842,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }
