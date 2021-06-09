@@ -37,10 +37,10 @@ namespace ChapeauUI
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            List<Order> items = billService.OrderItems();
+            List<OrderDisplayMenu> items = billService.OrderItems();
             List<OrderItem> orderOverview = billService.OrderOverview(dataTable);
 
-            foreach (Order item in items)
+            foreach (OrderDisplayMenu item in items)
             {
                 lbl_BillId.Text = $"{item.BillID}";
                 lbl_table.Text = $"{item.Table_Number}";

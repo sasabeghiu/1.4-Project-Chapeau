@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using ChapeauDAL;
 using ChapeauModel;
 
 namespace ChapeauLogic
 {
-    class MenuService
+    public class MenuService
     {
         MenuDAO menudb;
 
@@ -24,5 +25,6 @@ namespace ChapeauLogic
             Menu menu = menudb.GetById(menu_id);
             return menu;
         }
+
     }
 }
