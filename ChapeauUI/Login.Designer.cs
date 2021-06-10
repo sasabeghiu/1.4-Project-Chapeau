@@ -52,6 +52,7 @@ namespace ChapeauUI
             this.txtPin.ReadOnly = true;
             this.txtPin.Size = new System.Drawing.Size(119, 23);
             this.txtPin.TabIndex = 0;
+            this.txtPin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btn_Login
             // 
