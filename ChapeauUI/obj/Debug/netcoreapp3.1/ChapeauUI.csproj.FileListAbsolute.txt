@@ -92,3 +92,9 @@ C:\Users\crgio\source\repos\Chapeau\ChapeauUI\bin\Debug\netcoreapp3.1\ChapeauMod
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill.resources
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.CopyComplete
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.genruntimeconfig.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill_PaidInCash.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderDisplayMenu.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderHome.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Properties.Resources.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.TableOrderView.resources

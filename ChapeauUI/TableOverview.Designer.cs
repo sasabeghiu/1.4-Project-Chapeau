@@ -50,7 +50,6 @@ namespace ChapeauUI
             this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Table Overview";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btn_table_one
             // 
@@ -60,6 +59,7 @@ namespace ChapeauUI
             this.btn_table_one.TabIndex = 12;
             this.btn_table_one.Text = "1";
             this.btn_table_one.UseVisualStyleBackColor = true;
+            this.btn_table_one.Click += new System.EventHandler(this.btn_table_one_Click);
             // 
             // btn_table_two
             // 
@@ -69,6 +69,7 @@ namespace ChapeauUI
             this.btn_table_two.TabIndex = 13;
             this.btn_table_two.Text = "2";
             this.btn_table_two.UseVisualStyleBackColor = true;
+            this.btn_table_two.Click += new System.EventHandler(this.btn_table_two_Click);
             // 
             // btn_table_three
             // 
@@ -78,6 +79,7 @@ namespace ChapeauUI
             this.btn_table_three.TabIndex = 14;
             this.btn_table_three.Text = "3";
             this.btn_table_three.UseVisualStyleBackColor = true;
+            this.btn_table_three.Click += new System.EventHandler(this.btn_table_three_Click);
             // 
             // btn_table_five
             // 
@@ -87,6 +89,7 @@ namespace ChapeauUI
             this.btn_table_five.TabIndex = 16;
             this.btn_table_five.Text = "5";
             this.btn_table_five.UseVisualStyleBackColor = true;
+            this.btn_table_five.Click += new System.EventHandler(this.btn_table_five_Click);
             // 
             // btn_table_four
             // 
@@ -96,6 +99,7 @@ namespace ChapeauUI
             this.btn_table_four.TabIndex = 15;
             this.btn_table_four.Text = "4";
             this.btn_table_four.UseVisualStyleBackColor = true;
+            this.btn_table_four.Click += new System.EventHandler(this.btn_table_four_Click);
             // 
             // btn_table_ten
             // 
@@ -105,6 +109,7 @@ namespace ChapeauUI
             this.btn_table_ten.TabIndex = 21;
             this.btn_table_ten.Text = "10";
             this.btn_table_ten.UseVisualStyleBackColor = true;
+            this.btn_table_ten.Click += new System.EventHandler(this.btn_table_ten_Click);
             // 
             // btn_table_nine
             // 
@@ -114,6 +119,7 @@ namespace ChapeauUI
             this.btn_table_nine.TabIndex = 20;
             this.btn_table_nine.Text = "9";
             this.btn_table_nine.UseVisualStyleBackColor = true;
+            this.btn_table_nine.Click += new System.EventHandler(this.btn_table_nine_Click);
             // 
             // btn_table_eight
             // 
@@ -123,6 +129,7 @@ namespace ChapeauUI
             this.btn_table_eight.TabIndex = 19;
             this.btn_table_eight.Text = "8";
             this.btn_table_eight.UseVisualStyleBackColor = true;
+            this.btn_table_eight.Click += new System.EventHandler(this.btn_table_eight_Click);
             // 
             // btn_table_seven
             // 
@@ -132,6 +139,7 @@ namespace ChapeauUI
             this.btn_table_seven.TabIndex = 18;
             this.btn_table_seven.Text = "7";
             this.btn_table_seven.UseVisualStyleBackColor = true;
+            this.btn_table_seven.Click += new System.EventHandler(this.btn_table_seven_Click);
             // 
             // btn_table_six
             // 
@@ -141,6 +149,7 @@ namespace ChapeauUI
             this.btn_table_six.TabIndex = 17;
             this.btn_table_six.Text = "6";
             this.btn_table_six.UseVisualStyleBackColor = true;
+            this.btn_table_six.Click += new System.EventHandler(this.btn_table_six_Click);
             // 
             // TableOverview
             // 
