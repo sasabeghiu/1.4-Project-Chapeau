@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using ChapeauModel;
-using ChapeauLogic;
-using System.Collections.Generic;
 
 namespace ChapeauUI
 {
@@ -21,8 +19,7 @@ namespace ChapeauUI
 
         private void TableOverview_Load(object sender, EventArgs e)
         {
-            //TableService tableService = new TableService();
-            //List<Table> tables = tableService.GetTables();
+            lbl_user.Text = user.First_Name + user.Last_Name;
         }
 
         //when selecting a table a new form with order details will be opened depending on the table
@@ -33,6 +30,7 @@ namespace ChapeauUI
             orderView.ShowDialog();
             this.Close();
         }
+
         //select any table
         private void btn_table_one_Click(object sender, EventArgs e)
         {

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj": {}
+    "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+    "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+        "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
         "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\obj\\",
+        "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
+        "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
+        "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -68,21 +71,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
+    "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+        "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
         "projectName": "ChapeauLogic",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\obj\\",
+        "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+        "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
+        "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,11 +102,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -129,21 +135,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+    "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
         "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\obj\\",
+        "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
+        "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -183,21 +192,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj": {
+    "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
+        "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
         "projectName": "ChapeauUI",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\obj\\",
+        "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
+        "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
+        "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -211,14 +223,14 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
               },
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
               },
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+              "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+                "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
               }
             }
           }
@@ -250,7 +262,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

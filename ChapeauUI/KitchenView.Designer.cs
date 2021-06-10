@@ -46,9 +46,10 @@ namespace ChapeauUI
             this.status,
             this.time});
             this.listViewKitchen.HideSelection = false;
-            this.listViewKitchen.Location = new System.Drawing.Point(12, 126);
+            this.listViewKitchen.Location = new System.Drawing.Point(10, 94);
+            this.listViewKitchen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewKitchen.Name = "listViewKitchen";
-            this.listViewKitchen.Size = new System.Drawing.Size(440, 312);
+            this.listViewKitchen.Size = new System.Drawing.Size(386, 235);
             this.listViewKitchen.TabIndex = 0;
             this.listViewKitchen.UseCompatibleStateImageBehavior = false;
             // 
@@ -69,9 +70,10 @@ namespace ChapeauUI
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(12, 12);
+            this.btnLogOut.Location = new System.Drawing.Point(10, 9);
+            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(94, 29);
+            this.btnLogOut.Size = new System.Drawing.Size(82, 22);
             this.btnLogOut.TabIndex = 1;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -83,9 +85,10 @@ namespace ChapeauUI
             this.quantity,
             this.name});
             this.listViewOrderDetails.HideSelection = false;
-            this.listViewOrderDetails.Location = new System.Drawing.Point(487, 126);
+            this.listViewOrderDetails.Location = new System.Drawing.Point(426, 94);
+            this.listViewOrderDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listViewOrderDetails.Name = "listViewOrderDetails";
-            this.listViewOrderDetails.Size = new System.Drawing.Size(301, 312);
+            this.listViewOrderDetails.Size = new System.Drawing.Size(264, 235);
             this.listViewOrderDetails.TabIndex = 2;
             this.listViewOrderDetails.UseCompatibleStateImageBehavior = false;
             // 
@@ -99,13 +102,15 @@ namespace ChapeauUI
             // 
             // KitchenView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 361);
             this.Controls.Add(this.listViewOrderDetails);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.listViewKitchen);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "KitchenView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenViewcs";
             this.ResumeLayout(false);
 

@@ -37,14 +37,14 @@ namespace ChapeauUI
         private void btn_GoBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            TableOverview tablepage = new TableOverview();
+            TableOverview tablepage = new TableOverview(user);
             tablepage.ShowDialog();
             this.Close();
         }
 
         private void TableOrderView_Load(object sender, EventArgs e)
         {
-
+            lbl_user.Text = user.First_Name + user.Last_Name;
         }
     }
 }

@@ -31,7 +31,7 @@ namespace ChapeauUI
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_user = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -58,14 +58,14 @@ namespace ChapeauUI
             this.btn_logout.UseVisualStyleBackColor = true;
             this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
             // 
-            // label2
+            // lbl_user
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(628, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(117, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "User: name/surname";
+            this.lbl_user.AutoSize = true;
+            this.lbl_user.Location = new System.Drawing.Point(628, 36);
+            this.lbl_user.Name = "lbl_user";
+            this.lbl_user.Size = new System.Drawing.Size(117, 15);
+            this.lbl_user.TabIndex = 2;
+            this.lbl_user.Text = "User: name/surname";
             // 
             // button1
             // 
@@ -123,7 +123,7 @@ namespace ChapeauUI
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.label1);
             this.Name = "TableOrderView";
@@ -139,7 +139,7 @@ namespace ChapeauUI
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_logout;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
