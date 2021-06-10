@@ -150,4 +150,4 @@ C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.cspro
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.dll
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.pdb
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.genruntimeconfig.cache
-C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenViewcs.resources
+C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenView.resources

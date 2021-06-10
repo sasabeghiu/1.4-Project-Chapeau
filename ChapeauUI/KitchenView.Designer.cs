@@ -1,7 +1,7 @@
 ﻿
 namespace ChapeauUI
 {
-    partial class KitchenViewcs
+    partial class KitchenView
     {
         /// <summary>
         /// Required designer variable.
@@ -29,44 +29,59 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewKitchen = new System.Windows.Forms.ListView();
             this.Id = new System.Windows.Forms.ColumnHeader();
             this.status = new System.Windows.Forms.ColumnHeader();
             this.time = new System.Windows.Forms.ColumnHeader();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewKitchen
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewKitchen.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.Id,
             this.status,
             this.time});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 126);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(440, 312);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewKitchen.HideSelection = false;
+            this.listViewKitchen.Location = new System.Drawing.Point(12, 126);
+            this.listViewKitchen.Name = "listViewKitchen";
+            this.listViewKitchen.Size = new System.Drawing.Size(440, 312);
+            this.listViewKitchen.TabIndex = 0;
+            this.listViewKitchen.UseCompatibleStateImageBehavior = false;
             // 
             // Id
             // 
             this.Id.Text = "Order ID";
+            this.Id.Width = 80;
             // 
             // status
             // 
             this.status.Text = "Order Status";
+            this.status.Width = 100;
             // 
             // time
             // 
             this.time.Text = "Time";
+            this.time.Width = 150;
             // 
-            // KitchenViewcs
+            // btnLogOut
+            // 
+            this.btnLogOut.Location = new System.Drawing.Point(12, 12);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(94, 29);
+            this.btnLogOut.TabIndex = 1;
+            this.btnLogOut.Text = "Log Out";
+            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
+            // KitchenView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.listView1);
-            this.Name = "KitchenViewcs";
+            this.Controls.Add(this.btnLogOut);
+            this.Controls.Add(this.listViewKitchen);
+            this.Name = "KitchenView";
             this.Text = "KitchenViewcs";
             this.ResumeLayout(false);
 
@@ -74,9 +89,10 @@ namespace ChapeauUI
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewKitchen;
         private System.Windows.Forms.ColumnHeader Id;
         private System.Windows.Forms.ColumnHeader status;
         private System.Windows.Forms.ColumnHeader time;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
