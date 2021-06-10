@@ -46,7 +46,7 @@ namespace ChapeauUI
             else if (user.Employee_Role == EmployeeRole.Chef || user.Employee_Role == EmployeeRole.Bartender)
             {
                 this.Hide();
-                KitchenViewcs barform = new KitchenViewcs();
+                KitchenView barform = new KitchenView();
                 barform.ShowDialog();
                 this.Close();
             }
