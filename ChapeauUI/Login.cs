@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using ChapeauModel;
 using ChapeauLogic;
@@ -29,25 +22,41 @@ namespace ChapeauUI
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            //name of user
         }
 
+        //login in dependence of user role
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            //int pin = int.Parse(txtPin.Text);
-            //user = employeeService.GetByMenuId(pin);
-            //if (txtPin.Text == user.Employee_Password.ToString())
+            string pin = txtPin.Text;
 
-            if (txtPin.Text == "1111")
+            if (pin == "")
+            {
+                MessageBox.Show("Please enter your PIN-code", "PIN Required");
+            }
+            user = employeeService.GetEmployeeByPassword(pin);
+
+            if (user.Employee_Role == EmployeeRole.Waiter)
             {
                 this.Hide();
-                TableOverview form = new TableOverview();
-                form.ShowDialog();
+                TableOverview waiterform = new TableOverview();
+                waiterform.ShowDialog();
                 this.Close();
+            }
+            else if (user.Employee_Role == EmployeeRole.Chef || user.Employee_Role == EmployeeRole.Bartender)
+            {
+                this.Hide();
+                KitchenViewcs barform = new KitchenViewcs();
+                barform.ShowDialog();
+                this.Close();
+            }
+            else if (user.Employee_Role == EmployeeRole.Manager)
+            {
+                MessageBox.Show("We have no manager");
             }
             else
             {
-                MessageBox.Show("Incorrect PIN, try again.");
+                MessageBox.Show("Incorrect PIN, please try again.", "Wrong PIN");
             }
         }
 

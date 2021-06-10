@@ -1,6 +1,8 @@
 ﻿using ChapeauModel;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace ChapeauDAL
@@ -51,15 +53,28 @@ namespace ChapeauDAL
         }
 
         //sasa created this  for login
-        public Employee GetEmployeePassword(int password)
+        public Employee GetEmployeeByPassword(string password)
         {
-            Employee user  = new Employee();
-            string query = $"SELECT * FROM Employee WHERE [employee_password] = {user.Employee_Password}";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            ExecuteEditQuery(query, sqlParameters);
+            string query = "SELECT employee_number, first_name, last_name, employee_role, employee_password FROM Employee WHERE employee_password = @employee_password";
+            SqlParameter[] sqlParameters = { new SqlParameter("@employee_password", password), };
+            return ReadEmployee(ExecuteSelectQuery(query, sqlParameters));
+        }
 
-            return user;
-             
+        private Employee ReadEmployee(DataTable dataTable)
+        {
+            Employee employee = null;
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                employee = new Employee()
+                {
+                    Employee_Number = (int)(dr["employee_number"]),
+                    First_Name = (string)(dr["first_name"]),
+                    Last_Name = ((string)dr["last_name"]),
+                    Employee_Role = (EmployeeRole)Enum.Parse(typeof(EmployeeRole), dr["employee_role"].ToString()),
+                    Employee_Password = ((string)dr["employee_password"])
+                };
+            }
+            return employee;
         }
 
         private Employee Reademployee(SqlDataReader reader)
@@ -68,7 +83,7 @@ namespace ChapeauDAL
             int employee_Number = (int)reader["employee_number"];
             string first_Name = (string)reader["first_name"];
             string last_Name = (string)reader["last_name"];
-            int employee_Password = (int)reader["employee_password"];
+            string employee_Password = (string)reader["employee_password"];
             EmployeeRole role = (EmployeeRole)reader["employee_role"];
 
             //return new employee object

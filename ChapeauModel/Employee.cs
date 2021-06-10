@@ -8,9 +8,9 @@ namespace ChapeauModel
         public string First_Name { get; set; }
         public string Last_Name { get; set; }
         public EmployeeRole Employee_Role { get; set; }
-        public int Employee_Password { get; set; } //4-digit pin
+        public string Employee_Password { get; set; } //4-digit pin
 
-        public Employee(int employee_Number, string first_Name, string last_Name, int employee_Password, EmployeeRole role)
+        public Employee(int employee_Number, string first_Name, string last_Name, string employee_Password, EmployeeRole role)
         {
 
             this.Employee_Number = employee_Number;

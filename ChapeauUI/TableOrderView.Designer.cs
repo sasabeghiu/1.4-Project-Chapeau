@@ -36,6 +36,7 @@ namespace ChapeauUI
             this.button2 = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.btn_GoBack = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -103,11 +104,21 @@ namespace ChapeauUI
             this.btn_GoBack.UseVisualStyleBackColor = true;
             this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(628, 236);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 34);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Seat guests";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // TableOrderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_GoBack);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.button2);
@@ -118,6 +129,7 @@ namespace ChapeauUI
             this.Name = "TableOrderView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOrderView";
+            this.Load += new System.EventHandler(this.TableOrderView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +144,6 @@ namespace ChapeauUI
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_GoBack;
+        private System.Windows.Forms.Button button3;
     }
 }

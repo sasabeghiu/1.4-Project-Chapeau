@@ -5,8 +5,8 @@ namespace ChapeauModel
     public enum EmployeeRole
     {
         Waiter = 1,
-        Bar,
-        Kitchen,
+        Bartender,
+        Chef,
         Manager
     }
 }

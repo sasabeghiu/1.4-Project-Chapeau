@@ -26,10 +26,10 @@ namespace ChapeauLogic
             return employee;
         }
 
-        public Employee GetEmployeePassword(int password)
+        public Employee GetEmployeeByPassword(string password)
         {
-            Employee user = employeedb.GetEmployeePassword(password);
-            return user;
+            Employee employee = employeedb.GetEmployeeByPassword(password);
+            return employee;
         }
     }
 }

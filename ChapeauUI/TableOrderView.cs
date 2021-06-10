@@ -41,5 +41,10 @@ namespace ChapeauUI
             tablepage.ShowDialog();
             this.Close();
         }
+
+        private void TableOrderView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
