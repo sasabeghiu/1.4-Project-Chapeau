@@ -8,13 +8,16 @@ namespace ChapeauLogic
     public class MenuService
     {
         MenuDAO menudb;
+        MenuItemDAO menuitemdb;
 
         public MenuService()
         {
             menudb = new MenuDAO();
+            menuitemdb = new MenuItemDAO();
         }
 
-        public List<Menu> GetOrders()
+
+        public List<Menu> GetAll()
         {
             List<Menu> menuList = menudb.GetAll();
             return menuList;
@@ -26,5 +29,10 @@ namespace ChapeauLogic
             return menu;
         }
 
+        public List<MenuItem> GetAllMenuItems()
+        {
+            List<MenuItem> menuItems = menuitemdb.GetAllMenuItems();
+            return menuItems;
+        }
     }
 }

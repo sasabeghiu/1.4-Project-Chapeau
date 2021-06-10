@@ -16,11 +16,12 @@ namespace ChapeauUI
         public Order currentOrder { get; set; }
 
         static OrderDisplayMenu orderDisplayMenu;
-
+        MenuService menuService = new MenuService();
 
         public OrderDisplayMenu()
         {
             InitializeComponent();
+
         }
 
 
@@ -36,23 +37,31 @@ namespace ChapeauUI
 
         private void Order_Load(object sender, EventArgs e)
         {
+            List<MenuItem> menuitems = menuService.GetAllMenuItems();
+            listViewMenus.View = View.Details;
 
+            foreach (MenuItem menuitem in menuitems)
+            {
+                ListViewItem lv1 = new ListViewItem(menuitem.Menu_Item_ID.ToString());
+                lv1.SubItems.Add(menuitem.Menu_Item_Name);
+                lv1.SubItems.Add(menuitem.Menu_Item_Stock.ToString());
+                listViewMenus.Items.Add(lv1);
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
-       //this can't be done until the menu is updated private void DisplayMenuItems()
-       // {
+        //this can't be done until the menu is updated private void DisplayMenuItems()
+        // {
 
         //    List<MenuItem> menuItems = MenuService.GetByMenuId(menu_id);
         //    foreach (MenuItem menuItem in menuItems)
         //    {
 
         //    }
-        
+
 
 
     }
