@@ -9,6 +9,10 @@ namespace ChapeauUI
     public partial class TableOverview : Form
     {
         Employee user;
+        public TableOverview()
+        {
+            InitializeComponent();
+        }
         public TableOverview(Employee user)
         {
             this.user = user;
@@ -17,19 +21,19 @@ namespace ChapeauUI
 
         private void TableOverview_Load(object sender, EventArgs e)
         {
-            TableService tableService = new TableService();
-            List<Table> tables = tableService.GetTables();
-
+            //TableService tableService = new TableService();
+            //List<Table> tables = tableService.GetTables();
         }
 
         //when selecting a table a new form with order details will be opened depending on the table
         private void SelectedTable(int tableNr)
         {
+            this.Hide();
             TableOrderView orderView = new TableOrderView(user, tableNr);
-            orderView.Show();
+            orderView.ShowDialog();
             this.Close();
         }
-
+        //select any table
         private void btn_table_one_Click(object sender, EventArgs e)
         {
             SelectedTable(1);
@@ -78,6 +82,20 @@ namespace ChapeauUI
         private void btn_table_ten_Click(object sender, EventArgs e)
         {
             SelectedTable(10);
+        }
+
+        //logout button
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result==DialogResult.Yes)
+            {
+                this.Hide();
+                Login loginpage = new Login();
+                loginpage.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

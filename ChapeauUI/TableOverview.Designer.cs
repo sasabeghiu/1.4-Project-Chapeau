@@ -40,12 +40,14 @@ namespace ChapeauUI
             this.btn_table_eight = new System.Windows.Forms.Button();
             this.btn_table_seven = new System.Windows.Forms.Button();
             this.btn_table_six = new System.Windows.Forms.Button();
+            this.btn_logout = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(398, 74);
+            this.label1.Location = new System.Drawing.Point(354, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 0;
@@ -53,7 +55,7 @@ namespace ChapeauUI
             // 
             // btn_table_one
             // 
-            this.btn_table_one.Location = new System.Drawing.Point(97, 121);
+            this.btn_table_one.Location = new System.Drawing.Point(57, 111);
             this.btn_table_one.Name = "btn_table_one";
             this.btn_table_one.Size = new System.Drawing.Size(55, 38);
             this.btn_table_one.TabIndex = 12;
@@ -63,7 +65,7 @@ namespace ChapeauUI
             // 
             // btn_table_two
             // 
-            this.btn_table_two.Location = new System.Drawing.Point(97, 217);
+            this.btn_table_two.Location = new System.Drawing.Point(57, 207);
             this.btn_table_two.Name = "btn_table_two";
             this.btn_table_two.Size = new System.Drawing.Size(55, 38);
             this.btn_table_two.TabIndex = 13;
@@ -73,7 +75,7 @@ namespace ChapeauUI
             // 
             // btn_table_three
             // 
-            this.btn_table_three.Location = new System.Drawing.Point(252, 121);
+            this.btn_table_three.Location = new System.Drawing.Point(212, 111);
             this.btn_table_three.Name = "btn_table_three";
             this.btn_table_three.Size = new System.Drawing.Size(55, 38);
             this.btn_table_three.TabIndex = 14;
@@ -83,7 +85,7 @@ namespace ChapeauUI
             // 
             // btn_table_five
             // 
-            this.btn_table_five.Location = new System.Drawing.Point(407, 121);
+            this.btn_table_five.Location = new System.Drawing.Point(367, 111);
             this.btn_table_five.Name = "btn_table_five";
             this.btn_table_five.Size = new System.Drawing.Size(55, 38);
             this.btn_table_five.TabIndex = 16;
@@ -93,7 +95,7 @@ namespace ChapeauUI
             // 
             // btn_table_four
             // 
-            this.btn_table_four.Location = new System.Drawing.Point(252, 217);
+            this.btn_table_four.Location = new System.Drawing.Point(212, 207);
             this.btn_table_four.Name = "btn_table_four";
             this.btn_table_four.Size = new System.Drawing.Size(55, 38);
             this.btn_table_four.TabIndex = 15;
@@ -103,7 +105,7 @@ namespace ChapeauUI
             // 
             // btn_table_ten
             // 
-            this.btn_table_ten.Location = new System.Drawing.Point(715, 217);
+            this.btn_table_ten.Location = new System.Drawing.Point(675, 207);
             this.btn_table_ten.Name = "btn_table_ten";
             this.btn_table_ten.Size = new System.Drawing.Size(55, 38);
             this.btn_table_ten.TabIndex = 21;
@@ -113,7 +115,7 @@ namespace ChapeauUI
             // 
             // btn_table_nine
             // 
-            this.btn_table_nine.Location = new System.Drawing.Point(715, 121);
+            this.btn_table_nine.Location = new System.Drawing.Point(675, 111);
             this.btn_table_nine.Name = "btn_table_nine";
             this.btn_table_nine.Size = new System.Drawing.Size(55, 38);
             this.btn_table_nine.TabIndex = 20;
@@ -123,7 +125,7 @@ namespace ChapeauUI
             // 
             // btn_table_eight
             // 
-            this.btn_table_eight.Location = new System.Drawing.Point(563, 217);
+            this.btn_table_eight.Location = new System.Drawing.Point(523, 207);
             this.btn_table_eight.Name = "btn_table_eight";
             this.btn_table_eight.Size = new System.Drawing.Size(55, 38);
             this.btn_table_eight.TabIndex = 19;
@@ -133,7 +135,7 @@ namespace ChapeauUI
             // 
             // btn_table_seven
             // 
-            this.btn_table_seven.Location = new System.Drawing.Point(563, 121);
+            this.btn_table_seven.Location = new System.Drawing.Point(523, 111);
             this.btn_table_seven.Name = "btn_table_seven";
             this.btn_table_seven.Size = new System.Drawing.Size(55, 38);
             this.btn_table_seven.TabIndex = 18;
@@ -143,7 +145,7 @@ namespace ChapeauUI
             // 
             // btn_table_six
             // 
-            this.btn_table_six.Location = new System.Drawing.Point(407, 217);
+            this.btn_table_six.Location = new System.Drawing.Point(367, 207);
             this.btn_table_six.Name = "btn_table_six";
             this.btn_table_six.Size = new System.Drawing.Size(55, 38);
             this.btn_table_six.TabIndex = 17;
@@ -151,11 +153,32 @@ namespace ChapeauUI
             this.btn_table_six.UseVisualStyleBackColor = true;
             this.btn_table_six.Click += new System.EventHandler(this.btn_table_six_Click);
             // 
+            // btn_logout
+            // 
+            this.btn_logout.Location = new System.Drawing.Point(28, 26);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(75, 27);
+            this.btn_logout.TabIndex = 22;
+            this.btn_logout.Text = "Log Out";
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.btn_logout_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(629, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(117, 15);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "User: name/surname";
+            // 
             // TableOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 387);
+            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_table_ten);
             this.Controls.Add(this.btn_table_nine);
             this.Controls.Add(this.btn_table_eight);
@@ -168,6 +191,7 @@ namespace ChapeauUI
             this.Controls.Add(this.btn_table_one);
             this.Controls.Add(this.label1);
             this.Name = "TableOverview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOverview";
             this.Load += new System.EventHandler(this.TableOverview_Load);
             this.ResumeLayout(false);
@@ -188,5 +212,7 @@ namespace ChapeauUI
         private System.Windows.Forms.Button btn_table_eight;
         private System.Windows.Forms.Button btn_table_seven;
         private System.Windows.Forms.Button btn_table_six;
+        private System.Windows.Forms.Button btn_logout;
+        private System.Windows.Forms.Label label2;
     }
 }
