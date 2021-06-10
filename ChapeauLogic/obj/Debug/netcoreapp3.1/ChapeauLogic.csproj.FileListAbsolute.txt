@@ -40,3 +40,17 @@ Z:\Projects\Year 1\Term4\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauMod
 Z:\Projects\Year 1\Term4\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.pdb
 Z:\Projects\Year 1\Term4\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
 Z:\Projects\Year 1\Term4\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CopyComplete
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.deps.json
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.dll
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauLogic.pdb
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.dll
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauDAL.pdb
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csprojAssemblyReference.cache
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.AssemblyInfoInputs.cache
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.AssemblyInfo.cs
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CoreCompileInputs.cache
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.csproj.CopyComplete
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.dll
+C:\Users\pablo\Desktop\Chapeau\ChapeauLogic\obj\Debug\netcoreapp3.1\ChapeauLogic.pdb
