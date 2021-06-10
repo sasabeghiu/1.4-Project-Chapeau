@@ -150,6 +150,9 @@ C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.cspro
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.dll
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.pdb
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.genruntimeconfig.cache
-C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenViewcs.resources
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenViewcs.resources
+<<<<<<< Updated upstream
 D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenView.resources
+=======
+C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenView.resources
+>>>>>>> Stashed changes

@@ -34,6 +34,9 @@ namespace ChapeauUI
             this.status = new System.Windows.Forms.ColumnHeader();
             this.time = new System.Windows.Forms.ColumnHeader();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.listViewOrderDetails = new System.Windows.Forms.ListView();
+            this.quantity = new System.Windows.Forms.ColumnHeader();
+            this.name = new System.Windows.Forms.ColumnHeader();
             this.SuspendLayout();
             // 
             // listViewKitchen
@@ -74,11 +77,32 @@ namespace ChapeauUI
             this.btnLogOut.UseVisualStyleBackColor = true;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // listViewOrderDetails
+            // 
+            this.listViewOrderDetails.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.quantity,
+            this.name});
+            this.listViewOrderDetails.HideSelection = false;
+            this.listViewOrderDetails.Location = new System.Drawing.Point(487, 126);
+            this.listViewOrderDetails.Name = "listViewOrderDetails";
+            this.listViewOrderDetails.Size = new System.Drawing.Size(301, 312);
+            this.listViewOrderDetails.TabIndex = 2;
+            this.listViewOrderDetails.UseCompatibleStateImageBehavior = false;
+            // 
+            // quantity
+            // 
+            this.quantity.Text = "Qty";
+            // 
+            // name
+            // 
+            this.name.Text = "Name";
+            // 
             // KitchenView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listViewOrderDetails);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.listViewKitchen);
             this.Name = "KitchenView";
@@ -94,5 +118,8 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader status;
         private System.Windows.Forms.ColumnHeader time;
         private System.Windows.Forms.Button btnLogOut;
+        private System.Windows.Forms.ListView listViewOrderDetails;
+        private System.Windows.Forms.ColumnHeader quantity;
+        private System.Windows.Forms.ColumnHeader name;
     }
 }
