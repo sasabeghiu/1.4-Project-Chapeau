@@ -65,5 +65,22 @@ namespace ChapeauDAL
             //return new menu object
             return new Menu(id, name, start, end);
         }
+
+        private Menu Readallmenu(SqlDataReader reader)
+        {
+            dbConnection.Open();
+            SqlCommand selectedMenuItems = new SqlCommand("SELECT menu_item_id, menu_item_name, menu_item_stock, menu_item_price, menu_item_category FROM MenuItem", dbConnection);
+            reader = selectedMenuItems.ExecuteReader();
+            Menu menu = null;
+            if (reader.Read())
+            {
+                menu = Readmenus(reader);
+            }
+            reader.Close();
+            dbConnection.Close();
+            return menu;
+        }
+
+
     }
 }

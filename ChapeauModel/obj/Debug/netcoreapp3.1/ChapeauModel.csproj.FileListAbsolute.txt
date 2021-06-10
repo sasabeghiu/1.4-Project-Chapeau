@@ -16,3 +16,12 @@ C:\Users\crgio\Source\Repos\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\Chapeau
 C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.deps.json
 C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.dll
 C:\Users\crgio\source\repos\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.pdb
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csproj.AssemblyReference.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfoInputs.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.AssemblyInfo.cs
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.csproj.CoreCompileInputs.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.dll
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\obj\Debug\netcoreapp3.1\ChapeauModel.pdb
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.deps.json
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.dll
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauModel\bin\Debug\netcoreapp3.1\ChapeauModel.pdb

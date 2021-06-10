@@ -92,3 +92,18 @@ C:\Users\crgio\source\repos\Chapeau\ChapeauUI\bin\Debug\netcoreapp3.1\ChapeauMod
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill.resources
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.CopyComplete
 C:\Users\crgio\source\repos\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.genruntimeconfig.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.AssemblyReference.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.ResolveComReference.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Bill_PaidInCash.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Login.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderDisplayMenu.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderHome.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.Properties.Resources.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.TableOverview.resources
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.GenerateResource.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.AssemblyInfoInputs.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.AssemblyInfo.cs
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.CoreCompileInputs.cache
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.dll
+Z:\Projects\Year 1\Term4\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.pdb

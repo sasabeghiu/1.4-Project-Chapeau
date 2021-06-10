@@ -29,7 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewMenus = new System.Windows.Forms.ListView();
             this.columnID = new System.Windows.Forms.ColumnHeader();
             this.columnName = new System.Windows.Forms.ColumnHeader();
             this.columnStock = new System.Windows.Forms.ColumnHeader();
@@ -39,26 +39,26 @@ namespace ChapeauUI
             this.labelMenu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // listView1
+            // listViewMenus
             // 
-            this.listView1.CheckBoxes = true;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewMenus.CheckBoxes = true;
+            this.listViewMenus.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnID,
             this.columnName,
             this.columnStock,
             this.columnPrice,
             this.columnVAT,
             this.columnCategory});
-            this.listView1.FullRowSelect = true;
-            this.listView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(3, 43);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(427, 403);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.listViewMenus.FullRowSelect = true;
+            this.listViewMenus.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listViewMenus.HideSelection = false;
+            this.listViewMenus.Location = new System.Drawing.Point(3, 43);
+            this.listViewMenus.Name = "listViewMenus";
+            this.listViewMenus.Size = new System.Drawing.Size(427, 403);
+            this.listViewMenus.TabIndex = 0;
+            this.listViewMenus.UseCompatibleStateImageBehavior = false;
+            this.listViewMenus.View = System.Windows.Forms.View.Details;
+            this.listViewMenus.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnID
             // 
@@ -97,9 +97,9 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 454);
+            this.ClientSize = new System.Drawing.Size(1186, 454);
             this.Controls.Add(this.labelMenu);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewMenus);
             this.Name = "OrderDisplayMenu";
             this.Text = "Order";
             this.Load += new System.EventHandler(this.Order_Load);
@@ -110,7 +110,7 @@ namespace ChapeauUI
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewMenus;
         private System.Windows.Forms.ColumnHeader columnID;
         private System.Windows.Forms.ColumnHeader columnName;
         private System.Windows.Forms.ColumnHeader columnStock;

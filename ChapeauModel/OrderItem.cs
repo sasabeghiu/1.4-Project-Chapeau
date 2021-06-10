@@ -25,7 +25,7 @@ namespace ChapeauModel
             Order_Time = Ordertime;
         }
 
-        public OrderItem() : this(0, 0, new MenuItem(), 1, "", OrderStatus.Ordered, new Table(), DateTime.Now)
+        public OrderItem()
         {
 
         }

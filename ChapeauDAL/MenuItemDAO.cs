@@ -6,7 +6,7 @@ using ChapeauModel;
 
 namespace ChapeauDAL
 {
-    class MenuItemDAO : BaseDao
+    public class MenuItemDAO : BaseDao
     {
 
         public List<MenuItem> GetAllMenuItems()
@@ -81,10 +81,10 @@ namespace ChapeauDAL
             int menuItemStock = (int)reader["menu_item_stock"];
             int menuItemPrice = (int)reader["menu_item_price"];
             int menuItemVAT = (int)reader["menu_item_vat"];
-            int menuid = (int)reader["menu_id"];
+            Menu menuid = (Menu)reader["menu_id"];
             string category = (string)reader["menu_item_category"];
 
-            return new MenuItem(menuItemID, menuItemName, menuItemStock, menuItemPrice, menuItemVAT, category);
+            return new MenuItem(menuItemID, menuItemName, menuItemStock, menuItemPrice, menuItemVAT, menuid, category);
         }
     }
 }
