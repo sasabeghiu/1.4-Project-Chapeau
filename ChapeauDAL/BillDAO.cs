@@ -15,8 +15,7 @@ namespace ChapeauDAL
         private SqlConnection dbConnection;
         public BillDAO()
         {
-            string connString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-            dbConnection = new SqlConnection(connString);
+
         }
         public List<Bill> GetBills()
         {

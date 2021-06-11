@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
+using ChapeauLogic;
 using ChapeauModel;
 
 namespace ChapeauUI
@@ -7,19 +9,27 @@ namespace ChapeauUI
     public partial class TableOverview : Form
     {
         Employee user;
-        public TableOverview()
-        {
-            InitializeComponent();
-        }
+        TableService tableService;
+       
         public TableOverview(Employee user)
         {
             this.user = user;
+            tableService = new TableService();
             InitializeComponent();
         }
 
         private void TableOverview_Load(object sender, EventArgs e)
         {
             lbl_user.Text = user.First_Name + user.Last_Name;
+
+            /*List<Table> tables = tableService.GetTables();
+            foreach(Table table in tables)
+            {
+                if (table.Table_Availability==Table_Availability.Available)
+                {
+                    //
+                }
+            }*/
         }
 
         //when selecting a table a new form with order details will be opened depending on the table

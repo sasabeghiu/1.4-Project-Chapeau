@@ -46,5 +46,21 @@ namespace ChapeauUI
         {
             lbl_user.Text = user.First_Name + user.Last_Name;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Bill billpage = new Bill();
+            billpage.ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OrderDisplayMenu menupage = new OrderDisplayMenu();
+            menupage.ShowDialog();
+            this.Close();
+        }
     }
 }

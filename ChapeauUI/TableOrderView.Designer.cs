@@ -75,6 +75,7 @@ namespace ChapeauUI
             this.button1.TabIndex = 3;
             this.button1.Text = "Add to order";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -84,6 +85,7 @@ namespace ChapeauUI
             this.button2.TabIndex = 4;
             this.button2.Text = "Pay";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // listView1
             // 
