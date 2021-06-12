@@ -32,11 +32,11 @@ namespace ChapeauUI
             this.label1 = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_user = new System.Windows.Forms.Label();
-            this.btn_addOrder = new System.Windows.Forms.Button();
-            this.btn_pay = new System.Windows.Forms.Button();
-            this.listViewOrders = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.btn_GoBack = new System.Windows.Forms.Button();
-            this.btn_seatGuests = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,34 +67,34 @@ namespace ChapeauUI
             this.lbl_user.TabIndex = 2;
             this.lbl_user.Text = "User: name/surname";
             // 
-            // btn_addOrder
+            // button1
             // 
-            this.btn_addOrder.Location = new System.Drawing.Point(628, 130);
-            this.btn_addOrder.Name = "btn_addOrder";
-            this.btn_addOrder.Size = new System.Drawing.Size(92, 39);
-            this.btn_addOrder.TabIndex = 3;
-            this.btn_addOrder.Text = "Add to order";
-            this.btn_addOrder.UseVisualStyleBackColor = true;
-            this.btn_addOrder.Click += new System.EventHandler(this.btn_addOrder_Click_1);
+            this.button1.Location = new System.Drawing.Point(628, 130);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 39);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Add to order";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btn_pay
+            // button2
             // 
-            this.btn_pay.Location = new System.Drawing.Point(628, 185);
-            this.btn_pay.Name = "btn_pay";
-            this.btn_pay.Size = new System.Drawing.Size(92, 33);
-            this.btn_pay.TabIndex = 4;
-            this.btn_pay.Text = "Pay";
-            this.btn_pay.UseVisualStyleBackColor = true;
-            this.btn_pay.Click += new System.EventHandler(this.btn_pay_Click);
+            this.button2.Location = new System.Drawing.Point(628, 185);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 33);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Pay";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // listViewOrders
+            // listView1
             // 
-            this.listViewOrders.HideSelection = false;
-            this.listViewOrders.Location = new System.Drawing.Point(31, 98);
-            this.listViewOrders.Name = "listViewOrders";
-            this.listViewOrders.Size = new System.Drawing.Size(434, 239);
-            this.listViewOrders.TabIndex = 5;
-            this.listViewOrders.UseCompatibleStateImageBehavior = false;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(31, 98);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(434, 239);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // btn_GoBack
             // 
@@ -106,25 +106,25 @@ namespace ChapeauUI
             this.btn_GoBack.UseVisualStyleBackColor = true;
             this.btn_GoBack.Click += new System.EventHandler(this.btn_GoBack_Click);
             // 
-            // btn_seatGuests
+            // button3
             // 
-            this.btn_seatGuests.Location = new System.Drawing.Point(628, 236);
-            this.btn_seatGuests.Name = "btn_seatGuests";
-            this.btn_seatGuests.Size = new System.Drawing.Size(92, 34);
-            this.btn_seatGuests.TabIndex = 7;
-            this.btn_seatGuests.Text = "Seat guests";
-            this.btn_seatGuests.UseVisualStyleBackColor = true;
+            this.button3.Location = new System.Drawing.Point(628, 236);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(92, 34);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "Seat guests";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // TableOrderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.btn_seatGuests);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.btn_GoBack);
-            this.Controls.Add(this.listViewOrders);
-            this.Controls.Add(this.btn_pay);
-            this.Controls.Add(this.btn_addOrder);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.label1);
@@ -142,10 +142,10 @@ namespace ChapeauUI
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label lbl_user;
-        private System.Windows.Forms.Button btn_addOrder;
-        private System.Windows.Forms.Button btn_pay;
-        private System.Windows.Forms.ListView listViewOrders;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btn_GoBack;
-        private System.Windows.Forms.Button btn_seatGuests;
+        private System.Windows.Forms.Button button3;
     }
 }

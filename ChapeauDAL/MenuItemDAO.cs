@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
-using System.Data;
 using ChapeauModel;
 
 namespace ChapeauDAL
 {
     public class MenuItemDAO : BaseDao
     {
-        //sasa changed this method bcs of an error
+
         public List<MenuItem> GetAllMenuItems()
         {
-            /*
             OpenConnection();
             SqlCommand queryGetAll = new SqlCommand("SELECT * FROM [MenuItem]");
             SqlDataReader reader = queryGetAll.ExecuteReader();
@@ -24,31 +23,6 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
             return menuItems;
-            */
-            string query = "SELECT * FROM [MenuItem]";
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-            return ReadItems(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        private List<MenuItem> ReadItems(DataTable dataTable)
-        {
-            List<MenuItem> items = new List<MenuItem>();
-
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                MenuItem item = new MenuItem()
-                {
-                    Menu_Item_ID = (int)(dr["menu_item_id"]),
-                    Menu_Item_Name = (string)(dr["menu_item_name"]),
-                    Menu_Item_Stock = (int)(dr["menu_item_stock"]),
-                    Menu_Item_Price = (int)(dr["menu_item_price"]),
-                    Menu_Item_Vat = (int)(dr["menu_item_vat"]),
-                    //Menu_ID = (Menu)(dr["menu_id"]),
-                    Menu_Item_Category = (string)(dr["menu_item_category"])
-                };
-                items.Add(item);
-            }
-            return items;
         }
 
         public MenuItem GetMenuItemByID(int id)

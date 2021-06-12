@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 using ChapeauLogic;
 using ChapeauModel;
@@ -38,43 +37,17 @@ namespace ChapeauUI
         private void btn_GoBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            lbl_TableOverview tablepage = new lbl_TableOverview(user);
+            TableOverview tablepage = new TableOverview(user);
             tablepage.ShowDialog();
             this.Close();
         }
 
         private void TableOrderView_Load(object sender, EventArgs e)
         {
-            lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
-
-            /*
-            if(table.Table_Availability==Table_Availability.Occupied)
-            {
-                btn_seatGuests.Hide();
-            }
-
-            OrderService orderService = new OrderService();
-            List<Order> orderList = new List<Order>();
-
-            listViewOrders.Clear();
-            listViewOrders.View = View.Details;
-            listViewOrders.Columns.Add("Item");
-            listViewOrders.Columns.Add("Quantity");
-            listViewOrders.Columns.Add("Price");
-
-            foreach(Order o in orderList)
-            {
-                ListViewItem li = new ListViewItem(new String[] { o. });
-                listViewOrders.Items.Add(li);
-            }
-            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
-            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
-            */
+            lbl_user.Text = user.First_Name + user.Last_Name;
         }
 
-        //change the buttons name!
-
-        private void btn_pay_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Bill billpage = new Bill();
@@ -82,7 +55,7 @@ namespace ChapeauUI
             this.Close();
         }
 
-        private void btn_addOrder_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             OrderDisplayMenu menupage = new OrderDisplayMenu();

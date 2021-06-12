@@ -29,7 +29,6 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txtPin = new System.Windows.Forms.TextBox();
             this.btn_Login = new System.Windows.Forms.Button();
             this.btn_clear = new System.Windows.Forms.Button();
@@ -97,8 +96,6 @@ namespace ChapeauUI
             // 
             // btn_three
             // 
-            this.btn_three.Image = ((System.Drawing.Image)(resources.GetObject("btn_three.Image")));
-            this.btn_three.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btn_three.Location = new System.Drawing.Point(155, 87);
             this.btn_three.Name = "btn_three";
             this.btn_three.Size = new System.Drawing.Size(35, 23);
