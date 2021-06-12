@@ -10,12 +10,19 @@ namespace ChapeauLogic
 
         public OrderService()
         {
-
+            ordersdb = new OrderDAO();
         }
-        public List<Order> GetOrders()
+
+        public List<Order> GetAllOrders()
         {
             List<Order> orders = ordersdb.GetAllOrders();
             return orders;
+        }
+
+        public List<OrderItem> GetAllOrderItems()
+        {
+            List<OrderItem> orderItems = ordersdb.GetAllOrderItems();
+            return orderItems;
         }
 
         public void UpdateOrderStatusToOrdered(Order order, OrderStatus ordered)

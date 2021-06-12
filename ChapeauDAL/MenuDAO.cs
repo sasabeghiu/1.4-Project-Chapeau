@@ -12,8 +12,7 @@ namespace ChapeauDAL
 
         public MenuDAO()
         {
-            string connString = ConfigurationManager.ConnectionStrings["DBConnectionString"].ConnectionString;
-            dbConnection = new SqlConnection(connString);
+
         }
 
         public List<Menu> GetAll()
