@@ -16,7 +16,7 @@
     <Compile Update="OrderDisplayMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="OrderHome.cs">
+    <Compile Update="OrderMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TableOrderView.cs">
