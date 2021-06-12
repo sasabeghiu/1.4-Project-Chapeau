@@ -1,7 +1,7 @@
 ﻿
 namespace ChapeauUI
 {
-    partial class TableOverview
+    partial class lbl_TableOverview
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblTableOverview = new System.Windows.Forms.Label();
             this.btn_table_one = new System.Windows.Forms.Button();
             this.btn_table_two = new System.Windows.Forms.Button();
             this.btn_table_three = new System.Windows.Forms.Button();
@@ -44,18 +44,20 @@ namespace ChapeauUI
             this.lbl_user = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lblTableOverview
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(354, 38);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Table Overview";
+            this.lblTableOverview.AutoSize = true;
+            this.lblTableOverview.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTableOverview.Location = new System.Drawing.Point(335, 67);
+            this.lblTableOverview.Name = "lblTableOverview";
+            this.lblTableOverview.Size = new System.Drawing.Size(127, 21);
+            this.lblTableOverview.TabIndex = 0;
+            this.lblTableOverview.Text = "Table Overview";
             // 
             // btn_table_one
             // 
-            this.btn_table_one.Location = new System.Drawing.Point(57, 111);
+            this.btn_table_one.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_one.Location = new System.Drawing.Point(52, 136);
             this.btn_table_one.Name = "btn_table_one";
             this.btn_table_one.Size = new System.Drawing.Size(55, 38);
             this.btn_table_one.TabIndex = 12;
@@ -65,7 +67,8 @@ namespace ChapeauUI
             // 
             // btn_table_two
             // 
-            this.btn_table_two.Location = new System.Drawing.Point(57, 207);
+            this.btn_table_two.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_two.Location = new System.Drawing.Point(52, 232);
             this.btn_table_two.Name = "btn_table_two";
             this.btn_table_two.Size = new System.Drawing.Size(55, 38);
             this.btn_table_two.TabIndex = 13;
@@ -75,7 +78,8 @@ namespace ChapeauUI
             // 
             // btn_table_three
             // 
-            this.btn_table_three.Location = new System.Drawing.Point(212, 111);
+            this.btn_table_three.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_three.Location = new System.Drawing.Point(207, 136);
             this.btn_table_three.Name = "btn_table_three";
             this.btn_table_three.Size = new System.Drawing.Size(55, 38);
             this.btn_table_three.TabIndex = 14;
@@ -85,7 +89,8 @@ namespace ChapeauUI
             // 
             // btn_table_five
             // 
-            this.btn_table_five.Location = new System.Drawing.Point(367, 111);
+            this.btn_table_five.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_five.Location = new System.Drawing.Point(362, 136);
             this.btn_table_five.Name = "btn_table_five";
             this.btn_table_five.Size = new System.Drawing.Size(55, 38);
             this.btn_table_five.TabIndex = 16;
@@ -95,7 +100,8 @@ namespace ChapeauUI
             // 
             // btn_table_four
             // 
-            this.btn_table_four.Location = new System.Drawing.Point(212, 207);
+            this.btn_table_four.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_four.Location = new System.Drawing.Point(207, 232);
             this.btn_table_four.Name = "btn_table_four";
             this.btn_table_four.Size = new System.Drawing.Size(55, 38);
             this.btn_table_four.TabIndex = 15;
@@ -105,7 +111,8 @@ namespace ChapeauUI
             // 
             // btn_table_ten
             // 
-            this.btn_table_ten.Location = new System.Drawing.Point(675, 207);
+            this.btn_table_ten.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_ten.Location = new System.Drawing.Point(670, 232);
             this.btn_table_ten.Name = "btn_table_ten";
             this.btn_table_ten.Size = new System.Drawing.Size(55, 38);
             this.btn_table_ten.TabIndex = 21;
@@ -115,7 +122,8 @@ namespace ChapeauUI
             // 
             // btn_table_nine
             // 
-            this.btn_table_nine.Location = new System.Drawing.Point(675, 111);
+            this.btn_table_nine.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_nine.Location = new System.Drawing.Point(670, 136);
             this.btn_table_nine.Name = "btn_table_nine";
             this.btn_table_nine.Size = new System.Drawing.Size(55, 38);
             this.btn_table_nine.TabIndex = 20;
@@ -125,7 +133,8 @@ namespace ChapeauUI
             // 
             // btn_table_eight
             // 
-            this.btn_table_eight.Location = new System.Drawing.Point(523, 207);
+            this.btn_table_eight.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_eight.Location = new System.Drawing.Point(518, 232);
             this.btn_table_eight.Name = "btn_table_eight";
             this.btn_table_eight.Size = new System.Drawing.Size(55, 38);
             this.btn_table_eight.TabIndex = 19;
@@ -135,7 +144,8 @@ namespace ChapeauUI
             // 
             // btn_table_seven
             // 
-            this.btn_table_seven.Location = new System.Drawing.Point(523, 111);
+            this.btn_table_seven.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_seven.Location = new System.Drawing.Point(518, 136);
             this.btn_table_seven.Name = "btn_table_seven";
             this.btn_table_seven.Size = new System.Drawing.Size(55, 38);
             this.btn_table_seven.TabIndex = 18;
@@ -145,7 +155,8 @@ namespace ChapeauUI
             // 
             // btn_table_six
             // 
-            this.btn_table_six.Location = new System.Drawing.Point(367, 207);
+            this.btn_table_six.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_table_six.Location = new System.Drawing.Point(362, 232);
             this.btn_table_six.Name = "btn_table_six";
             this.btn_table_six.Size = new System.Drawing.Size(55, 38);
             this.btn_table_six.TabIndex = 17;
@@ -155,7 +166,8 @@ namespace ChapeauUI
             // 
             // btn_logout
             // 
-            this.btn_logout.Location = new System.Drawing.Point(28, 26);
+            this.btn_logout.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_logout.Location = new System.Drawing.Point(52, 67);
             this.btn_logout.Name = "btn_logout";
             this.btn_logout.Size = new System.Drawing.Size(75, 27);
             this.btn_logout.TabIndex = 22;
@@ -166,13 +178,14 @@ namespace ChapeauUI
             // lbl_user
             // 
             this.lbl_user.AutoSize = true;
-            this.lbl_user.Location = new System.Drawing.Point(629, 38);
+            this.lbl_user.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbl_user.Location = new System.Drawing.Point(657, 67);
             this.lbl_user.Name = "lbl_user";
-            this.lbl_user.Size = new System.Drawing.Size(117, 15);
+            this.lbl_user.Size = new System.Drawing.Size(44, 17);
             this.lbl_user.TabIndex = 23;
-            this.lbl_user.Text = "User: name/surname";
+            this.lbl_user.Text = "User: ";
             // 
-            // TableOverview
+            // lbl_TableOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +202,8 @@ namespace ChapeauUI
             this.Controls.Add(this.btn_table_three);
             this.Controls.Add(this.btn_table_two);
             this.Controls.Add(this.btn_table_one);
-            this.Controls.Add(this.label1);
-            this.Name = "TableOverview";
+            this.Controls.Add(this.lblTableOverview);
+            this.Name = "lbl_TableOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOverview";
             this.Load += new System.EventHandler(this.TableOverview_Load);
@@ -201,7 +214,7 @@ namespace ChapeauUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTableOverview;
         private System.Windows.Forms.Button btn_table_one;
         private System.Windows.Forms.Button btn_table_two;
         private System.Windows.Forms.Button btn_table_three;
