@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ChapeauUI
 {
-    public partial class KitchenView : Form
+    public partial class BarView : Form
     {
-        public KitchenView()
+        public BarView()
         {
             InitializeComponent();
             LoadCurrentOrders();
@@ -19,8 +19,8 @@ namespace ChapeauUI
 
         private void LoadCurrentOrders()
         {
-            panelKitchenCurrent.Show();
-            panelKitchenPrevious.Hide();
+            panelBarCurrent.Show();
+            panelBarPrevious.Hide();
 
             OrderService orderService = new OrderService();
 
@@ -29,7 +29,7 @@ namespace ChapeauUI
             listViewCurrentOrders.View = View.Details;
             listViewCurrentOrders.Items.Clear();
 
-            foreach(Order order in orderList)
+            foreach (Order order in orderList)
             {
                 ListViewItem li = new ListViewItem(order.OrderID.ToString());
                 li.SubItems.Add(order.Order_Status.ToString());
@@ -37,20 +37,17 @@ namespace ChapeauUI
                 li.Tag = order;
                 listViewCurrentOrders.Items.Add(li);
             }
-        }
 
-        private void listViewCurrentOrders_SelectedIndexChanged(object sender, EventArgs e)
-        {
             if (listViewCurrentOrders.SelectedItems.Count > 0)
             {
-                lbltest.Text = "works!";
+
             }
         }
 
         private void LoadPreviousOrders()
         {
-            panelKitchenPrevious.Show();
-            panelKitchenCurrent.Hide();
+            panelBarPrevious.Show();
+            panelBarCurrent.Hide();
 
             OrderService orderService = new OrderService();
 
@@ -82,31 +79,24 @@ namespace ChapeauUI
             }
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e) //logout button
+        private void BtnCurrentB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMarkAsReadyBP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logout_Click(object sender, EventArgs e)
         {
             Logout();
         }
 
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            LoadPreviousOrders();
-        }
-
-        private void btnCurrent_Click(object sender, EventArgs e)
-        {
-            LoadCurrentOrders();
-        }
-
-        private void KitchenView_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void btnLogOut_Click(object sender, EventArgs e)
         {
             Logout();
         }
-
-
     }
 }

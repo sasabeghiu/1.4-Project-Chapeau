@@ -42,11 +42,18 @@ namespace ChapeauUI
                     waiterform.ShowDialog();
                     this.Close();
                 }
-                else if (user.Employee_Role == EmployeeRole.Chef || user.Employee_Role == EmployeeRole.Bartender)
+                else if(user.Employee_Role == EmployeeRole.Bartender)
                 {
                     this.Hide();
-                    KitchenView barform = new KitchenView();
+                    BarView barform = new BarView();
                     barform.ShowDialog();
+                    this.Close();
+                }
+                else if (user.Employee_Role == EmployeeRole.Chef)
+                {
+                    this.Hide();
+                    KitchenView cheform = new KitchenView();
+                    cheform.ShowDialog();
                     this.Close();
                 }
                 else if (user.Employee_Role == EmployeeRole.Manager)
