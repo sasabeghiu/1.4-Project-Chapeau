@@ -8,3 +8,6 @@ ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.assets.cache
 ChapeauUI/bin/Debug/netcoreapp3.1/ChapeauModel.pdb
 *.dll
 *.pdb
+ChapeauLogic/obj/Debug/netcoreapp3.1/ChapeauLogic.csproj.AssemblyReference.cache
+ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.designer.deps.json
+ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.designer.runtimeconfig.json
