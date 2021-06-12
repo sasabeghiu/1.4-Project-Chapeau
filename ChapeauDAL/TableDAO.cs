@@ -26,7 +26,7 @@ namespace ChapeauDAL
                 {
                     Table_Number = (int)(dr["table_number"]),
                     Table_Capacity = (int)(dr["table_capacity"]),
-                    Table_Availability = (Table_Availability)Enum.Parse(typeof(Table_Availability), dr["table_availability"].ToString())
+                    Table_Availability = ((Table_Availability)dr["table_availability"])
                 };
                 tables.Add(table);
             }

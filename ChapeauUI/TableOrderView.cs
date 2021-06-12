@@ -44,6 +44,7 @@ namespace ChapeauUI
 
         private void TableOrderView_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
 
             /*
@@ -66,6 +67,9 @@ namespace ChapeauUI
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
             */
+=======
+            lbl_user.Text = user.First_Name + user.Last_Name;
+>>>>>>> parent of ee71bd3 (changed the tables colors depending on availability)
         }
 
         private void button2_Click(object sender, EventArgs e)

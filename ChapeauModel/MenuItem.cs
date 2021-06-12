@@ -12,11 +12,6 @@ namespace ChapeauModel
         public Menu Menu_ID { get; set; }
         public string Menu_Item_Category { get; set; }
 
-        public MenuItem()
-        {
-
-        }
-
         public MenuItem(int menu_item_id, string menu_item_name, int menu_item_stock, int menu_item_price, int menu_item_vat, Menu menu_id, string menu_item_category)
         {
             Menu_Item_ID = menu_item_id;
