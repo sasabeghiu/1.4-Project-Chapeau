@@ -7,12 +7,12 @@ using ChapeauModel;
 
 namespace ChapeauUI
 {
-    public partial class lbl_TableOverview : Form
+    public partial class TableOverview : Form
     {
         Employee user;
         TableService tableService;
 
-        public lbl_TableOverview(Employee user)
+        public TableOverview(Employee user)
         {
             this.user = user;
             tableService = new TableService();

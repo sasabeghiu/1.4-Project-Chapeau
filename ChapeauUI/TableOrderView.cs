@@ -38,7 +38,7 @@ namespace ChapeauUI
         private void btn_GoBack_Click(object sender, EventArgs e)
         {
             this.Hide();
-            lbl_TableOverview tablepage = new lbl_TableOverview(user);
+            TableOverview tablepage = new TableOverview(user);
             tablepage.ShowDialog();
             this.Close();
         }
@@ -85,7 +85,7 @@ namespace ChapeauUI
         private void btn_addOrder_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            OrderDisplayMenu menupage = new OrderDisplayMenu();
+            OrderMain menupage = new OrderMain();
             menupage.ShowDialog();
             this.Close();
         }

@@ -1,7 +1,7 @@
 ﻿
 namespace ChapeauUI
 {
-    partial class lbl_TableOverview
+    partial class TableOverview
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,12 @@ namespace ChapeauUI
             this.btn_table_six = new System.Windows.Forms.Button();
             this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_user = new System.Windows.Forms.Label();
+            this.lbl_redtable = new System.Windows.Forms.Label();
+            this.lbl_orangetable = new System.Windows.Forms.Label();
+            this.lbl_greentable = new System.Windows.Forms.Label();
+            this.lbl_free = new System.Windows.Forms.Label();
+            this.lbl_ocupied = new System.Windows.Forms.Label();
+            this.lbl_reserved = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTableOverview
@@ -185,11 +191,74 @@ namespace ChapeauUI
             this.lbl_user.TabIndex = 23;
             this.lbl_user.Text = "User: ";
             // 
-            // lbl_TableOverview
+            // lbl_redtable
+            // 
+            this.lbl_redtable.AutoSize = true;
+            this.lbl_redtable.BackColor = System.Drawing.Color.Red;
+            this.lbl_redtable.Location = new System.Drawing.Point(52, 310);
+            this.lbl_redtable.Name = "lbl_redtable";
+            this.lbl_redtable.Size = new System.Drawing.Size(34, 15);
+            this.lbl_redtable.TabIndex = 24;
+            this.lbl_redtable.Text = "         ";
+            // 
+            // lbl_orangetable
+            // 
+            this.lbl_orangetable.AutoSize = true;
+            this.lbl_orangetable.BackColor = System.Drawing.Color.Orange;
+            this.lbl_orangetable.Location = new System.Drawing.Point(52, 332);
+            this.lbl_orangetable.Name = "lbl_orangetable";
+            this.lbl_orangetable.Size = new System.Drawing.Size(34, 15);
+            this.lbl_orangetable.TabIndex = 25;
+            this.lbl_orangetable.Text = "         ";
+            // 
+            // lbl_greentable
+            // 
+            this.lbl_greentable.AutoSize = true;
+            this.lbl_greentable.BackColor = System.Drawing.Color.Green;
+            this.lbl_greentable.Location = new System.Drawing.Point(52, 355);
+            this.lbl_greentable.Name = "lbl_greentable";
+            this.lbl_greentable.Size = new System.Drawing.Size(34, 15);
+            this.lbl_greentable.TabIndex = 26;
+            this.lbl_greentable.Text = "         ";
+            // 
+            // lbl_free
+            // 
+            this.lbl_free.AutoSize = true;
+            this.lbl_free.Location = new System.Drawing.Point(92, 355);
+            this.lbl_free.Name = "lbl_free";
+            this.lbl_free.Size = new System.Drawing.Size(55, 15);
+            this.lbl_free.TabIndex = 27;
+            this.lbl_free.Text = "Available";
+            // 
+            // lbl_ocupied
+            // 
+            this.lbl_ocupied.AutoSize = true;
+            this.lbl_ocupied.Location = new System.Drawing.Point(92, 310);
+            this.lbl_ocupied.Name = "lbl_ocupied";
+            this.lbl_ocupied.Size = new System.Drawing.Size(58, 15);
+            this.lbl_ocupied.TabIndex = 28;
+            this.lbl_ocupied.Text = "Occupied";
+            // 
+            // lbl_reserved
+            // 
+            this.lbl_reserved.AutoSize = true;
+            this.lbl_reserved.Location = new System.Drawing.Point(92, 332);
+            this.lbl_reserved.Name = "lbl_reserved";
+            this.lbl_reserved.Size = new System.Drawing.Size(54, 15);
+            this.lbl_reserved.TabIndex = 29;
+            this.lbl_reserved.Text = "Reserved";
+            // 
+            // TableOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
+            this.ClientSize = new System.Drawing.Size(784, 412);
+            this.Controls.Add(this.lbl_reserved);
+            this.Controls.Add(this.lbl_ocupied);
+            this.Controls.Add(this.lbl_free);
+            this.Controls.Add(this.lbl_greentable);
+            this.Controls.Add(this.lbl_orangetable);
+            this.Controls.Add(this.lbl_redtable);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.btn_table_ten);
@@ -203,7 +272,7 @@ namespace ChapeauUI
             this.Controls.Add(this.btn_table_two);
             this.Controls.Add(this.btn_table_one);
             this.Controls.Add(this.lblTableOverview);
-            this.Name = "lbl_TableOverview";
+            this.Name = "TableOverview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOverview";
             this.Load += new System.EventHandler(this.TableOverview_Load);
@@ -227,5 +296,11 @@ namespace ChapeauUI
         private System.Windows.Forms.Button btn_table_six;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label lbl_user;
+        private System.Windows.Forms.Label lbl_redtable;
+        private System.Windows.Forms.Label lbl_orangetable;
+        private System.Windows.Forms.Label lbl_greentable;
+        private System.Windows.Forms.Label lbl_free;
+        private System.Windows.Forms.Label lbl_ocupied;
+        private System.Windows.Forms.Label lbl_reserved;
     }
 }

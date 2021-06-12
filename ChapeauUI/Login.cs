@@ -38,7 +38,7 @@ namespace ChapeauUI
                 if (user.Employee_Role == EmployeeRole.Waiter)
                 {
                     this.Hide();
-                    lbl_TableOverview waiterform = new lbl_TableOverview(user);
+                    TableOverview waiterform = new TableOverview(user);
                     waiterform.ShowDialog();
                     this.Close();
                 }
