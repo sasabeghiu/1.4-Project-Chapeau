@@ -44,7 +44,28 @@ namespace ChapeauUI
 
         private void TableOrderView_Load(object sender, EventArgs e)
         {
-            lbl_user.Text = user.First_Name + user.Last_Name;
+            lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
+
+            /*
+            if(table.Table_Availability==Table_Availability.Occupied)
+            {
+                btn_seatGuests.Hide();
+            }
+            OrderService orderService = new OrderService();
+            List<Order> orderList = new List<Order>();
+            listViewOrders.Clear();
+            listViewOrders.View = View.Details;
+            listViewOrders.Columns.Add("Item");
+            listViewOrders.Columns.Add("Quantity");
+            listViewOrders.Columns.Add("Price");
+            foreach(Order o in orderList)
+            {
+                ListViewItem li = new ListViewItem(new String[] { o. });
+                listViewOrders.Items.Add(li);
+            }
+            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
+            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
+            */
         }
 
         private void button2_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using ChapeauLogic;
 using ChapeauModel;
+using System.Drawing;
 
 namespace ChapeauUI
 {
@@ -10,7 +11,7 @@ namespace ChapeauUI
     {
         Employee user;
         TableService tableService;
-       
+
         public TableOverview(Employee user)
         {
             this.user = user;
@@ -20,16 +21,26 @@ namespace ChapeauUI
 
         private void TableOverview_Load(object sender, EventArgs e)
         {
-            lbl_user.Text = user.First_Name + user.Last_Name;
+            lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
 
-            /*List<Table> tables = tableService.GetTables();
-            foreach(Table table in tables)
+            List<Table> tables = tableService.GetTables();
+            Button[] buttons = { btn_table_one, btn_table_two, btn_table_three, btn_table_four, btn_table_five, btn_table_six, btn_table_seven, btn_table_eight, btn_table_nine, btn_table_ten };
+
+            for (int i = 0; i < tables.Count; i++)
             {
-                if (table.Table_Availability==Table_Availability.Available)
+                if (tables[i].Table_Availability == Table_Availability.Available)
                 {
-                    //
+                    buttons[i].BackColor = Color.Green;
                 }
-            }*/
+                else if (tables[i].Table_Availability == Table_Availability.Reserved)
+                {
+                    buttons[i].BackColor = Color.Orange;
+                }
+                else if (tables[i].Table_Availability == Table_Availability.Occupied)
+                {
+                    buttons[i].BackColor = Color.Red;
+                }
+            }
         }
 
         //when selecting a table a new form with order details will be opened depending on the table
@@ -97,7 +108,7 @@ namespace ChapeauUI
         {
             var result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
 
-            if (result==DialogResult.Yes)
+            if (result == DialogResult.Yes)
             {
                 this.Hide();
                 Login loginpage = new Login();

@@ -40,7 +40,7 @@ namespace ChapeauDAL
                     Table_Number = (Table)dr["table_number"],
                     Employee_Number = (Employee)dr["empoyee_number"],
                     Order_Time = (DateTime)dr["order_time"],
-                    Order_Status = (OrderStatus)dr["order_status"],
+                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
                     Comment = (string)dr["comment"]
                 };
                 orders.Add(order);

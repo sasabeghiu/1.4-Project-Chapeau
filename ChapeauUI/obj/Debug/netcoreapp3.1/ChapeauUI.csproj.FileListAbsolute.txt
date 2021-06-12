@@ -157,3 +157,4 @@ D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\Chape
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.KitchenView.resources
 >>>>>>> Stashed changes
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.csproj.AssemblyReference.cache
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderMain.resources
