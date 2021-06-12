@@ -14,20 +14,17 @@ namespace ChapeauUI
         public KitchenView()
         {
             InitializeComponent();
-            LoadCurrentOrders();
+            LoadKitchenOrders();
         }
 
-        private void LoadCurrentOrders()
+        private void LoadKitchenOrders()
         {
-            panelKitchenCurrent.Show();
-            panelKitchenPrevious.Hide();
-
             OrderService orderService = new OrderService();
 
-            List<Order> orderList = orderService.GetCurrentOrders();
+            List<Order> orderList = orderService.GetKitchenOrders();
 
-            listViewCurrentOrders.View = View.Details;
-            listViewCurrentOrders.Items.Clear();
+            listViewKitchen.View = View.Details;
+            listViewKitchen.Items.Clear();
 
             foreach(Order order in orderList)
             {
@@ -35,34 +32,7 @@ namespace ChapeauUI
                 li.SubItems.Add(order.Order_Status.ToString());
                 li.SubItems.Add(order.Order_Time.ToString("MM/dd/yyyy HH:mm"));
                 li.Tag = order;
-                listViewCurrentOrders.Items.Add(li);
-            }
-
-            if(listViewCurrentOrders.SelectedItems.Count > 0)
-            {
-
-            }
-        }
-
-        private void LoadPreviousOrders()
-        {
-            panelKitchenPrevious.Show();
-            panelKitchenCurrent.Hide();
-
-            OrderService orderService = new OrderService();
-
-            List<Order> orderList = orderService.GetPreviousOrders();
-
-            listViewPreviousOrders.View = View.Details;
-            listViewPreviousOrders.Items.Clear();
-
-            foreach (Order order in orderList)
-            {
-                ListViewItem li = new ListViewItem(order.OrderID.ToString());
-                li.SubItems.Add(order.Order_Status.ToString());
-                li.SubItems.Add(order.Order_Time.ToString("MM/dd/yyyy HH:mm"));
-                li.Tag = order;
-                listViewPreviousOrders.Items.Add(li);
+                listViewKitchen.Items.Add(li);
             }
         }
 
@@ -77,16 +47,6 @@ namespace ChapeauUI
                 loginpage.ShowDialog();
                 this.Close();
             }
-        }
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            LoadPreviousOrders();
-        }
-
-        private void btnCurrent_Click(object sender, EventArgs e)
-        {
-            LoadCurrentOrders();
         }
     }
 }

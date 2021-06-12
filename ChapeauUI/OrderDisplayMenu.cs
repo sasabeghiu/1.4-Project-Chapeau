@@ -17,7 +17,6 @@ namespace ChapeauUI
 
         static OrderDisplayMenu orderDisplayMenu;
         MenuService menuService = new MenuService();
-        DataTable dataTable;
 
         public OrderDisplayMenu()
         {
@@ -52,8 +51,18 @@ namespace ChapeauUI
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
+
+        //this can't be done until the menu is updated private void DisplayMenuItems()
+        // {
+
+        //    List<MenuItem> menuItems = MenuService.GetByMenuId(menu_id);
+        //    foreach (MenuItem menuItem in menuItems)
+        //    {
+
+        //    }
+
+
 
     }
 }

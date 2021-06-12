@@ -12,17 +12,16 @@ namespace ChapeauLogic
         {
             ordersdb = new OrderDAO();
         }
-
-        public List<Order> GetAllOrders()
+        public List<Order> GetOrders()
         {
             List<Order> orders = ordersdb.GetAllOrders();
             return orders;
         }
 
-        public List<OrderItem> GetAllOrderItems()
+        public List<Order> GetKitchenOrders()
         {
-            List<OrderItem> orderItems = ordersdb.GetAllOrderItems();
-            return orderItems;
+            List<Order> orders = ordersdb.GetKitchenOrders();
+            return orders;
         }
 
         public void UpdateOrderStatusToOrdered(Order order, OrderStatus ordered)

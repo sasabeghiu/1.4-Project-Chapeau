@@ -40,7 +40,7 @@ namespace ChapeauDAL
                     Table_Number = (Table)dr["table_number"],
                     Employee_Number = (Employee)dr["empoyee_number"],
                     Order_Time = (DateTime)dr["order_time"],
-                    Order_Status = (OrderStatus)dr["order_status"],
+                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
                     Comment = (string)dr["comment"]
                 };
                 orders.Add(order);
@@ -147,7 +147,7 @@ namespace ChapeauDAL
         }
 
         //get order by order id
-        /* public Order GetOrderByOrderID(int order_ID)
+        public Order GetOrderByOrderID(int order_ID)
         {
             OpenConnection();
             SqlCommand queryGetOrderByOrderID = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE order_ID = @order_ID AND order_status <> 1"));
@@ -218,7 +218,6 @@ namespace ChapeauDAL
 
             return order;
         }
-        */
 
         /// now making all the queries for the order items
         /// read order item, get order items, get all order items
@@ -242,7 +241,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetOrderItems(DataTable dataTable)
         {
             OpenConnection();
-            SqlCommand sqlGetOrderItems = new SqlCommand("SELECT (order_item.id, order_number, menu_item_id, quantity, comment, status, datetime, table_number) FROM [Order_Item] LEFT OUTER JOIN [Orders] ON order_item_id = order_ID");
+            SqlCommand sqlGetOrderItems = new SqlCommand("SELECT OrderItems.order_item.id, OrderItems.order_number, OrderItems.menu_item_id, OrderItems.quantity, OrderItems.comment, OrderItems.status, OrderItems.datetime, OrderItems.table_number FROM [Order_Item] LEFT OUTER JOIN [Orders] ON OrderItems.order_item_id = Orders.order_ID");
             SqlDataReader reader = sqlGetOrderItems.ExecuteReader();
             List<OrderItem> orderItems = new List<OrderItem>();
 
@@ -271,10 +270,11 @@ namespace ChapeauDAL
             return orderItems;
         }
 
-        public List<OrderItem> GetAllOrderItems()
+        public List<OrderItem> GetAllOrderItems(int order_item_ID)
         {
             OpenConnection();
-            SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE order_item_id = '{OrderItem.order_item_id} ");
+            SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT OrderItems.order_item.id, OrderItems.order_number, OrderItems.menu_item_id, OrderItems.quantity, OrderItems.comment, OrderItems.status, OrderItems.datetime, OrderItems.table_number FROM [Order_Item] LEFT OUTER JOIN [Orders] ON OrderItems.order_item_id = Orders.order_ID WHERE Order.Items.order_item_id = @orderitemid");
+            queryGetAllOrderItems.Parameters.AddWithValue("@orderitemid", order_item_ID);
             SqlDataReader reader = queryGetAllOrderItems.ExecuteReader();
             List<OrderItem> orderItems = new List<OrderItem>();
             while (reader.Read())
@@ -293,6 +293,7 @@ namespace ChapeauDAL
             OpenConnection();
             SqlCommand queryAddOrderItem = new SqlCommand("INSERT INTO[Order_Item]([order_item_id],[order_number], [menu_item_id], [quantity], [comment],[status],[datetime],[table_number]) VALUES (@order_item_id, @order_number, @menu_item_id, @quantity, @comment, @datetime, @table_number); ");
             queryAddOrderItem.Parameters.AddWithValue("@order_item_id", orderItem.OrderItemID);
+
         }
 
         //update order item quantity.
@@ -327,18 +328,9 @@ namespace ChapeauDAL
 
         //   }
 
-        public List<Order> GetCurrentOrders()
+        public List<Order> GetKitchenOrders()
         {
-            string query = "SELECT order_ID, order_status, order_time FROM [Order] WHERE is_paid = 0";
-
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-
-            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        public List<Order> GetPreviousOrders()
-        {
-            string query = "SELECT order_ID, order_status, order_time FROM [Order] WHERE is_paid = 1";
+            string query = "SELECT order_ID, order_status, order_time FROM [Order]";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
 
