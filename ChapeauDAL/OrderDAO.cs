@@ -303,6 +303,43 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
+        public List<Order> GetCurrentOrders()
+        {
+            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 0";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<Order> GetPreviousOrders()
+        {
+            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 1";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        private List<Order> ReadKitchenOrders(DataTable dataTable)
+        {
+            List<Order> orderList = new List<Order>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                Order order = new Order()
+                {
+                    OrderID = (int)dr["order_ID"],
+                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
+                    Order_Time = (DateTime)(dr["order_time"]),
+
+                };
+                orderList.Add(order);
+            }
+            return orderList;
+        }
+
+
         //get order item last entered
         // public OrderItem GetLastOrderItem()
         // {
