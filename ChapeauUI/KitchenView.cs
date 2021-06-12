@@ -88,5 +88,10 @@ namespace ChapeauUI
         {
             LoadCurrentOrders();
         }
+
+        private void KitchenView_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

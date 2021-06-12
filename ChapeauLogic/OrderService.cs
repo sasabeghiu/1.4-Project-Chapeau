@@ -25,6 +25,18 @@ namespace ChapeauLogic
             return orderItems;
         }
 
+        public List<Order> GetCurrentOrders()
+        {
+            List<Order> orders = ordersdb.GetCurrentOrders();
+            return orders;
+        }
+
+        public List<Order> GetPreviousOrders()
+        {
+            List<Order> orders = ordersdb.GetPreviousOrders();
+            return orders;
+        }
+
         public void UpdateOrderStatusToOrdered(Order order, OrderStatus ordered)
         {
             ordersdb.UpdateOrderStatusToOrdered(order, ordered);

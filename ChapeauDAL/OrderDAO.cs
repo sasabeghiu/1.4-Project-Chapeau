@@ -147,7 +147,7 @@ namespace ChapeauDAL
         }
 
         //get order by order id
-        /* public Order GetOrderByOrderID(int order_ID)
+         public Order GetOrderByOrderID(int order_ID)
         {
             OpenConnection();
             SqlCommand queryGetOrderByOrderID = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE order_ID = @order_ID AND order_status <> 1"));
@@ -166,10 +166,11 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            GetAllOrderItems();
 
             return order;
         }
+
         //get order by bill id
         public Order GetOrderByBillID(int bill_ID)
         {
@@ -190,7 +191,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            GetAllOrderItems();
 
             return order;
         }
@@ -214,11 +215,10 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            GetAllOrderItems();
 
             return order;
         }
-        */
 
         /// now making all the queries for the order items
         /// read order item, get order items, get all order items

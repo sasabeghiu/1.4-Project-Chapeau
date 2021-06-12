@@ -251,6 +251,7 @@ namespace ChapeauUI
             this.Name = "KitchenView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenView";
+            this.Load += new System.EventHandler(this.KitchenView_Load);
             this.panelKitchenCurrent.ResumeLayout(false);
             this.panelKitchenCurrent.PerformLayout();
             this.panelKitchenPrevious.ResumeLayout(false);
