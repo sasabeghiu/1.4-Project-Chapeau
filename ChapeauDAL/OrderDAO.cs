@@ -166,7 +166,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            order.orderItems = GetAllOrderItems();
 
             return order;
         }
@@ -190,7 +190,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            order.orderItems = GetAllOrderItems();
 
             return order;
         }
@@ -214,7 +214,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems(order.OrderID);
+            order.orderItems = GetAllOrderItems();
 
             return order;
         }
@@ -270,20 +270,29 @@ namespace ChapeauDAL
             return orderItems;
         }
 
-        public List<OrderItem> GetAllOrderItems(int order_item_ID)
+        public List<OrderItem> GetAllOrderItems()
         {
             OpenConnection();
-            SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT OrderItems.order_item.id, OrderItems.order_number, OrderItems.menu_item_id, OrderItems.quantity, OrderItems.comment, OrderItems.status, OrderItems.datetime, OrderItems.table_number FROM [Order_Item] LEFT OUTER JOIN [Orders] ON OrderItems.order_item_id = Orders.order_ID WHERE Order.Items.order_item_id = @orderitemid");
-            queryGetAllOrderItems.Parameters.AddWithValue("@orderitemid", order_item_ID);
+            SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE order_item_id = '{OrderItem.order_item_id} ");
+
             SqlDataReader reader = queryGetAllOrderItems.ExecuteReader();
+
             List<OrderItem> orderItems = new List<OrderItem>();
+
             while (reader.Read())
+
             {
                 OrderItem orderItem = ReadOrderItem(reader);
+
                 orderItems.Add(orderItem);
+
             }
+
             reader.Close();
+
             CloseConnection();
+
+
             return orderItems;
         }
 
@@ -328,9 +337,18 @@ namespace ChapeauDAL
 
         //   }
 
-        public List<Order> GetKitchenOrders()
+        public List<Order> GetCurrentOrders()
         {
-            string query = "SELECT order_ID, order_status, order_time FROM [Order]";
+            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 0";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<Order> GetPreviousOrders()
+        {
+            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 1";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
 

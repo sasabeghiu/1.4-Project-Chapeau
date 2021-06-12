@@ -18,9 +18,21 @@ namespace ChapeauLogic
             return orders;
         }
 
-        public List<Order> GetKitchenOrders()
+        public List<OrderItem> GetAllOrderItems()
         {
-            List<Order> orders = ordersdb.GetKitchenOrders();
+            List<OrderItem> orderItems = ordersdb.GetAllOrderItems();
+            return orderItems;
+        }
+
+        public List<Order> GetCurrentOrders()
+        {
+            List<Order> orders = ordersdb.GetCurrentOrders();
+            return orders;
+        }
+
+        public List<Order> GetPreviousOrders()
+        {
+            List<Order> orders = ordersdb.GetPreviousOrders();
             return orders;
         }
 
