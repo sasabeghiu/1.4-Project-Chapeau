@@ -783,19 +783,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pablo\\.nuget\\packages\\": {}
+    "C:\\Users\\Conor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
+      "projectUniqueName": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauLogic\\ChapeauLogic.csproj",
       "projectName": "ChapeauLogic",
-      "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-      "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\obj\\",
+      "projectPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauLogic\\ChapeauLogic.csproj",
+      "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
+      "outputPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -809,11 +809,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-              "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
+            "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauDAL\\ChapeauDAL.csproj": {
+              "projectPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauDAL\\ChapeauDAL.csproj"
             },
-            "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
+            "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }

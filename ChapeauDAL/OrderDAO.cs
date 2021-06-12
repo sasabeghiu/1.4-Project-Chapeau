@@ -40,7 +40,7 @@ namespace ChapeauDAL
                     Table_Number = (Table)dr["table_number"],
                     Employee_Number = (Employee)dr["empoyee_number"],
                     Order_Time = (DateTime)dr["order_time"],
-                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
+                    Order_Status = (OrderStatus)dr["order_status"],
                     Comment = (string)dr["comment"]
                 };
                 orders.Add(order);
@@ -147,7 +147,7 @@ namespace ChapeauDAL
         }
 
         //get order by order id
-        public Order GetOrderByOrderID(int order_ID)
+        /* public Order GetOrderByOrderID(int order_ID)
         {
             OpenConnection();
             SqlCommand queryGetOrderByOrderID = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE order_ID = @order_ID AND order_status <> 1"));
@@ -166,7 +166,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems();
+            order.orderItems = GetAllOrderItems(order.OrderID);
 
             return order;
         }
@@ -190,7 +190,7 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems();
+            order.orderItems = GetAllOrderItems(order.OrderID);
 
             return order;
         }
@@ -214,10 +214,11 @@ namespace ChapeauDAL
             reader.Close();
             CloseConnection();
 
-            order.orderItems = GetAllOrderItems();
+            order.orderItems = GetAllOrderItems(order.OrderID);
 
             return order;
         }
+        */
 
         /// now making all the queries for the order items
         /// read order item, get order items, get all order items
@@ -241,7 +242,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetOrderItems(DataTable dataTable)
         {
             OpenConnection();
-            SqlCommand sqlGetOrderItems = new SqlCommand("SELECT OrderItems.order_item.id, OrderItems.order_number, OrderItems.menu_item_id, OrderItems.quantity, OrderItems.comment, OrderItems.status, OrderItems.datetime, OrderItems.table_number FROM [Order_Item] LEFT OUTER JOIN [Orders] ON OrderItems.order_item_id = Orders.order_ID");
+            SqlCommand sqlGetOrderItems = new SqlCommand("SELECT (order_item.id, order_number, menu_item_id, quantity, comment, status, datetime, table_number) FROM [Order_Item] LEFT OUTER JOIN [Orders] ON order_item_id = order_ID");
             SqlDataReader reader = sqlGetOrderItems.ExecuteReader();
             List<OrderItem> orderItems = new List<OrderItem>();
 
@@ -274,25 +275,15 @@ namespace ChapeauDAL
         {
             OpenConnection();
             SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE order_item_id = '{OrderItem.order_item_id} ");
-
             SqlDataReader reader = queryGetAllOrderItems.ExecuteReader();
-
             List<OrderItem> orderItems = new List<OrderItem>();
-
             while (reader.Read())
-
             {
                 OrderItem orderItem = ReadOrderItem(reader);
-
                 orderItems.Add(orderItem);
-
             }
-
             reader.Close();
-
             CloseConnection();
-
-
             return orderItems;
         }
 
@@ -302,7 +293,6 @@ namespace ChapeauDAL
             OpenConnection();
             SqlCommand queryAddOrderItem = new SqlCommand("INSERT INTO[Order_Item]([order_item_id],[order_number], [menu_item_id], [quantity], [comment],[status],[datetime],[table_number]) VALUES (@order_item_id, @order_number, @menu_item_id, @quantity, @comment, @datetime, @table_number); ");
             queryAddOrderItem.Parameters.AddWithValue("@order_item_id", orderItem.OrderItemID);
-
         }
 
         //update order item quantity.
@@ -336,42 +326,6 @@ namespace ChapeauDAL
         //  {
 
         //   }
-
-        public List<Order> GetCurrentOrders()
-        {
-            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 0";
-
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-
-            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        public List<Order> GetPreviousOrders()
-        {
-            string query = "SELECT order_ID, order_status, order_time FROM[Order] WHERE is_paid = 1";
-
-            SqlParameter[] sqlParameters = new SqlParameter[0];
-
-            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
-        }
-
-        private List<Order> ReadKitchenOrders(DataTable dataTable)
-        {
-            List<Order> orderList = new List<Order>();
-
-            foreach (DataRow dr in dataTable.Rows)
-            {
-                Order order = new Order()
-                {
-                    OrderID = (int)dr["order_ID"],
-                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
-                    Order_Time = (DateTime)(dr["order_time"]),
-
-                };
-                orderList.Add(order);
-            }
-            return orderList;
-        }
 
 
     }

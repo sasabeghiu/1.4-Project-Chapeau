@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\pablo\\.nuget\\packages\\": {}
+    "C:\\Users\\Conor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+      "projectUniqueName": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj",
       "projectName": "ChapeauModel",
-      "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-      "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\obj\\",
+      "projectPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj",
+      "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
+      "outputPath": "Z:\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

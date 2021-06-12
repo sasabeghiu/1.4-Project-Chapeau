@@ -52,7 +52,7 @@ namespace ChapeauUI
             this.listViewMenus.FullRowSelect = true;
             this.listViewMenus.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewMenus.HideSelection = false;
-            this.listViewMenus.Location = new System.Drawing.Point(3, 43);
+            this.listViewMenus.Location = new System.Drawing.Point(3, 51);
             this.listViewMenus.Name = "listViewMenus";
             this.listViewMenus.Size = new System.Drawing.Size(427, 403);
             this.listViewMenus.TabIndex = 0;
@@ -97,7 +97,7 @@ namespace ChapeauUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1186, 454);
+            this.ClientSize = new System.Drawing.Size(598, 454);
             this.Controls.Add(this.labelMenu);
             this.Controls.Add(this.listViewMenus);
             this.Name = "OrderDisplayMenu";
