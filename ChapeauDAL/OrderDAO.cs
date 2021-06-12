@@ -328,9 +328,18 @@ namespace ChapeauDAL
 
         //   }
 
-        public List<Order> GetKitchenOrders()
+        public List<Order> GetCurrentOrders()
         {
-            string query = "SELECT order_ID, order_status, order_time FROM [Order]";
+            string query = "SELECT order_ID, order_status, order_time FROM [Order] WHERE is_paid = 0";
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+
+            return ReadKitchenOrders(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public List<Order> GetPreviousOrders()
+        {
+            string query = "SELECT order_ID, order_status, order_time FROM [Order] WHERE is_paid = 1";
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
 

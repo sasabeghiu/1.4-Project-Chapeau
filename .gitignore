@@ -1,0 +1,10 @@
+
+*.dll
+*.pdb
+*.dll
+*.pdb
+ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.csproj.AssemblyReference.cache
+ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.assets.cache
+ChapeauUI/bin/Debug/netcoreapp3.1/ChapeauModel.pdb
+*.dll
+*.pdb
