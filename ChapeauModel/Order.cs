@@ -4,6 +4,7 @@ using ChapeauModel;
 
 public class Order
 {
+    public List<OrderItem> OrderedItems { get; set; }
 
     public int OrderID { get; set; } // to refer to the order later
     public int BillID { get; set; } //to refer to the bill within the order
@@ -30,6 +31,6 @@ public class Order
 
     public Order()
     {
-
+        OrderedItems = new List<OrderItem>();
     }
 }

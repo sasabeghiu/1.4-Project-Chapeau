@@ -77,5 +77,10 @@ namespace ChapeauLogic
             ordersdb.UpdateOrderStatusToDelivered(order, delivered);
         }
 
+        public List<OrderItem> GetOrderItemsByTableID(int tableid)
+        {
+            List<OrderItem> orderitems = ordersdb.GetOrderItemsByTableID(tableid);
+            return orderitems;
+        }
     }
 }

@@ -8,6 +8,10 @@ namespace ChapeauDAL
 {
     public class OrderDAO : BaseDao
     {
+        TableDAO tabledao = new TableDAO();
+        MenuDAO menudao = new MenuDAO();
+        MenuItemDAO menuItemDAO = new MenuItemDAO();
+
         /// read order or read orders
         private Order ReadOrder(SqlDataReader reader)
         {
@@ -61,45 +65,31 @@ namespace ChapeauDAL
 
 
         //add, edit, delete orders
-        public void AddOrder(Order order)
+        public void AddOrder()
         {
             OpenConnection();
-            SqlCommand queryAddOrder = new SqlCommand("INSERT INTO [Order] ([order_ID], [bill_ID], [table_number], [employee_number], [order_time], [order_status], [comment], [is_paid]) VALUES (@order_ID, @bill_ID, @table_number, @employee_number, @order_time, @order_status, @comment, @is_paid);");
-            queryAddOrder.Parameters.AddWithValue("@order_ID", order.OrderID);
-            queryAddOrder.Parameters.AddWithValue("@billID", order.BillID);
-            queryAddOrder.Parameters.AddWithValue("@table_number", order.Table_Number);
-            queryAddOrder.Parameters.AddWithValue("@employeeID", order.Employee_Number);
-            queryAddOrder.Parameters.AddWithValue("@order_time", order.Order_Time);
-            queryAddOrder.Parameters.AddWithValue(@"order_status", order.Order_Status);
-            queryAddOrder.Parameters.AddWithValue("@comment", order.Comment);
-            queryAddOrder.Parameters.AddWithValue("@is_paid", order.IsPaid);
-            queryAddOrder.ExecuteNonQuery();
+            string query = ("INSERT INTO [Order] ([order_ID], [bill_ID], [table_number], [employee_number], [order_time], [order_status], [comment], [is_paid]) VALUES (@order_ID, @bill_ID, @table_number, @employee_number, @order_time, @order_status, @comment, @is_paid);");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
+            ExecuteEditQuery(query, sqlParameters);
         }
 
-        public void EditOrder(Order order)
+        public void EditOrder()
         {
             OpenConnection();
-            SqlCommand queryEditOrder = new SqlCommand("UPDATE [Orders] SET [billID] = @billID, [table_number] = @table_number, [employee_number] = @employee_number, [order_time] = @order_time, [order_status] = @order_status, [comment] = @comment, [is_paid] = @ispaid WHERE [orderID] = @orderID");
-            queryEditOrder.Parameters.AddWithValue("@billID", order.BillID);
-            queryEditOrder.Parameters.AddWithValue("@table_number", order.Table_Number);
-            queryEditOrder.Parameters.AddWithValue("@employeeID", order.Employee_Number);
-            queryEditOrder.Parameters.AddWithValue("@order_time", order.Order_Time);
-            queryEditOrder.Parameters.AddWithValue(@"order_status", order.Order_Status);
-            queryEditOrder.Parameters.AddWithValue("@comment", order.Comment);
-            queryEditOrder.Parameters.AddWithValue("@is_paid", order.IsPaid);
-            queryEditOrder.Parameters.AddWithValue("@order_ID", order.OrderID);
-            queryEditOrder.ExecuteNonQuery();
+            string query = ("UPDATE [Orders] SET [billID] = @billID, [table_number] = @table_number, [employee_number] = @employee_number, [order_time] = @order_time, [order_status] = @order_status, [comment] = @comment, [is_paid] = @ispaid WHERE [orderID] = @orderID");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         public void DeleteOrder(Order order)
         {
             OpenConnection();
-            SqlCommand queryDeleteOrder = new SqlCommand("DELETE FROM [Orders] WHERE [order_ID] = @order_ID");
-            queryDeleteOrder.Parameters.AddWithValue("@order_ID", order.OrderID);
-            queryDeleteOrder.ExecuteNonQuery();
+            string query = ("DELETE FROM [Orders] WHERE [order_ID] = @order_ID");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
+            ExecuteEditQuery(query, sqlParameters);
         }
 
         //update status of order
@@ -131,95 +121,17 @@ namespace ChapeauDAL
             ExecuteEditQuery(query, sqlParameters);
         }
 
-        //get order last entered, order by order id,order by bill id, order by table number.
-        public Order GetLastOrder()
+        public List<OrderItem> GetOrderItemsByTableID(int tableid)
         {
             OpenConnection();
-            SqlCommand queryGetLastOrder = new SqlCommand("SELECT TOP 1 * FROM [Orders] ORDER BY [orderID] DESC");
-            SqlDataReader reader = queryGetLastOrder.ExecuteReader();
-            Order order = null;
-            if (reader.Read())
-            {
-                order = ReadOrder(reader);
-            }
-            reader.Close();
-            CloseConnection();
-            return order;
+            string query = "SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE table_number = @table_number";
+            SqlParameter[] sqlParameters = { new SqlParameter("@table_number", tableid) };
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
-        //get order by order id
-         public Order GetOrderByOrderID(int order_ID)
-        {
-            OpenConnection();
-            SqlCommand queryGetOrderByOrderID = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE order_ID = @order_ID AND order_status <> 1"));
-            queryGetOrderByOrderID.Parameters.AddWithValue("@order_ID", order_ID);
-            SqlDataReader reader = queryGetOrderByOrderID.ExecuteReader();
-            Order order = null;
-            if (reader.Read())
-            {
-                order = ReadOrder(reader);
-            }
 
-            if (reader.HasRows == false)
-            {
-                throw new Exception("There is no order placed at the selected table");
-            }
-            reader.Close();
-            CloseConnection();
+       
 
-            GetAllOrderItems();
-
-            return order;
-        }
-
-        //get order by bill id
-        public Order GetOrderByBillID(int bill_ID)
-        {
-            OpenConnection();
-            SqlCommand queryGetOrderByBillID = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE bill_ID = @bill_ID AND order_status <> 1"));
-            queryGetOrderByBillID.Parameters.AddWithValue("@bill_ID", bill_ID);
-            SqlDataReader reader = queryGetOrderByBillID.ExecuteReader();
-            Order order = null;
-            if (reader.Read())
-            {
-                order = ReadOrder(reader);
-            }
-
-            if (reader.HasRows == false)
-            {
-                throw new Exception("There is no order placed at the selected table");
-            }
-            reader.Close();
-            CloseConnection();
-
-            GetAllOrderItems();
-
-            return order;
-        }
-        //get order by table number
-        public Order GetOrderByTableNumber(int table_number)
-        {
-            OpenConnection();
-            SqlCommand queryOrderGetByTableNumber = new SqlCommand(("SELECT order_ID, bill_ID, table_number, employee_number, order_time, order_status, comment, is_paid FROM [Order] WHERE table_number = @table_number AND order_status <> 1"));
-            queryOrderGetByTableNumber.Parameters.AddWithValue("@table_number", table_number);
-            SqlDataReader reader = queryOrderGetByTableNumber.ExecuteReader();
-            Order order = null;
-            if (reader.Read())
-            {
-                order = ReadOrder(reader);
-            }
-
-            if (reader.HasRows == false)
-            {
-                throw new Exception("There is no order placed at the selected table");
-            }
-            reader.Close();
-            CloseConnection();
-
-            GetAllOrderItems();
-
-            return order;
-        }
 
         /// now making all the queries for the order items
         /// read order item, get order items, get all order items
@@ -243,8 +155,8 @@ namespace ChapeauDAL
         public List<OrderItem> GetOrderItems(DataTable dataTable)
         {
             OpenConnection();
-            SqlCommand sqlGetOrderItems = new SqlCommand("SELECT (order_item.id, order_number, menu_item_id, quantity, comment, status, datetime, table_number) FROM [Order_Item] LEFT OUTER JOIN [Orders] ON order_item_id = order_ID");
-            SqlDataReader reader = sqlGetOrderItems.ExecuteReader();
+            string query = "SELECT * FROM [Order_Item]";
+
             List<OrderItem> orderItems = new List<OrderItem>();
 
             foreach (DataRow dr in dataTable.Rows)
@@ -253,48 +165,48 @@ namespace ChapeauDAL
                 {
                     OrderItemID = (int)dr["order_item_id"],
                     Order_Number = (int)dr["order_number"],
-                    MenuItemID = (MenuItem)dr["menu_item_id"],
+                    MenuItemID = menuItemDAO.GetMenuItemByID((int)dr["menu_item_id"]),
                     Quantity = (int)dr["quantity"],
                     Comment = (string)dr["comment"],
-                    Order_Status = (OrderStatus)dr["status"],
+                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["status"].ToString()),
                     Order_Time = (DateTime)dr["datetime"],
-                    Table = (Table)dr["table_number"]
+                    Table_Number = tabledao.GetTable((int)dr["table_number"]),
                 };
                 orderItems.Add(orderitem);
             }
-            while (reader.Read())
-            {
-                OrderItem orderItem = ReadOrderItem(reader);
-                orderItems.Add(orderItem);
-            }
-            reader.Close();
+
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
-            return orderItems;
+            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<OrderItem> GetAllOrderItems()
         {
             OpenConnection();
-            SqlCommand queryGetAllOrderItems = new SqlCommand("SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE order_item_id = '{OrderItem.order_item_id} ");
-            SqlDataReader reader = queryGetAllOrderItems.ExecuteReader();
-            List<OrderItem> orderItems = new List<OrderItem>();
-            while (reader.Read())
-            {
-                OrderItem orderItem = ReadOrderItem(reader);
-                orderItems.Add(orderItem);
-            }
-            reader.Close();
+            string query = ("SELECT * FROM [Order_Item]");
+            SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
-            return orderItems;
+            return GetOrderItems(ExecuteSelectQuery(query, sqlParameters));
         }
-
         //add order item.
         public void AddOrderItem(OrderItem orderItem)
         {
-            OpenConnection();
-            SqlCommand queryAddOrderItem = new SqlCommand("INSERT INTO[Order_Item]([order_item_id],[order_number], [menu_item_id], [quantity], [comment],[status],[datetime],[table_number]) VALUES (@order_item_id, @order_number, @menu_item_id, @quantity, @comment, @datetime, @table_number); ");
-            queryAddOrderItem.Parameters.AddWithValue("@order_item_id", orderItem.OrderItemID);
+            int status = (int)orderItem.Order_Status;
+            Table tableNumber = orderItem.Table_Number;
+
+            string query = ("INSERT INTO[Order_Item](order_item_id,order_number, menu_item_id, quantity, comment, status,datetime,table_number) VALUES (@order_item_id, @order_number, @menu_item_id, @quantity, @comment, @datetime, @table_number); ");
+            SqlParameter[] sqlParameters = new SqlParameter[7];
+            sqlParameters[0] = new SqlParameter("order_item_id", orderItem.OrderItemID);
+            sqlParameters[1] = new SqlParameter("menu_item_id", orderItem.MenuItemID);
+            sqlParameters[2] = new SqlParameter("quantity", orderItem.Quantity);
+            sqlParameters[3] = new SqlParameter("comment", orderItem.Comment);
+            sqlParameters[4] = new SqlParameter("status", status);
+            sqlParameters[5] = new SqlParameter("datetime", orderItem.Order_Time);
+            sqlParameters[6] = new SqlParameter("table_number", tableNumber);
+
+            ExecuteSelectQuery(query, sqlParameters);
         }
+
 
         //update order item quantity.
         public void UpdateOrderItem(OrderItem orderItem, int newQuantity)
@@ -340,7 +252,7 @@ namespace ChapeauDAL
             }
             return orderList;
         }
-
+        
         public List<OrderItem> GetKitchenItemsById(int id)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
@@ -424,6 +336,8 @@ namespace ChapeauDAL
             return orderItem;
         }
 
+        //made another method below
+        /*
         private List<OrderItem> ReadOrderItems(DataTable dataTable)
         {
             List<OrderItem> itemList = new List<OrderItem>();
@@ -441,31 +355,31 @@ namespace ChapeauDAL
             }
             return itemList;
         }
+        */
 
-        //get order item last entered
-        // public OrderItem GetLastOrderItem()
-        // {
+        private List<OrderItem> ReadOrderItem(DataTable dataTable)
+        {
+            List<OrderItem> itemList = new List<OrderItem>();
 
-        // }
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem item = new OrderItem()
+                {
+                    OrderItemID = (int)dr["order_item_id"],
+                    Order_Number = (int)dr["order_number"],
+                    MenuItemID = menuItemDAO.GetMenuItemByID((int)dr["menu_item_id"]),
+                    Quantity = (int)dr["quantity"],
+                    Comment = (string)dr["comment"],
+                    Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["status"].ToString()),
+                    Order_Time = (DateTime)dr["datetime"],
+                    Table_Number = tabledao.GetTable((int)dr["table_number"]),
 
-        //get order item by order item id
-        // public OrderItem GetOrderItemByOrderID(int order_item_id)
-        // {
-
-        //  }
-
-        //get bar item only
-        //   public List<OrderItem> GetBarItems()
-        //   {
-
-        //   }
-
-        //get kitchen item only
-        //   public List<OrderItem> GetKitchenItems()
-        //  {
-
-        //   }
-
+                };
+                itemList.Add(item);
+            }
+            return itemList;
+        }
+        
 
     }
 }

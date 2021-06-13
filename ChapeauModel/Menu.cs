@@ -16,5 +16,9 @@ namespace ChapeauModel
             Start_Time = start_time;
             End_Time = end_time;
         }
+
+        public Menu()
+        {
+        }
     }
 }

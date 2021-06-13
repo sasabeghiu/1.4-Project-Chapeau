@@ -10,7 +10,7 @@ namespace ChapeauModel
         public int Quantity { get; set; }
         public string Comment { get; set; }
         public OrderStatus Order_Status { get; set; }
-        public Table Table { get; set; }
+        public Table Table_Number { get; set; }
         public DateTime Order_Time { get; set; }
 
         public OrderItem(int orderItemID, int orderNumber, MenuItem menuitemID, int quantity, string comment, OrderStatus orderStatus, Table table, DateTime Ordertime)
@@ -21,7 +21,7 @@ namespace ChapeauModel
             Quantity = quantity;
             Comment = comment;
             Order_Status = orderStatus;
-            Table = table;
+            Table_Number = table;
             Order_Time = Ordertime;
         }
 
