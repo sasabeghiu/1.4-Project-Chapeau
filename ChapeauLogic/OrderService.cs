@@ -25,6 +25,12 @@ namespace ChapeauLogic
             return orderItems;
         }
 
+        public List<OrderItem> GetOrderItemsById(int orderid)
+        {
+            List<OrderItem> orderItems = ordersdb.GetItemsById(orderid);
+            return orderItems;
+        }
+
         public List<Order> GetCurrentOrders()
         {
             List<Order> orders = ordersdb.GetCurrentOrders();

@@ -330,6 +330,7 @@ namespace ChapeauDAL
             {
                 Order order = new Order()
                 {
+                    
                     OrderID = (int)dr["order_ID"],
                     Order_Status = (OrderStatus)Enum.Parse(typeof(OrderStatus), dr["order_status"].ToString()),
                     Order_Time = (DateTime)(dr["order_time"]),
@@ -339,7 +340,51 @@ namespace ChapeauDAL
             }
             return orderList;
         }
+        public List<OrderItem> GetItemsById(int id)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, quantity, Order_Item.comment FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id", OpenConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while(reader.Read())
+            {
+                OrderItem item = ReturnOrderItem(reader);
+                orderItems.Add(item);
+            }
+            reader.Close();
 
+            return orderItems;
+        }
+
+        private OrderItem ReturnOrderItem(SqlDataReader reader)
+        {
+            MenuItem item = new MenuItem
+            {
+                Menu_Item_Name = (string)reader["menu_item_name"],
+            };
+            int quantity = (int)reader["quantity"];
+            string comment = (string)reader["comment"];
+            OrderItem orderItem = new OrderItem(item, quantity, comment);
+            return orderItem;
+        }
+
+        private List<OrderItem> ReadOrderItems(DataTable dataTable)
+        {
+            List<OrderItem> itemList = new List<OrderItem>();
+
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                OrderItem item = new OrderItem()
+                {
+                    
+                    Quantity = (int)dr["quantity"],
+                    Order_Time = (DateTime)(dr["order_time"]),
+
+                };
+                itemList.Add(item);
+            }
+            return itemList;
+        }
 
         //get order item last entered
         // public OrderItem GetLastOrderItem()

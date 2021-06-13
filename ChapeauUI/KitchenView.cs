@@ -1,4 +1,5 @@
 ﻿using ChapeauLogic;
+using ChapeauModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,7 +44,9 @@ namespace ChapeauUI
         {
             if (listViewCurrentOrders.SelectedItems.Count > 0)
             {
-                lbltest.Text = "works!";
+                lbltest.Text = "2d";
+                int orderid = int.Parse(listViewCurrentOrders.SelectedItems[0].Text);
+                LoadOrderDetails(orderid);
             }
         }
 
@@ -69,6 +72,31 @@ namespace ChapeauUI
             }
         }
 
+        private void LoadOrderDetails(int orderid)
+        {
+            OrderService orderService = new OrderService();
+            List<OrderItem> itemList = orderService.GetOrderItemsById(orderid);
+
+            //MenuService menuService = new MenuService();
+            //Menu menu = menuService.GetByMenuId(2);
+            listViewDetailsK.Clear();
+            listViewDetailsK.View = View.Details;
+            listViewDetailsK.Items.Clear();
+
+            listViewDetailsK.Columns.Add("Item name");
+            listViewDetailsK.Columns.Add("Item quantity");
+            listViewDetailsK.Columns.Add("Item comment");
+
+            foreach (OrderItem item in itemList)
+            {
+                ListViewItem li = new ListViewItem(item.MenuItemID.Menu_Item_Name);
+                li.SubItems.Add(item.Quantity.ToString());
+                li.SubItems.Add(item.Comment);
+                li.Tag = item;
+                listViewDetailsK.Items.Add(li);
+            }
+        }
+
         private void Logout()
         {
             var result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
@@ -89,6 +117,7 @@ namespace ChapeauUI
 
         private void btnPrevious_Click(object sender, EventArgs e)
         {
+            btnMarkAsReadyKP.Enabled = false;
             LoadPreviousOrders();
         }
 

@@ -81,12 +81,7 @@ namespace ChapeauUI
 
         private void BtnCurrentB_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnMarkAsReadyBP_Click(object sender, EventArgs e)
-        {
-
+            LoadCurrentOrders();
         }
 
         private void logout_Click(object sender, EventArgs e)
@@ -97,6 +92,12 @@ namespace ChapeauUI
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Logout();
+        }
+
+        private void btnPreviousB_Click(object sender, EventArgs e)
+        {
+            btnMarkAsReadyBP.Enabled = false;
+            LoadPreviousOrders();
         }
     }
 }

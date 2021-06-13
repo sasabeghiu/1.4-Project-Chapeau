@@ -76,6 +76,7 @@ namespace ChapeauUI
             this.btnPreviousB.TabIndex = 5;
             this.btnPreviousB.Text = "Previous Orders";
             this.btnPreviousB.UseVisualStyleBackColor = true;
+            this.btnPreviousB.Click += new System.EventHandler(this.btnPreviousB_Click);
             // 
             // btnMarkAsReady
             // 
@@ -101,9 +102,9 @@ namespace ChapeauUI
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(290, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.Size = new System.Drawing.Size(119, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Bar Previous View";
+            this.label1.Text = "Bar Current View";
             // 
             // label2
             // 
@@ -184,7 +185,6 @@ namespace ChapeauUI
             this.btnMarkAsReadyBP.TabIndex = 4;
             this.btnMarkAsReadyBP.Text = "Mark as ready";
             this.btnMarkAsReadyBP.UseVisualStyleBackColor = true;
-            this.btnMarkAsReadyBP.Click += new System.EventHandler(this.btnMarkAsReadyBP_Click);
             // 
             // logout
             // 
