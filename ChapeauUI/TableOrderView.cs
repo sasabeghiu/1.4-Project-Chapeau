@@ -10,13 +10,14 @@ namespace ChapeauUI
     {
         Employee user;
         Table table;
+        TableService tableService;
 
         public TableOrderView(Employee user, int tableNr)
         {
-            this.user = user;
-            /*TableService tableService = new TableService();
+            tableService = new TableService();
             Table table = tableService.GetTable(tableNr);
-            this.table = table;*/
+            this.table = table;
+            this.user = user;
             InitializeComponent();
         }
 
@@ -47,14 +48,25 @@ namespace ChapeauUI
         {
             lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
 
-            /*
-            if(table.Table_Availability==Table_Availability.Occupied)
-            {
-                btn_seatGuests.Hide();
-            }
 
+            if (table.Table_Availability == Table_Availability.Occupied)
+            {
+                btn_seatGuests.Enabled = false;
+            }
+            else if (table.Table_Availability == Table_Availability.Reserved)
+            {
+                lbl_Reservation.Text = "Reservation for John and Marie LeClerk at 12:30";
+                btn_pay.Enabled = false;
+                btn_addOrder.Enabled = false;
+            }
+            else if (table.Table_Availability == Table_Availability.Available)
+            {
+                btn_pay.Enabled = false;
+                btn_addOrder.Enabled = false;
+            }
+            /*
             OrderService orderService = new OrderService();
-            List<Order> orderList = new List<Order>();
+            List<OrderItem> itemsList = orderService.GetAllOrderItems();
 
             listViewOrders.Clear();
             listViewOrders.View = View.Details;
@@ -62,9 +74,9 @@ namespace ChapeauUI
             listViewOrders.Columns.Add("Quantity");
             listViewOrders.Columns.Add("Price");
 
-            foreach(Order o in orderList)
+            foreach(OrderItem o in itemsList)
             {
-                ListViewItem li = new ListViewItem(new String[] { o. });
+                ListViewItem li = new ListViewItem(new String[] {o.MenuItemID.Menu_Item_Name, o.Quantity.ToString(), o.MenuItemID.Menu_Item_Price.ToString() });
                 listViewOrders.Items.Add(li);
             }
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
@@ -72,8 +84,7 @@ namespace ChapeauUI
             */
         }
 
-        //change the buttons name!
-
+        //pay the bill
         private void btn_pay_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -81,13 +92,22 @@ namespace ChapeauUI
             billpage.ShowDialog();
             this.Close();
         }
-
+        //open menu
         private void btn_addOrder_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             OrderMain menupage = new OrderMain();
             menupage.ShowDialog();
             this.Close();
+        }
+        
+        //seat guests or mark table as occupied
+        private void btn_seatGuests_Click(object sender, EventArgs e)
+        {
+            //use updatestatus
+            //table.Table_Availability = Table_Availability.Occupied;
+            MessageBox.Show("The table is now occupied, you can go to the menu.", $"Table {table.Table_Number} state changed");
+            btn_addOrder.Enabled = true;
         }
     }
 }

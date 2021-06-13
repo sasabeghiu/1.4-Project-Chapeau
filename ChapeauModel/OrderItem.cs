@@ -29,5 +29,12 @@ namespace ChapeauModel
         {
 
         }
+
+        public OrderItem(MenuItem menu, int quantity, string comment)
+        {
+            this.MenuItemID = menu;
+            this.Quantity = quantity;
+            this.Comment = comment;
+        }
     }
 }

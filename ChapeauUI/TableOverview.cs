@@ -22,7 +22,12 @@ namespace ChapeauUI
         private void TableOverview_Load(object sender, EventArgs e)
         {
             lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
-            
+            GetTableState();
+            //GetOrderState();
+        }
+
+        private void GetTableState()
+        {
             List<Table> tables = tableService.GetTables();
             Button[] buttons = { btn_table_one, btn_table_two, btn_table_three, btn_table_four, btn_table_five, btn_table_six, btn_table_seven, btn_table_eight, btn_table_nine, btn_table_ten };
             
@@ -43,6 +48,37 @@ namespace ChapeauUI
             }
         }
 
+        private void GetOrderState()
+        {
+            OrderService orderService = new OrderService();
+            List<Order> listoforders = orderService.GetAllOrders();
+
+            List<Table> tables = tableService.GetTables();
+            Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
+
+            for (int i = 0; i < tables.Count; i++)
+            {
+                foreach(Order order in listoforders)
+                {
+                    if (order.Order_Status==OrderStatus.Ordered)
+                    {
+                        labels[i].Text = "Ordered";
+                    }
+                    else if(order.Order_Status == OrderStatus.Preparing)
+                    {
+                        labels[i].Text = "Preparing";
+                    }
+                    else if (order.Order_Status == OrderStatus.Ready)
+                    {
+                        labels[i].Text = "Ready";
+                    }
+                    else if (order.Order_Status == OrderStatus.Delivered)
+                    {
+                        labels[i].Text = "Delivered";
+                    }
+                }
+            }
+        }
         //when selecting a table a new form with order details will be opened depending on the table
         private void SelectedTable(int tableNr)
         {
@@ -115,6 +151,11 @@ namespace ChapeauUI
                 loginpage.ShowDialog();
                 this.Close();
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

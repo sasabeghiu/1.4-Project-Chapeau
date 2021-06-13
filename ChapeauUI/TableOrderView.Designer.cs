@@ -29,7 +29,7 @@ namespace ChapeauUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_OrderView = new System.Windows.Forms.Label();
             this.btn_logout = new System.Windows.Forms.Button();
             this.lbl_user = new System.Windows.Forms.Label();
             this.btn_addOrder = new System.Windows.Forms.Button();
@@ -37,16 +37,17 @@ namespace ChapeauUI
             this.listViewOrders = new System.Windows.Forms.ListView();
             this.btn_GoBack = new System.Windows.Forms.Button();
             this.btn_seatGuests = new System.Windows.Forms.Button();
+            this.lbl_Reservation = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_OrderView
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(344, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Order View";
+            this.lbl_OrderView.AutoSize = true;
+            this.lbl_OrderView.Location = new System.Drawing.Point(344, 30);
+            this.lbl_OrderView.Name = "lbl_OrderView";
+            this.lbl_OrderView.Size = new System.Drawing.Size(65, 15);
+            this.lbl_OrderView.TabIndex = 0;
+            this.lbl_OrderView.Text = "Order View";
             // 
             // btn_logout
             // 
@@ -114,12 +115,22 @@ namespace ChapeauUI
             this.btn_seatGuests.TabIndex = 7;
             this.btn_seatGuests.Text = "Seat guests";
             this.btn_seatGuests.UseVisualStyleBackColor = true;
+            this.btn_seatGuests.Click += new System.EventHandler(this.btn_seatGuests_Click);
+            // 
+            // lbl_Reservation
+            // 
+            this.lbl_Reservation.AutoSize = true;
+            this.lbl_Reservation.Location = new System.Drawing.Point(195, 78);
+            this.lbl_Reservation.Name = "lbl_Reservation";
+            this.lbl_Reservation.Size = new System.Drawing.Size(0, 15);
+            this.lbl_Reservation.TabIndex = 8;
             // 
             // TableOrderView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.lbl_Reservation);
             this.Controls.Add(this.btn_seatGuests);
             this.Controls.Add(this.btn_GoBack);
             this.Controls.Add(this.listViewOrders);
@@ -127,7 +138,7 @@ namespace ChapeauUI
             this.Controls.Add(this.btn_addOrder);
             this.Controls.Add(this.lbl_user);
             this.Controls.Add(this.btn_logout);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_OrderView);
             this.Name = "TableOrderView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TableOrderView";
@@ -139,7 +150,7 @@ namespace ChapeauUI
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_OrderView;
         private System.Windows.Forms.Button btn_logout;
         private System.Windows.Forms.Label lbl_user;
         private System.Windows.Forms.Button btn_addOrder;
@@ -147,5 +158,6 @@ namespace ChapeauUI
         private System.Windows.Forms.ListView listViewOrders;
         private System.Windows.Forms.Button btn_GoBack;
         private System.Windows.Forms.Button btn_seatGuests;
+        private System.Windows.Forms.Label lbl_Reservation;
     }
 }

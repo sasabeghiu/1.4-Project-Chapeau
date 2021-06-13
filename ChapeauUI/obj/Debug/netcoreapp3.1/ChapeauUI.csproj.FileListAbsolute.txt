@@ -162,3 +162,4 @@ C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.cspro
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.OrderMain.resources
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.lbl_TableOverview.resources
 C:\Users\pablo\Desktop\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.BarView.resources
+D:\1NHOLLAND\year1repeat\project\Chapeau\ChapeauUI\obj\Debug\netcoreapp3.1\ChapeauUI.BarView.resources

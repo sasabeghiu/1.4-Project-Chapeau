@@ -18,7 +18,11 @@ namespace ChapeauLogic
             List<Table> tables = tabledb.GetAllTables();
             return tables;
         }
-
+        public Table GetTable(int tablenr)
+        {
+            Table table = tabledb.GetTable(tablenr);
+            return table;
+        }
         public void UpdateTable(Table table, bool occupied)
         {
             tabledb.UpdateTable(table, occupied);

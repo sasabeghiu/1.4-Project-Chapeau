@@ -42,6 +42,7 @@ namespace ChapeauDAL
                     Order_Time = (DateTime)dr["order_time"],
                     Order_Status = (OrderStatus)dr["order_status"],
                     Comment = (string)dr["comment"]
+
                 };
                 orders.Add(order);
             }
