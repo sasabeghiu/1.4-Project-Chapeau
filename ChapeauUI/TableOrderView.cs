@@ -64,9 +64,9 @@ namespace ChapeauUI
                 btn_pay.Enabled = false;
                 btn_addOrder.Enabled = false;
             }
-            /*
+            
             OrderService orderService = new OrderService();
-            List<OrderItem> itemsList = orderService.GetAllOrderItems();
+            List<OrderItem> itemsList = orderService.GetOrderItemsById(table.Table_Number);
 
             listViewOrders.Clear();
             listViewOrders.View = View.Details;
@@ -81,7 +81,7 @@ namespace ChapeauUI
             }
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
             listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
-            */
+            
         }
 
         //pay the bill

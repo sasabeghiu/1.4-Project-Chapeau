@@ -23,14 +23,14 @@ namespace ChapeauUI
         {
             lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
             GetTableState();
-            //GetOrderState();
+            GetOrderState();
         }
 
         private void GetTableState()
         {
             List<Table> tables = tableService.GetTables();
             Button[] buttons = { btn_table_one, btn_table_two, btn_table_three, btn_table_four, btn_table_five, btn_table_six, btn_table_seven, btn_table_eight, btn_table_nine, btn_table_ten };
-            
+
             for (int i = 0; i < tables.Count; i++)
             {
                 if (tables[i].Table_Availability == Table_Availability.Available)
@@ -50,21 +50,24 @@ namespace ChapeauUI
 
         private void GetOrderState()
         {
-            OrderService orderService = new OrderService();
-            List<Order> listoforders = orderService.GetAllOrders();
 
             List<Table> tables = tableService.GetTables();
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
 
+            OrderService orderService = new OrderService();
+
+
             for (int i = 0; i < tables.Count; i++)
             {
-                foreach(Order order in listoforders)
+                List<OrderItem> listoforders = orderService.GetOrderItemsById(i +1);
+
+                foreach (OrderItem order in listoforders)
                 {
-                    if (order.Order_Status==OrderStatus.Ordered)
+                    if (order.Order_Status == OrderStatus.Ordered)
                     {
                         labels[i].Text = "Ordered";
                     }
-                    else if(order.Order_Status == OrderStatus.Preparing)
+                    else if (order.Order_Status == OrderStatus.Preparing)
                     {
                         labels[i].Text = "Preparing";
                     }

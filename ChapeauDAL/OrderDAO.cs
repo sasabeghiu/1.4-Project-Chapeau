@@ -343,7 +343,7 @@ namespace ChapeauDAL
         public List<OrderItem> GetItemsById(int id)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
-            SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, quantity, Order_Item.comment FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id", OpenConnection());
+            SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, MenuItem.menu_item_price, quantity, Order_Item.comment, Order_Item.status FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id", OpenConnection());
             cmd.Parameters.AddWithValue("@id", id);
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
@@ -361,10 +361,12 @@ namespace ChapeauDAL
             MenuItem item = new MenuItem
             {
                 Menu_Item_Name = (string)reader["menu_item_name"],
+                Menu_Item_Price = (int)reader["menu_item_price"],
             };
             int quantity = (int)reader["quantity"];
             string comment = (string)reader["comment"];
-            OrderItem orderItem = new OrderItem(item, quantity, comment);
+            OrderStatus status = (OrderStatus)Enum.Parse(typeof(OrderStatus), reader["status"].ToString());
+            OrderItem orderItem = new OrderItem(item, quantity, comment, status);
             return orderItem;
         }
 

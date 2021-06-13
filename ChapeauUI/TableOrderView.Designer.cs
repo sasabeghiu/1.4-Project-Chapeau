@@ -90,6 +90,7 @@ namespace ChapeauUI
             // 
             // listViewOrders
             // 
+            this.listViewOrders.FullRowSelect = true;
             this.listViewOrders.HideSelection = false;
             this.listViewOrders.Location = new System.Drawing.Point(31, 98);
             this.listViewOrders.Name = "listViewOrders";

@@ -30,11 +30,12 @@ namespace ChapeauModel
 
         }
 
-        public OrderItem(MenuItem menu, int quantity, string comment)
+        public OrderItem(MenuItem menu, int quantity, string comment, OrderStatus status)
         {
             this.MenuItemID = menu;
             this.Quantity = quantity;
             this.Comment = comment;
+            this.Order_Status = status;
         }
     }
 }
