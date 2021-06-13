@@ -15,6 +15,7 @@ namespace ChapeauUI
     {
         BillService billService;
         ChapeauModel.Bill bill;
+
        
 
         public Bill()
@@ -55,6 +56,20 @@ namespace ChapeauUI
             billService.GetBills();
             billService.AddtoPayment(bill);
             */
+        }
+
+        //sasa added logout 
+        private void btn_logout_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+                Login loginpage = new Login();
+                loginpage.ShowDialog();
+                this.Close();
+            }
         }
     }
 }

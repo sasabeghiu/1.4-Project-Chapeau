@@ -51,8 +51,20 @@ namespace ChapeauDAL
 
             return employee;
         }
+        private Employee Reademployee(SqlDataReader reader)
+        {
+            //retrieve data from all fields
+            int employee_Number = (int)reader["employee_number"];
+            string first_Name = (string)reader["first_name"];
+            string last_Name = (string)reader["last_name"];
+            string employee_Password = (string)reader["employee_password"];
+            EmployeeRole role = (EmployeeRole)reader["employee_role"];
 
-        //sasa created this  for login
+            //return new employee object
+            return new Employee(employee_Number, first_Name, last_Name, employee_Password, role);
+        }
+
+        //Alexandru did following 2 methods for login
         public Employee GetEmployeeByPassword(string password)
         {
             string query = "SELECT employee_number, first_name, last_name, employee_role, employee_password FROM Employee WHERE employee_password = @employee_password";
@@ -75,19 +87,6 @@ namespace ChapeauDAL
                 };
             }
             return employee;
-        }
-
-        private Employee Reademployee(SqlDataReader reader)
-        {
-            //retrieve data from all fields
-            int employee_Number = (int)reader["employee_number"];
-            string first_Name = (string)reader["first_name"];
-            string last_Name = (string)reader["last_name"];
-            string employee_Password = (string)reader["employee_password"];
-            EmployeeRole role = (EmployeeRole)reader["employee_role"];
-
-            //return new employee object
-            return new Employee(employee_Number, first_Name, last_Name, employee_Password, role);
         }
     }
 }

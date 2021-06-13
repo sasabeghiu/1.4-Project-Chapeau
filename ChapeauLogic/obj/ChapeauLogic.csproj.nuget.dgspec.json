@@ -1,19 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-        "projectName": "ChapeauDAL",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\obj\\",
-=======
     "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {}
   },
   "projects": {
@@ -25,17 +12,12 @@
         "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
         "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
         "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,13 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
-=======
               "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
                 "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
->>>>>>> Stashed changes
               }
             }
           }
@@ -98,16 +75,6 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-        "projectName": "ChapeauLogic",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauLogic\\obj\\",
-=======
     "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -116,17 +83,12 @@
         "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj",
         "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
         "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -140,19 +102,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-<<<<<<< Updated upstream
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
-              },
-              "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-                "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
-=======
               "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
                 "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
               },
               "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
                 "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
->>>>>>> Stashed changes
               }
             }
           }
@@ -185,16 +139,6 @@
         }
       }
     },
-<<<<<<< Updated upstream
-    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-        "projectName": "ChapeauModel",
-        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
-        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\obj\\",
-=======
     "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -203,17 +147,12 @@
         "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
         "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
         "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\obj\\",
->>>>>>> Stashed changes
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-<<<<<<< Updated upstream
-          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
           "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
