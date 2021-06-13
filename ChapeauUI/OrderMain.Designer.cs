@@ -328,6 +328,7 @@ namespace ChapeauUI
             this.Controls.Add(this.labelMenu);
             this.Controls.Add(this.listViewMenus);
             this.Name = "OrderMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OrderMain";
             this.Load += new System.EventHandler(this.OrderMain_Load);
             this.ResumeLayout(false);

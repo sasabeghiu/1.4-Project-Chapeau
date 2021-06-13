@@ -149,7 +149,7 @@ namespace ChapeauUI
         
         private void button1_Click(object sender, EventArgs e)
         {
-            int tableNumber = int.Parse(textBoxTableNumber.Text);
+            int tableNumber = int.Parse(textBoxItem.Text);
 
 
             List<OrderItem> orderItems = orderService.GetOrderItemsByTableID(tableNumber);

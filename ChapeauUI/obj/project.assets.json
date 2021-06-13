@@ -803,19 +803,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Conor\\.nuget\\packages\\": {}
+    "C:\\Users\\sasac\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauUI\\ChapeauUI.csproj",
+      "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
       "projectName": "ChapeauUI",
-      "projectPath": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauUI\\ChapeauUI.csproj",
-      "packagesPath": "C:\\Users\\Conor\\.nuget\\packages\\",
-      "outputPath": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauUI\\obj\\",
+      "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
+      "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
+      "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauUI\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Conor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -829,14 +833,14 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauDAL\\ChapeauDAL.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauDAL\\ChapeauDAL.csproj"
+            "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
+              "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
             },
-            "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauLogic\\ChapeauLogic.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauLogic\\ChapeauLogic.csproj"
+            "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
+              "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
             },
-            "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "\\\\Mac\\Home\\Projects\\Year 1\\Term4\\ChapeauFINAL\\ChapeauModel\\ChapeauModel.csproj"
+            "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+              "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
             }
           }
         }
@@ -868,7 +872,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

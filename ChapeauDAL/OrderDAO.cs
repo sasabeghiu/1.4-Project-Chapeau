@@ -126,7 +126,7 @@ namespace ChapeauDAL
             OpenConnection();
             string query = "SELECT order_item_id, order_number, menu_item_id, quantity, comment, status, datetime, table_number FROM [Order_Item] WHERE table_number = @table_number";
             SqlParameter[] sqlParameters = { new SqlParameter("@table_number", tableid) };
-            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+            return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
 
@@ -177,7 +177,7 @@ namespace ChapeauDAL
 
             SqlParameter[] sqlParameters = new SqlParameter[0];
             CloseConnection();
-            return ReadOrderItems(ExecuteSelectQuery(query, sqlParameters));
+            return ReadOrderItem(ExecuteSelectQuery(query, sqlParameters));
         }
 
         public List<OrderItem> GetAllOrderItems()
