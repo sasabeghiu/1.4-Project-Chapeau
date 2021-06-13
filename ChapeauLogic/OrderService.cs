@@ -52,9 +52,14 @@ namespace ChapeauLogic
             return orders;
         }
 
-        public void MarkOrderAsReady(Order order)
+        public void UpdateOrder(Order order)
         {
-            ordersdb.MarkAsReady(order);
+            ordersdb.UpdateOrder(order);
+        }
+
+        public void UpdateOrderItem(OrderItem orderItem)
+        {
+            ordersdb.UpdateOrderItemKitchen(orderItem);
         }
 
         public void UpdateOrderStatusToOrdered(Order order, OrderStatus ordered)

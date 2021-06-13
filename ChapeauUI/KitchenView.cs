@@ -85,26 +85,20 @@ namespace ChapeauUI
             OrderService orderService = new OrderService();
             List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "kitchen");
 
-            lblDetailsKC.Text = $"Order Details for Order  #({orderid})";
+            lblDetailsKC.Text = $"Order Details for Order  #{orderid}";
 
-            listViewDetailsKC.CheckBoxes = true;
+            //listViewDetailsKC.CheckBoxes = true;
             listViewDetailsKC.View = View.Details;
             listViewDetailsKC.Items.Clear();
 
-            foreach (OrderItem item in itemList)
+            foreach (OrderItem item in itemList) //adding items to listview
             {
-                if (item.MenuItemID.Menu_Item_Category == "Drinks")
-                {
-                    continue;
-                }
-                else
-                {
-                    ListViewItem li = new ListViewItem(item.Quantity.ToString());
-                    li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
-                    li.SubItems.Add(item.Comment);
-                    li.Tag = item;
-                    listViewDetailsKC.Items.Add(li);
-                }
+                ListViewItem li = new ListViewItem(item.Quantity.ToString());
+                li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
+                li.SubItems.Add(item.Comment);
+                li.SubItems.Add(item.Order_Status.ToString());
+                li.Tag = item;
+                listViewDetailsKC.Items.Add(li);
             }
         }
 
@@ -113,9 +107,9 @@ namespace ChapeauUI
             OrderService orderService = new OrderService();
             List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "kitchen");
 
-            lblDetailsKP.Text = $"Order Details for Order  #({orderid})";
+            lblDetailsKP.Text = $"Order Details for Order  #{orderid}";
 
-            listViewDetailsKP.CheckBoxes = true; //enables check boxes
+            //listViewDetailsKP.CheckBoxes = true; //enables check boxes
             listViewDetailsKP.View = View.Details;
             listViewDetailsKP.Items.Clear();
 
@@ -123,26 +117,13 @@ namespace ChapeauUI
 
             foreach (OrderItem item in itemList)
             {
-                if (item.MenuItemID.Menu_Item_Category == "Drinks")
-                {
-                    continue;
-                }
-                else
-                {
-                    ListViewItem li = new ListViewItem(item.Quantity.ToString());
-                    li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
-                    li.SubItems.Add(item.Comment);
-                    li.Tag = item;
-                    listViewDetailsKP.Items.Add(li);
-                }
+                ListViewItem li = new ListViewItem(item.Quantity.ToString());
+                li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
+                li.SubItems.Add(item.Comment);
+                li.SubItems.Add(item.Order_Status.ToString());
+                li.Tag = item;
+                listViewDetailsKP.Items.Add(li);
             }
-
-        }
-        private void ItemChecked(string itemName)
-        {
-            string message = $"{itemName} will be marked as ready";
-            string title = "Notification sent to waiter";
-            MessageBox.Show(message, title);
         }
 
         private void Logout()
@@ -188,9 +169,24 @@ namespace ChapeauUI
                 Order order = listViewCurrentOrders.SelectedItems[0].Tag as Order;
                 order.Order_Status = OrderStatus.Ready;
                 
-                orderService.MarkOrderAsReady(order);
+                orderService.UpdateOrder(order);
                 LoadCurrentOrders();
             }
         }
+
+        private void btnMarkAsPreparingKC_Click(object sender, EventArgs e)
+        {
+            if (listViewDetailsKC.SelectedItems.Count == 1)
+            {
+                OrderService orderService = new OrderService();
+
+                OrderItem orderItem = listViewDetailsKC.SelectedItems[0].Tag as OrderItem;
+                orderItem.Order_Status = OrderStatus.Preparing;
+
+                orderService.UpdateOrderItem(orderItem);
+                listViewDetailsKC.View = View.Details;
+                LoadOrderDetailsC(orderItem.Order_Number);
+            }
+        }   
     }
 }

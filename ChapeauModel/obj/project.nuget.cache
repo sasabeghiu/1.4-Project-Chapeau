@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< Updated upstream
   "dgSpecHash": "kY3pJXuFws7F/LWLNJ3FTAXUVY37INerN+SrkKFUC10tgekiWrzuj+3fHbffS3coD8vEGXKgU1qrCbGY/uMyNA==",
   "success": true,
   "projectFilePath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+=======
+  "dgSpecHash": "3Eez9xrBmlpo7jowntoUdTvxjHQsppuq0Cfr9r1X7g6FhlvUrTk4oy8980LdhNo4Skm69SpgPtIn0Q6QBIAyQA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+>>>>>>> Stashed changes
   "expectedPackageFiles": [],
   "logs": []
 }

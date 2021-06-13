@@ -285,11 +285,20 @@ namespace ChapeauDAL
             return orderItems;
         }
 
-        public void MarkAsReady(Order order)
+        public void UpdateOrder(Order order)
         {
-            SqlCommand queryUpdateOrder = new SqlCommand($"UPDATE [Order] SET order_status = @orderstatus WHERE order_ID = @orderid", OpenConnection());
+            SqlCommand queryUpdateOrder = new SqlCommand("UPDATE [Order] SET order_status = @orderstatus WHERE order_ID = @orderid", OpenConnection());
             queryUpdateOrder.Parameters.AddWithValue("@orderstatus", order.Order_Status.ToString());
             queryUpdateOrder.Parameters.AddWithValue("@orderid", order.OrderID.ToString());
+            queryUpdateOrder.ExecuteNonQuery();
+            CloseConnection();
+        }
+
+        public void UpdateOrderItemKitchen(OrderItem item)
+        {
+            SqlCommand queryUpdateOrder = new SqlCommand("UPDATE [Order_Item] SET status = @orderstatus WHERE order_item_id = @itemid", OpenConnection());
+            queryUpdateOrder.Parameters.AddWithValue("@orderstatus", item.Order_Status.ToString());
+            queryUpdateOrder.Parameters.AddWithValue("@itemid", item.OrderItemID.ToString());
             queryUpdateOrder.ExecuteNonQuery();
             CloseConnection();
         }

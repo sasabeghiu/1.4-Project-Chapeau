@@ -84,7 +84,7 @@ namespace ChapeauUI
             OrderService orderService = new OrderService();
             List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "bar");
 
-            lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
+            lblDetailsBC.Text = $"Order Details for Order  #{orderid}";
 
             listViewDetailsBC.CheckBoxes = true;
             listViewDetailsBC.View = View.Details;
@@ -95,6 +95,7 @@ namespace ChapeauUI
                 ListViewItem li = new ListViewItem(item.Quantity.ToString());
                 li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
                 li.SubItems.Add(item.Comment);
+                li.SubItems.Add(item.Order_Status.ToString());
                 li.Tag = item;
                 listViewDetailsBC.Items.Add(li);
             }
@@ -105,7 +106,7 @@ namespace ChapeauUI
             OrderService orderService = new OrderService();
             List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "bar");
 
-            lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
+            lblDetailsBP.Text = $"Order Details for Order  #{orderid}";
 
             listViewDetailsBP.CheckBoxes = true;
             listViewDetailsBP.View = View.Details;
@@ -116,6 +117,7 @@ namespace ChapeauUI
                 ListViewItem li = new ListViewItem(item.Quantity.ToString());
                 li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
                 li.SubItems.Add(item.Comment);
+                li.SubItems.Add(item.Order_Status.ToString());
                 li.Tag = item;
                 listViewDetailsBP.Items.Add(li);
             }
@@ -163,8 +165,23 @@ namespace ChapeauUI
                 Order order = listViewCurrentOrders.SelectedItems[0].Tag as Order;
                 order.Order_Status = OrderStatus.Ready;
 
-                orderService.MarkOrderAsReady(order);
+                orderService.UpdateOrder(order);
                 LoadCurrentOrders();
+            }
+        }
+
+        private void btnMarkAsPreparingB_Click(object sender, EventArgs e)
+        {
+            if (listViewDetailsBC.SelectedItems.Count == 1)
+            {
+                OrderService orderService = new OrderService();
+
+                OrderItem orderItem = listViewDetailsBC.SelectedItems[0].Tag as OrderItem;
+                orderItem.Order_Status = OrderStatus.Preparing;
+
+                orderService.UpdateOrderItem(orderItem);
+
+                LoadOrderDetailsC(orderItem.Order_Number);
             }
         }
     }

@@ -37,9 +37,11 @@ namespace ChapeauUI
             this.label1 = new System.Windows.Forms.Label();
             this.btnMarkAsReadyKC = new System.Windows.Forms.Button();
             this.panelKitchenCurrent = new System.Windows.Forms.Panel();
+            this.btnMarkAsPreparingKC = new System.Windows.Forms.Button();
             this.listViewDetailsKC = new System.Windows.Forms.ListView();
             this.qty = new System.Windows.Forms.ColumnHeader();
             this.name = new System.Windows.Forms.ColumnHeader();
+            this.comment = new System.Windows.Forms.ColumnHeader();
             this.state = new System.Windows.Forms.ColumnHeader();
             this.btnPreviousK = new System.Windows.Forms.Button();
             this.lblDetailsKC = new System.Windows.Forms.Label();
@@ -69,10 +71,9 @@ namespace ChapeauUI
             this.time});
             this.listViewCurrentOrders.FullRowSelect = true;
             this.listViewCurrentOrders.HideSelection = false;
-            this.listViewCurrentOrders.Location = new System.Drawing.Point(10, 80);
-            this.listViewCurrentOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewCurrentOrders.Location = new System.Drawing.Point(11, 107);
             this.listViewCurrentOrders.Name = "listViewCurrentOrders";
-            this.listViewCurrentOrders.Size = new System.Drawing.Size(386, 228);
+            this.listViewCurrentOrders.Size = new System.Drawing.Size(441, 303);
             this.listViewCurrentOrders.TabIndex = 0;
             this.listViewCurrentOrders.UseCompatibleStateImageBehavior = false;
             this.listViewCurrentOrders.SelectedIndexChanged += new System.EventHandler(this.listViewCurrentOrders_SelectedIndexChanged);
@@ -94,10 +95,9 @@ namespace ChapeauUI
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(10, 14);
-            this.btnLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOut.Location = new System.Drawing.Point(11, 19);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(82, 22);
+            this.btnLogOut.Size = new System.Drawing.Size(94, 29);
             this.btnLogOut.TabIndex = 1;
             this.btnLogOut.Text = "Log Out";
             this.btnLogOut.UseVisualStyleBackColor = true;
@@ -106,18 +106,18 @@ namespace ChapeauUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 21);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(320, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 15);
+            this.label1.Size = new System.Drawing.Size(182, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Kitchen Current View";
             // 
             // btnMarkAsReadyKC
             // 
-            this.btnMarkAsReadyKC.Location = new System.Drawing.Point(279, 327);
-            this.btnMarkAsReadyKC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMarkAsReadyKC.Location = new System.Drawing.Point(319, 436);
             this.btnMarkAsReadyKC.Name = "btnMarkAsReadyKC";
-            this.btnMarkAsReadyKC.Size = new System.Drawing.Size(116, 26);
+            this.btnMarkAsReadyKC.Size = new System.Drawing.Size(133, 35);
             this.btnMarkAsReadyKC.TabIndex = 4;
             this.btnMarkAsReadyKC.Text = "Mark as ready";
             this.btnMarkAsReadyKC.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@ namespace ChapeauUI
             // 
             // panelKitchenCurrent
             // 
-            this.panelKitchenCurrent.Controls.Add(this.listViewDetailsKC);
+            this.panelKitchenCurrent.Controls.Add(this.btnMarkAsPreparingKC);
             this.panelKitchenCurrent.Controls.Add(this.btnPreviousK);
             this.panelKitchenCurrent.Controls.Add(this.btnMarkAsReadyKC);
             this.panelKitchenCurrent.Controls.Add(this.btnLogOut);
@@ -134,23 +134,32 @@ namespace ChapeauUI
             this.panelKitchenCurrent.Controls.Add(this.listViewCurrentOrders);
             this.panelKitchenCurrent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKitchenCurrent.Location = new System.Drawing.Point(0, 0);
-            this.panelKitchenCurrent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKitchenCurrent.Name = "panelKitchenCurrent";
-            this.panelKitchenCurrent.Size = new System.Drawing.Size(784, 361);
+            this.panelKitchenCurrent.Size = new System.Drawing.Size(896, 481);
             this.panelKitchenCurrent.TabIndex = 5;
+            // 
+            // btnMarkAsPreparingKC
+            // 
+            this.btnMarkAsPreparingKC.Location = new System.Drawing.Point(695, 436);
+            this.btnMarkAsPreparingKC.Name = "btnMarkAsPreparingKC";
+            this.btnMarkAsPreparingKC.Size = new System.Drawing.Size(172, 29);
+            this.btnMarkAsPreparingKC.TabIndex = 8;
+            this.btnMarkAsPreparingKC.Text = "Mark as preparing";
+            this.btnMarkAsPreparingKC.UseVisualStyleBackColor = true;
+            this.btnMarkAsPreparingKC.Click += new System.EventHandler(this.btnMarkAsPreparingKC_Click);
             // 
             // listViewDetailsKC
             // 
             this.listViewDetailsKC.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.qty,
             this.name,
+            this.comment,
             this.state});
             this.listViewDetailsKC.FullRowSelect = true;
             this.listViewDetailsKC.HideSelection = false;
-            this.listViewDetailsKC.Location = new System.Drawing.Point(461, 80);
-            this.listViewDetailsKC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewDetailsKC.Location = new System.Drawing.Point(527, 107);
             this.listViewDetailsKC.Name = "listViewDetailsKC";
-            this.listViewDetailsKC.Size = new System.Drawing.Size(298, 272);
+            this.listViewDetailsKC.Size = new System.Drawing.Size(340, 364);
             this.listViewDetailsKC.TabIndex = 6;
             this.listViewDetailsKC.UseCompatibleStateImageBehavior = false;
             // 
@@ -163,17 +172,22 @@ namespace ChapeauUI
             this.name.Text = "Name";
             this.name.Width = 170;
             // 
+            // comment
+            // 
+            this.comment.DisplayIndex = 3;
+            this.comment.Text = "Comment";
+            // 
             // state
             // 
+            this.state.DisplayIndex = 2;
             this.state.Text = "Status";
             this.state.Width = 80;
             // 
             // btnPreviousK
             // 
-            this.btnPreviousK.Location = new System.Drawing.Point(10, 327);
-            this.btnPreviousK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPreviousK.Location = new System.Drawing.Point(11, 436);
             this.btnPreviousK.Name = "btnPreviousK";
-            this.btnPreviousK.Size = new System.Drawing.Size(116, 26);
+            this.btnPreviousK.Size = new System.Drawing.Size(133, 35);
             this.btnPreviousK.TabIndex = 5;
             this.btnPreviousK.Text = "Previous Orders";
             this.btnPreviousK.UseVisualStyleBackColor = true;
@@ -182,14 +196,15 @@ namespace ChapeauUI
             // lblDetailsKC
             // 
             this.lblDetailsKC.AutoSize = true;
-            this.lblDetailsKC.Location = new System.Drawing.Point(512, 39);
+            this.lblDetailsKC.Location = new System.Drawing.Point(598, 72);
             this.lblDetailsKC.Name = "lblDetailsKC";
-            this.lblDetailsKC.Size = new System.Drawing.Size(147, 15);
+            this.lblDetailsKC.Size = new System.Drawing.Size(189, 20);
             this.lblDetailsKC.TabIndex = 7;
             this.lblDetailsKC.Text = "Order Details for Order  #()";
             // 
             // panelKitchenPrevious
             // 
+            this.panelKitchenPrevious.Controls.Add(this.listViewDetailsKC);
             this.panelKitchenPrevious.Controls.Add(this.listViewDetailsKP);
             this.panelKitchenPrevious.Controls.Add(this.btnCurrentK);
             this.panelKitchenPrevious.Controls.Add(this.btnMarkAsReadyKP);
@@ -199,9 +214,8 @@ namespace ChapeauUI
             this.panelKitchenPrevious.Controls.Add(this.listViewPreviousOrders);
             this.panelKitchenPrevious.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelKitchenPrevious.Location = new System.Drawing.Point(0, 0);
-            this.panelKitchenPrevious.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelKitchenPrevious.Name = "panelKitchenPrevious";
-            this.panelKitchenPrevious.Size = new System.Drawing.Size(784, 361);
+            this.panelKitchenPrevious.Size = new System.Drawing.Size(896, 481);
             this.panelKitchenPrevious.TabIndex = 6;
             // 
             // listViewDetailsKP
@@ -211,10 +225,9 @@ namespace ChapeauUI
             this.columnHeader5,
             this.columnHeader6});
             this.listViewDetailsKP.HideSelection = false;
-            this.listViewDetailsKP.Location = new System.Drawing.Point(461, 80);
-            this.listViewDetailsKP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewDetailsKP.Location = new System.Drawing.Point(527, 107);
             this.listViewDetailsKP.Name = "listViewDetailsKP";
-            this.listViewDetailsKP.Size = new System.Drawing.Size(298, 272);
+            this.listViewDetailsKP.Size = new System.Drawing.Size(340, 303);
             this.listViewDetailsKP.TabIndex = 7;
             this.listViewDetailsKP.UseCompatibleStateImageBehavior = false;
             // 
@@ -234,10 +247,9 @@ namespace ChapeauUI
             // 
             // btnCurrentK
             // 
-            this.btnCurrentK.Location = new System.Drawing.Point(12, 327);
-            this.btnCurrentK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCurrentK.Location = new System.Drawing.Point(14, 436);
             this.btnCurrentK.Name = "btnCurrentK";
-            this.btnCurrentK.Size = new System.Drawing.Size(116, 26);
+            this.btnCurrentK.Size = new System.Drawing.Size(133, 35);
             this.btnCurrentK.TabIndex = 5;
             this.btnCurrentK.Text = "Current Orders";
             this.btnCurrentK.UseVisualStyleBackColor = true;
@@ -245,20 +257,18 @@ namespace ChapeauUI
             // 
             // btnMarkAsReadyKP
             // 
-            this.btnMarkAsReadyKP.Location = new System.Drawing.Point(280, 327);
-            this.btnMarkAsReadyKP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnMarkAsReadyKP.Location = new System.Drawing.Point(320, 436);
             this.btnMarkAsReadyKP.Name = "btnMarkAsReadyKP";
-            this.btnMarkAsReadyKP.Size = new System.Drawing.Size(116, 26);
+            this.btnMarkAsReadyKP.Size = new System.Drawing.Size(133, 35);
             this.btnMarkAsReadyKP.TabIndex = 4;
             this.btnMarkAsReadyKP.Text = "Mark as ready";
             this.btnMarkAsReadyKP.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(10, 14);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button3.Location = new System.Drawing.Point(11, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 22);
+            this.button3.Size = new System.Drawing.Size(94, 29);
             this.button3.TabIndex = 1;
             this.button3.Text = "Log Out";
             this.button3.UseVisualStyleBackColor = true;
@@ -267,18 +277,18 @@ namespace ChapeauUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 17);
+            this.label3.Location = new System.Drawing.Point(337, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(123, 15);
+            this.label3.Size = new System.Drawing.Size(153, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Kitchen Previous View";
             // 
             // lblDetailsKP
             // 
             this.lblDetailsKP.AutoSize = true;
-            this.lblDetailsKP.Location = new System.Drawing.Point(498, 54);
+            this.lblDetailsKP.Location = new System.Drawing.Point(569, 72);
             this.lblDetailsKP.Name = "lblDetailsKP";
-            this.lblDetailsKP.Size = new System.Drawing.Size(147, 15);
+            this.lblDetailsKP.Size = new System.Drawing.Size(189, 20);
             this.lblDetailsKP.TabIndex = 3;
             this.lblDetailsKP.Text = "Order Details for Order  #()";
             // 
@@ -290,10 +300,9 @@ namespace ChapeauUI
             this.columnHeader3});
             this.listViewPreviousOrders.FullRowSelect = true;
             this.listViewPreviousOrders.HideSelection = false;
-            this.listViewPreviousOrders.Location = new System.Drawing.Point(10, 80);
-            this.listViewPreviousOrders.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.listViewPreviousOrders.Location = new System.Drawing.Point(11, 107);
             this.listViewPreviousOrders.Name = "listViewPreviousOrders";
-            this.listViewPreviousOrders.Size = new System.Drawing.Size(386, 228);
+            this.listViewPreviousOrders.Size = new System.Drawing.Size(441, 303);
             this.listViewPreviousOrders.TabIndex = 0;
             this.listViewPreviousOrders.UseCompatibleStateImageBehavior = false;
             this.listViewPreviousOrders.SelectedIndexChanged += new System.EventHandler(this.listViewPreviousOrders_SelectedIndexChanged_1);
@@ -315,12 +324,11 @@ namespace ChapeauUI
             // 
             // KitchenView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.panelKitchenCurrent);
+            this.ClientSize = new System.Drawing.Size(896, 481);
             this.Controls.Add(this.panelKitchenPrevious);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Controls.Add(this.panelKitchenCurrent);
             this.Name = "KitchenView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KitchenView";
@@ -362,5 +370,7 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label lblDetailsKC;
+        private System.Windows.Forms.Button btnMarkAsPreparingKC;
+        private System.Windows.Forms.ColumnHeader comment;
     }
 }
