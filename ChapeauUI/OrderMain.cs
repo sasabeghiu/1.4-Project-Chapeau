@@ -21,9 +21,20 @@ namespace ChapeauUI
         OrderService orderService = new OrderService();
         OrderItem oI;
         
-
-
-
+        public void ConvertIdName(MenuItem menuItem)
+        {
+            string menuItemName;
+            menuItemName = menuItem.Menu_Item_Name;
+            Console.WriteLine(menuItemName);
+        }
+        /*
+        public void GetName(MenuItem menuItem)
+        {
+            string menuItemName;
+            menuItemName = menuItem.Menu_Item_Name.get();
+            Console.WriteLine(menuItemName);
+        }
+        */
 
         public static OrderMain GetInstance()
         {
@@ -47,7 +58,7 @@ namespace ChapeauUI
             foreach (MenuItem menuitem in menuitems)
             {
                 ListViewItem lv1 = new ListViewItem(menuitem.Menu_Item_ID.ToString());
-                lv1.SubItems.Add(menuitem.Menu_Item_Name);
+                lv1.SubItems.Add(menuitem.Menu_Item_Name.ToString());
                 lv1.SubItems.Add(menuitem.Menu_Item_Stock.ToString());
                 lv1.SubItems.Add(menuitem.Menu_Item_Price.ToString());
                 lv1.SubItems.Add(menuitem.Menu_Item_Vat.ToString());
@@ -83,7 +94,6 @@ namespace ChapeauUI
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             currentOrder.OrderedItems.Add(oI);
-            listViewOrder.Items.Clear();
 
 
             foreach (OrderItem orderedItem in currentOrder.OrderedItems)

@@ -39,27 +39,20 @@ namespace ChapeauUI
             this.labelMenu = new System.Windows.Forms.Label();
             this.listViewOrder = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader7 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader8 = new System.Windows.Forms.ColumnHeader();
             this.labelOrder = new System.Windows.Forms.Label();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.buttonOrderView = new System.Windows.Forms.Button();
             this.buttonBarKitchen = new System.Windows.Forms.Button();
             this.buttonTable = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
-            this.buttonCancel = new System.Windows.Forms.Button();
             this.buttonPayment = new System.Windows.Forms.Button();
-            this.labelItem = new System.Windows.Forms.Label();
-            this.labelQuantity = new System.Windows.Forms.Label();
-            this.textBoxQuantity = new System.Windows.Forms.TextBox();
-            this.textBoxItem = new System.Windows.Forms.TextBox();
+            this.labelTable = new System.Windows.Forms.Label();
+            this.textBoxTableNumber = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewMenus
@@ -121,19 +114,15 @@ namespace ChapeauUI
             this.listViewOrder.CheckBoxes = true;
             this.listViewOrder.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
             this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader3,
+            this.columnHeader5});
             this.listViewOrder.FullRowSelect = true;
             this.listViewOrder.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewOrder.HideSelection = false;
-            this.listViewOrder.Location = new System.Drawing.Point(559, 46);
+            this.listViewOrder.Location = new System.Drawing.Point(633, 46);
             this.listViewOrder.Name = "listViewOrder";
-            this.listViewOrder.Size = new System.Drawing.Size(506, 403);
+            this.listViewOrder.Size = new System.Drawing.Size(432, 403);
             this.listViewOrder.TabIndex = 3;
             this.listViewOrder.UseCompatibleStateImageBehavior = false;
             this.listViewOrder.View = System.Windows.Forms.View.Details;
@@ -143,41 +132,24 @@ namespace ChapeauUI
             this.columnHeader1.Text = "ID";
             this.columnHeader1.Width = 30;
             // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Order#";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "MenuItem ID";
-            this.columnHeader3.Width = 85;
-            // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Quantity";
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Name";
+            this.columnHeader3.Width = 100;
             // 
             // columnHeader5
             // 
             this.columnHeader5.Text = "Comment";
             this.columnHeader5.Width = 75;
             // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Status";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Table#";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Order Time";
-            this.columnHeader8.Width = 110;
-            // 
             // labelOrder
             // 
             this.labelOrder.AutoSize = true;
-            this.labelOrder.Location = new System.Drawing.Point(559, 28);
+            this.labelOrder.Location = new System.Drawing.Point(633, 28);
             this.labelOrder.Name = "labelOrder";
             this.labelOrder.Size = new System.Drawing.Size(37, 15);
             this.labelOrder.TabIndex = 4;
@@ -185,9 +157,9 @@ namespace ChapeauUI
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(406, 138);
+            this.buttonAdd.Location = new System.Drawing.Point(406, 269);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(147, 56);
+            this.buttonAdd.Size = new System.Drawing.Size(221, 56);
             this.buttonAdd.TabIndex = 5;
             this.buttonAdd.Text = "Add To Order";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -195,23 +167,13 @@ namespace ChapeauUI
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(406, 200);
+            this.buttonRemove.Location = new System.Drawing.Point(406, 331);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(147, 56);
+            this.buttonRemove.Size = new System.Drawing.Size(221, 56);
             this.buttonRemove.TabIndex = 6;
             this.buttonRemove.Text = "Remove From Order";
             this.buttonRemove.UseVisualStyleBackColor = true;
             this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.Location = new System.Drawing.Point(406, 262);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(147, 56);
-            this.buttonRefresh.TabIndex = 7;
-            this.buttonRefresh.Text = "Refresh Order";
-            this.buttonRefresh.UseVisualStyleBackColor = true;
-            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // buttonOrderView
             // 
@@ -245,23 +207,13 @@ namespace ChapeauUI
             // 
             // buttonComplete
             // 
-            this.buttonComplete.Location = new System.Drawing.Point(406, 324);
+            this.buttonComplete.Location = new System.Drawing.Point(406, 393);
             this.buttonComplete.Name = "buttonComplete";
-            this.buttonComplete.Size = new System.Drawing.Size(147, 56);
+            this.buttonComplete.Size = new System.Drawing.Size(221, 56);
             this.buttonComplete.TabIndex = 11;
             this.buttonComplete.Text = "Complete Order";
             this.buttonComplete.UseVisualStyleBackColor = true;
             this.buttonComplete.Click += new System.EventHandler(this.buttonComplete_Click);
-            // 
-            // buttonCancel
-            // 
-            this.buttonCancel.Location = new System.Drawing.Point(406, 386);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(147, 56);
-            this.buttonCancel.TabIndex = 12;
-            this.buttonCancel.Text = "Cancel Order";
-            this.buttonCancel.UseVisualStyleBackColor = true;
-            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // buttonPayment
             // 
@@ -273,54 +225,46 @@ namespace ChapeauUI
             this.buttonPayment.UseVisualStyleBackColor = true;
             this.buttonPayment.Click += new System.EventHandler(this.buttonPayment_Click);
             // 
-            // labelItem
+            // labelTable
             // 
-            this.labelItem.AutoSize = true;
-            this.labelItem.Location = new System.Drawing.Point(460, 46);
-            this.labelItem.Name = "labelItem";
-            this.labelItem.Size = new System.Drawing.Size(31, 15);
-            this.labelItem.TabIndex = 14;
-            this.labelItem.Text = "Item";
+            this.labelTable.AutoSize = true;
+            this.labelTable.Location = new System.Drawing.Point(472, 28);
+            this.labelTable.Name = "labelTable";
+            this.labelTable.Size = new System.Drawing.Size(81, 15);
+            this.labelTable.TabIndex = 15;
+            this.labelTable.Text = "Table Number";
+            this.labelTable.Click += new System.EventHandler(this.labelQuantity_Click);
             // 
-            // labelQuantity
+            // textBoxTableNumber
             // 
-            this.labelQuantity.AutoSize = true;
-            this.labelQuantity.Location = new System.Drawing.Point(449, 91);
-            this.labelQuantity.Name = "labelQuantity";
-            this.labelQuantity.Size = new System.Drawing.Size(53, 15);
-            this.labelQuantity.TabIndex = 15;
-            this.labelQuantity.Text = "Quantity";
+            this.textBoxTableNumber.Location = new System.Drawing.Point(462, 47);
+            this.textBoxTableNumber.Name = "textBoxTableNumber";
+            this.textBoxTableNumber.Size = new System.Drawing.Size(100, 23);
+            this.textBoxTableNumber.TabIndex = 16;
             // 
-            // textBoxQuantity
+            // button1
             // 
-            this.textBoxQuantity.Location = new System.Drawing.Point(429, 109);
-            this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(100, 23);
-            this.textBoxQuantity.TabIndex = 16;
-            // 
-            // textBoxItem
-            // 
-            this.textBoxItem.Location = new System.Drawing.Point(429, 64);
-            this.textBoxItem.Name = "textBoxItem";
-            this.textBoxItem.Size = new System.Drawing.Size(100, 23);
-            this.textBoxItem.TabIndex = 17;
+            this.button1.Location = new System.Drawing.Point(406, 76);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(221, 56);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Go To Table";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OrderMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1064, 454);
-            this.Controls.Add(this.textBoxItem);
-            this.Controls.Add(this.textBoxQuantity);
-            this.Controls.Add(this.labelQuantity);
-            this.Controls.Add(this.labelItem);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBoxTableNumber);
+            this.Controls.Add(this.labelTable);
             this.Controls.Add(this.buttonPayment);
-            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonComplete);
             this.Controls.Add(this.buttonTable);
             this.Controls.Add(this.buttonBarKitchen);
             this.Controls.Add(this.buttonOrderView);
-            this.Controls.Add(this.buttonRefresh);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.labelOrder);
@@ -349,26 +293,22 @@ namespace ChapeauUI
         private System.Windows.Forms.ListView listViewOrder;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label labelOrder;
         private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonRemove;
-        private System.Windows.Forms.Button buttonRefresh;
         private System.Windows.Forms.Button buttonOrderView;
         private System.Windows.Forms.Button buttonBarKitchen;
         private System.Windows.Forms.Button buttonTable;
         private System.Windows.Forms.Button buttonComplete;
-        private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.Button buttonPayment;
-        private System.Windows.Forms.Label labelItem;
-        private System.Windows.Forms.Label labelQuantity;
-        private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.TextBox textBoxItem;
+        private System.Windows.Forms.Label labelTable;
+        private System.Windows.Forms.TextBox textBoxTableNumber;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
     }
 }
