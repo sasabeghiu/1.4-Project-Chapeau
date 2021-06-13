@@ -1,4 +1,5 @@
 ﻿using ChapeauLogic;
+using ChapeauModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,11 +38,6 @@ namespace ChapeauUI
                 li.Tag = order;
                 listViewCurrentOrders.Items.Add(li);
             }
-
-            if (listViewCurrentOrders.SelectedItems.Count > 0)
-            {
-
-            }
         }
 
         private void LoadPreviousOrders()
@@ -66,6 +62,65 @@ namespace ChapeauUI
             }
         }
 
+        private void listViewCurrentOrders_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (listViewCurrentOrders.SelectedItems.Count > 0)
+            {
+                int orderid = int.Parse(listViewCurrentOrders.SelectedItems[0].Text);
+                LoadOrderDetailsC(orderid);
+            }
+        }
+
+        private void listViewPreviousOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listViewPreviousOrders.SelectedItems.Count > 0)
+            {
+                int orderid = int.Parse(listViewPreviousOrders.SelectedItems[0].Text);
+                LoadOrderDetailsP(orderid);
+            }
+        }
+        private void LoadOrderDetailsC(int orderid)
+        {
+            OrderService orderService = new OrderService();
+            List<OrderItem> itemList = orderService.GetOrderItemsById(orderid, "bar");
+
+            lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
+
+            listViewDetailsBC.CheckBoxes = true;
+            listViewDetailsBC.View = View.Details;
+            listViewDetailsBC.Items.Clear();
+
+            foreach (OrderItem item in itemList)
+            {
+                ListViewItem li = new ListViewItem(item.Quantity.ToString());
+                li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
+                li.SubItems.Add(item.Comment);
+                li.Tag = item;
+                listViewDetailsBC.Items.Add(li);
+            }
+        }
+
+        private void LoadOrderDetailsP(int orderid)
+        {
+            OrderService orderService = new OrderService();
+            List<OrderItem> itemList = orderService.GetOrderItemsById(orderid, "bar");
+
+            lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
+
+            listViewDetailsBP.CheckBoxes = true;
+            listViewDetailsBP.View = View.Details;
+            listViewDetailsBP.Items.Clear();
+
+            foreach (OrderItem item in itemList)
+            {
+                ListViewItem li = new ListViewItem(item.Quantity.ToString());
+                li.SubItems.Add(item.MenuItemID.Menu_Item_Name);
+                li.SubItems.Add(item.Comment);
+                li.Tag = item;
+                listViewDetailsBP.Items.Add(li);
+            }
+        }
+
         private void Logout()
         {
             var result = MessageBox.Show("Are you sure you want to log out?", "Confirmation", MessageBoxButtons.YesNo);
@@ -78,26 +133,39 @@ namespace ChapeauUI
                 this.Close();
             }
         }
-
         private void BtnCurrentB_Click(object sender, EventArgs e)
         {
             LoadCurrentOrders();
         }
 
-        private void logout_Click(object sender, EventArgs e)
-        {
-            Logout();
-        }
-
-        private void btnLogOut_Click(object sender, EventArgs e)
-        {
-            Logout();
-        }
-
-        private void btnPreviousB_Click(object sender, EventArgs e)
+        private void btnPreviousB_Click_1(object sender, EventArgs e)
         {
             btnMarkAsReadyBP.Enabled = false;
             LoadPreviousOrders();
+        }
+
+        private void btnLogOut_Click_1(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Logout();
+        }
+
+        private void btnMarkAsReadyBC_Click(object sender, EventArgs e)
+        {
+            if (listViewCurrentOrders.SelectedItems.Count == 1)
+            {
+                OrderService orderService = new OrderService();
+
+                Order order = listViewCurrentOrders.SelectedItems[0].Tag as Order;
+                order.Order_Status = OrderStatus.Ready;
+
+                orderService.MarkOrderAsReady(order);
+                LoadCurrentOrders();
+            }
         }
     }
 }

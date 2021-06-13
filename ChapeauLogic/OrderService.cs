@@ -25,10 +25,13 @@ namespace ChapeauLogic
             return orderItems;
         }
 
-        public List<OrderItem> GetOrderItemsById(int orderid)
+        public List<OrderItem> GetOrderItemsById(int orderid, string parameter)
         {
-            List<OrderItem> orderItems = ordersdb.GetItemsById(orderid);
-            return orderItems;
+            if (parameter == "kitchen")
+            {
+                return  ordersdb.GetKitchenItemsById(orderid);
+            }
+            return ordersdb.GetBarItemsById(orderid);
         }
 
         public List<Order> GetCurrentOrders()
@@ -41,6 +44,11 @@ namespace ChapeauLogic
         {
             List<Order> orders = ordersdb.GetPreviousOrders();
             return orders;
+        }
+
+        public void MarkOrderAsReady(Order order)
+        {
+            ordersdb.MarkAsReady(order);
         }
 
         public void UpdateOrderStatusToOrdered(Order order, OrderStatus ordered)

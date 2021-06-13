@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< Updated upstream
     "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\crgio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "projectName": "ChapeauModel",
+        "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj",
+        "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

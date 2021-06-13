@@ -340,10 +340,15 @@ namespace ChapeauDAL
             }
             return orderList;
         }
-        public List<OrderItem> GetItemsById(int id)
+
+        public List<OrderItem> GetKitchenItemsById(int id)
         {
             List<OrderItem> orderItems = new List<OrderItem>();
+<<<<<<< Updated upstream
             SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, MenuItem.menu_item_price, quantity, Order_Item.comment, Order_Item.status FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id", OpenConnection());
+=======
+            SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, quantity, Order_Item.comment FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id AND CONVERT(VARCHAR, menu_item_category) <> 'Drinks'", OpenConnection());
+>>>>>>> Stashed changes
             cmd.Parameters.AddWithValue("@id", id);
             SqlDataReader reader = cmd.ExecuteReader();
             while(reader.Read())
@@ -354,6 +359,31 @@ namespace ChapeauDAL
             reader.Close();
 
             return orderItems;
+        }
+
+        public List<OrderItem> GetBarItemsById(int id)
+        {
+            List<OrderItem> orderItems = new List<OrderItem>();
+            SqlCommand cmd = new SqlCommand("SELECT MenuItem.menu_item_name, quantity, Order_Item.comment FROM [Order] JOIN Order_Item ON order_number = order_ID JOIN MenuItem ON MenuItem.menu_item_id = Order_Item.menu_item_id WHERE order_ID = @id AND CONVERT(VARCHAR, menu_item_category) = 'Drinks'", OpenConnection());
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                OrderItem item = ReturnOrderItem(reader);
+                orderItems.Add(item);
+            }
+            reader.Close();
+
+            return orderItems;
+        }
+
+        public void MarkAsReady(Order order)
+        {
+            SqlCommand queryUpdateOrder = new SqlCommand($"UPDATE [Order] SET order_status = @orderstatus WHERE order_ID = @orderid", OpenConnection());
+            queryUpdateOrder.Parameters.AddWithValue("@orderstatus", order.Order_Status.ToString());
+            queryUpdateOrder.Parameters.AddWithValue("@orderid", order.OrderID.ToString());
+            queryUpdateOrder.ExecuteNonQuery();
+            CloseConnection();
         }
 
         private OrderItem ReturnOrderItem(SqlDataReader reader)
