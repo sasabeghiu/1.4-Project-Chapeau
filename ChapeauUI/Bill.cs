@@ -14,14 +14,15 @@ namespace ChapeauUI
     public partial class Bill : Form
     {
         BillService billService;
-        DataTable dataTable;
+        ChapeauModel.Bill bill;
        
 
         public Bill()
         {
             InitializeComponent();
             billService = new BillService();
-            dataTable = new DataTable();
+            bill = new ChapeauModel.Bill();
+           
          
         }
 
@@ -38,7 +39,7 @@ namespace ChapeauUI
         private void Bill_Load(object sender, EventArgs e)
         {
             List<Order> items = billService.OrderItems();
-            List<OrderItem> orderOverview = billService.OrderOverview(dataTable);
+            List<OrderItem> orderOverview = billService.OrderOverview();
 
             foreach (Order item in items)
             {
@@ -52,6 +53,8 @@ namespace ChapeauUI
             }
             lbl_VAT.Text = $"€ {billService.VatDrinks()}";
             lbl_total.Text = $"€{billService.CalculateBill()}";
+            billService.GetBills();
+            billService.AddtoPayment(bill);
         }
     }
 }

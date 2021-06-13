@@ -33,16 +33,7 @@ namespace ChapeauDAL
 
             return billList;
         }
-        public List<Order> OrderItems()
-        {
-            OrderDAO order = new OrderDAO();
-            return order.GetAllOrders();
-        }
-        public List<OrderItem> OrderOverview(DataTable dataTable)
-        {
-            OrderDAO order = new OrderDAO();
-            return order.GetOrderItems(dataTable);
-        }
+       
 
         private Bill Readbill(SqlDataReader reader)
         {

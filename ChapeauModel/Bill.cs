@@ -11,7 +11,7 @@ namespace ChapeauModel
         public Order Order { get; set; }
         public int TotalPrice { get; set; }//total price of the meal
 
-        //for the payment method, message box
+      
         public PaymentType Type { get; set; }//how gonna be pay
         public string Feedback { get; set; }//any comments to add
         public int Tip { get; set; }//tip for the host
@@ -26,6 +26,10 @@ namespace ChapeauModel
             this.Tip = tip;
             this.Vat = vat;
 
+
+        }
+        public Bill()
+        {
 
         }
        

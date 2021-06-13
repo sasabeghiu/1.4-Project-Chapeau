@@ -50,9 +50,10 @@ namespace ChapeauUI
             // 
             // btn_paidCard
             // 
-            this.btn_paidCard.Location = new System.Drawing.Point(588, 239);
+            this.btn_paidCard.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_paidCard.Location = new System.Drawing.Point(788, 240);
             this.btn_paidCard.Name = "btn_paidCard";
-            this.btn_paidCard.Size = new System.Drawing.Size(94, 57);
+            this.btn_paidCard.Size = new System.Drawing.Size(206, 101);
             this.btn_paidCard.TabIndex = 0;
             this.btn_paidCard.Text = "PAID WITH CARD";
             this.btn_paidCard.UseVisualStyleBackColor = true;
@@ -60,9 +61,10 @@ namespace ChapeauUI
             // 
             // btn_paidCash
             // 
-            this.btn_paidCash.Location = new System.Drawing.Point(588, 312);
+            this.btn_paidCash.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_paidCash.Location = new System.Drawing.Point(788, 391);
             this.btn_paidCash.Name = "btn_paidCash";
-            this.btn_paidCash.Size = new System.Drawing.Size(94, 64);
+            this.btn_paidCash.Size = new System.Drawing.Size(206, 101);
             this.btn_paidCash.TabIndex = 1;
             this.btn_paidCash.Text = "PAID WITH CASH";
             this.btn_paidCash.UseVisualStyleBackColor = true;
@@ -71,34 +73,37 @@ namespace ChapeauUI
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(14, 31);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 20);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bill ID:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(13, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 20);
+            this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Table:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(413, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.Size = new System.Drawing.Size(44, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Host:";
             // 
             // lbl_orderview
             // 
             this.lbl_orderview.AutoSize = true;
-            this.lbl_orderview.Location = new System.Drawing.Point(12, 107);
+            this.lbl_orderview.Location = new System.Drawing.Point(12, 132);
             this.lbl_orderview.Name = "lbl_orderview";
             this.lbl_orderview.Size = new System.Drawing.Size(54, 20);
             this.lbl_orderview.TabIndex = 5;
@@ -107,18 +112,20 @@ namespace ChapeauUI
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(223, 370);
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(50, 657);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 20);
+            this.label4.Size = new System.Drawing.Size(62, 23);
             this.label4.TabIndex = 6;
             this.label4.Text = "VAT:  €";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(215, 412);
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(43, 697);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 20);
+            this.label5.Size = new System.Drawing.Size(69, 23);
             this.label5.TabIndex = 7;
             this.label5.Text = "Total:  €";
             // 
@@ -152,7 +159,7 @@ namespace ChapeauUI
             // lbl_VAT
             // 
             this.lbl_VAT.AutoSize = true;
-            this.lbl_VAT.Location = new System.Drawing.Point(291, 370);
+            this.lbl_VAT.Location = new System.Drawing.Point(145, 657);
             this.lbl_VAT.Name = "lbl_VAT";
             this.lbl_VAT.Size = new System.Drawing.Size(18, 20);
             this.lbl_VAT.TabIndex = 11;
@@ -161,7 +168,7 @@ namespace ChapeauUI
             // lbl_total
             // 
             this.lbl_total.AutoSize = true;
-            this.lbl_total.Location = new System.Drawing.Point(291, 412);
+            this.lbl_total.Location = new System.Drawing.Point(145, 697);
             this.lbl_total.Name = "lbl_total";
             this.lbl_total.Size = new System.Drawing.Size(18, 20);
             this.lbl_total.TabIndex = 12;
@@ -171,9 +178,9 @@ namespace ChapeauUI
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(-3, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(803, 87);
+            this.pictureBox1.Size = new System.Drawing.Size(1067, 87);
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
@@ -181,7 +188,7 @@ namespace ChapeauUI
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox2.Image = global::ChapeauUI.Properties.Resources.Chapeau_no_bg;
-            this.pictureBox2.Location = new System.Drawing.Point(510, 31);
+            this.pictureBox2.Location = new System.Drawing.Point(772, 31);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(278, 178);
             this.pictureBox2.TabIndex = 14;
@@ -192,7 +199,7 @@ namespace ChapeauUI
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1062, 753);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.lbl_VAT);
             this.Controls.Add(this.lbl_hostname);

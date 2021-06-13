@@ -10,10 +10,13 @@ namespace ChapeauLogic
     public class BillService
     {
         BillDAO billdb;
+        OrderDAO orderdb;
 
         public BillService()
         {
             billdb = new BillDAO();
+            orderdb = new OrderDAO();
+
         }
         public List<Bill> GetBills()
         {
@@ -22,12 +25,12 @@ namespace ChapeauLogic
         }
         public List<Order> OrderItems()
         {
-            return billdb.OrderItems();
+            return orderdb.GetAllOrders();
             
         }
-        public List<OrderItem> OrderOverview(DataTable dataTable)
+        public List<OrderItem> OrderOverview()
         {
-            return billdb.OrderOverview(dataTable);
+            return orderdb.GetAllOrderItems();
         }
         public int CalculateBill()
         {
@@ -36,6 +39,10 @@ namespace ChapeauLogic
         public int VatDrinks()
         {
             return billdb.VatDrinks();
+        }
+        public void AddtoPayment(Bill Data)
+        {
+            billdb.AddtoPayment(Data);
         }
     }
 }
