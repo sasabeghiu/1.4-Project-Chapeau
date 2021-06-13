@@ -25,13 +25,19 @@ namespace ChapeauLogic
             return orderItems;
         }
 
-        public List<OrderItem> GetOrderItemsById(int orderid, string parameter)
+        public List<OrderItem> GetOrderItemsByID(int orderid, string parameter)
         {
             if (parameter == "kitchen")
             {
                 return  ordersdb.GetKitchenItemsById(orderid);
             }
             return ordersdb.GetBarItemsById(orderid);
+        }
+
+        public List<OrderItem> GetOrderItemsById(int orderid)
+        {
+            List<OrderItem> orderItems = ordersdb.GetItemsById(orderid);
+            return orderItems;
         }
 
         public List<Order> GetCurrentOrders()

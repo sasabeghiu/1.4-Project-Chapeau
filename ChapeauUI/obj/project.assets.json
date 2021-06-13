@@ -806,25 +806,11 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\crgio\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\pablo\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
-      "projectName": "ChapeauUI",
-      "projectPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
-      "packagesPath": "C:\\Users\\crgio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauUI\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\crgio\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
       "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
       "projectName": "ChapeauUI",
       "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\ChapeauUI.csproj",
@@ -833,7 +819,6 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -847,16 +832,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-<<<<<<< Updated upstream
-            "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
-              "projectPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
-            },
-            "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj": {
-              "projectPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauLogic\\ChapeauLogic.csproj"
-            },
-            "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "C:\\Users\\crgio\\Source\\Repos\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
-=======
             "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj": {
               "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj"
             },
@@ -865,7 +840,6 @@
             },
             "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
               "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
->>>>>>> Stashed changes
             }
           }
         }
@@ -900,5 +874,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauUI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

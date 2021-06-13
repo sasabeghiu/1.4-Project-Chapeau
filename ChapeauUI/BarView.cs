@@ -82,7 +82,7 @@ namespace ChapeauUI
         private void LoadOrderDetailsC(int orderid)
         {
             OrderService orderService = new OrderService();
-            List<OrderItem> itemList = orderService.GetOrderItemsById(orderid, "bar");
+            List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "bar");
 
             lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
 
@@ -103,7 +103,7 @@ namespace ChapeauUI
         private void LoadOrderDetailsP(int orderid)
         {
             OrderService orderService = new OrderService();
-            List<OrderItem> itemList = orderService.GetOrderItemsById(orderid, "bar");
+            List<OrderItem> itemList = orderService.GetOrderItemsByID(orderid, "bar");
 
             lblDetailsBC.Text = $"Order Details for Order  #({orderid})";
 
