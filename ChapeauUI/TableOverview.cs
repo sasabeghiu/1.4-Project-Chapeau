@@ -7,27 +7,33 @@ using ChapeauModel;
 
 namespace ChapeauUI
 {
+    //Alexandru
     public partial class TableOverview : Form
     {
+        //logic and model layers used later on
         Employee user;
         TableService tableService;
+        OrderService orderService;
 
         public TableOverview(Employee user)
         {
             this.user = user;
             tableService = new TableService();
+            orderService = new OrderService();
             InitializeComponent();
         }
 
         private void TableOverview_Load(object sender, EventArgs e)
         {
-            lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
+            lbl_user.Text = $"User: ({user.Employee_Role}) {user.First_Name} {user.Last_Name}";
             GetTableState();
             GetOrderState();
         }
 
+        //display different colors for different states of table 
         private void GetTableState()
         {
+            //getting the list of tables from DB and creating a list of buttons for each table
             List<Table> tables = tableService.GetTables();
             Button[] buttons = { btn_table_one, btn_table_two, btn_table_three, btn_table_four, btn_table_five, btn_table_six, btn_table_seven, btn_table_eight, btn_table_nine, btn_table_ten };
 
@@ -48,39 +54,41 @@ namespace ChapeauUI
             }
         }
 
+        //display different icons for different states of order 
         private void GetOrderState()
         {
+            //getting the list of tables from DB and creating a list of icons for each order(table) and a list of labels for time displaying
             List<Table> tables = tableService.GetTables();
-            Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
-
-            OrderService orderService = new OrderService();
-
-
+            PictureBox[] orderStatus = { pB_StatusOrder1, pB_StatusOrder2, pB_StatusOrder3, pB_StatusOrder4, pB_StatusOrder5, pB_StatusOrder6, pB_StatusOrder7, pB_StatusOrder8, pB_StatusOrder9, pB_StatusOrder10 };
+            Label[] orderRunningtimer = { lbl_timerOrder1, lbl_timerOrder2, lbl_timerOrder3, lbl_timerOrder4, lbl_timerOrder5, lbl_timerOrder6, lbl_timerOrder7, lbl_timerOrder8, lbl_timerOrder9, lbl_timerOrder10 };
+            
             for (int i = 0; i < tables.Count; i++)
             {
-                List<OrderItem> listoforders = orderService.GetOrderItemsById(i +1);
-
+                List<OrderItem> listoforders = orderService.GetOrderItemsById(i + 1);
                 foreach (OrderItem order in listoforders)
                 {
                     if (order.Order_Status == OrderStatus.Ordered)
                     {
-                        labels[i].Text = "Ordered";
+                        orderStatus[i].Image = Properties.Resources.status_ordered;
+                        orderRunningtimer[i].Text = order.Order_Time.ToString("mm:ss");
                     }
                     else if (order.Order_Status == OrderStatus.Preparing)
                     {
-                        labels[i].Text = "Preparing";
+                        orderStatus[i].Image = Properties.Resources.status_preparing;
+                        orderRunningtimer[i].Text = order.Order_Time.ToString("mm:ss");
                     }
                     else if (order.Order_Status == OrderStatus.Ready)
                     {
-                        labels[i].Text = "Ready";
+                        orderStatus[i].Image = Properties.Resources.status_ready;
                     }
                     else if (order.Order_Status == OrderStatus.Delivered)
                     {
-                        labels[i].Text = "Delivered";
+                        orderStatus[i].Image = Properties.Resources.status_delivered;
                     }
                 }
             }
         }
+
         //when selecting a table a new form with order details will be opened depending on the table
         private void SelectedTable(int tableNr)
         {
@@ -155,9 +163,13 @@ namespace ChapeauUI
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        //refresh button
+        private void btn_Refresh_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            TableOverview overview = new TableOverview(user);
+            overview.ShowDialog();
+            this.Close();
         }
     }
 }

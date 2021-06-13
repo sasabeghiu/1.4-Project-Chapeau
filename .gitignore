@@ -11,3 +11,9 @@ ChapeauUI/bin/Debug/netcoreapp3.1/ChapeauModel.pdb
 ChapeauLogic/obj/Debug/netcoreapp3.1/ChapeauLogic.csproj.AssemblyReference.cache
 ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.designer.deps.json
 ChapeauUI/obj/Debug/netcoreapp3.1/ChapeauUI.designer.runtimeconfig.json
+ChapeauDAL/obj/ChapeauDAL.csproj.nuget.dgspec.json
+ChapeauDAL/obj/ChapeauDAL.csproj.nuget.g.props
+ChapeauDAL/obj/ChapeauDAL.csproj.nuget.dgspec.json
+ChapeauDAL/obj/project.assets.json
+ChapeauDAL/obj/project.nuget.cache
+*.cache

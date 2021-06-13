@@ -94,7 +94,7 @@ namespace ChapeauUI
         {
             this.Hide();
             Bill billpage = new Bill();
-            billpage.Show();
+            billpage.ShowDialog();
             this.Close();
         }
         //open menu

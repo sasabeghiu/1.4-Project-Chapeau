@@ -5,8 +5,10 @@ using ChapeauLogic;
 
 namespace ChapeauUI
 {
+    //Alexandru
     public partial class Login : Form
     {
+        //logic and model layers used later on
         Employee user;
         EmployeeService employeeService;
 
@@ -18,7 +20,6 @@ namespace ChapeauUI
             //hide the pin
             txtPin.UseSystemPasswordChar = true;
             txtPin.PasswordChar = '*';
-
         }
 
         //login in dependence of user role
@@ -42,7 +43,7 @@ namespace ChapeauUI
                     waiterform.ShowDialog();
                     this.Close();
                 }
-                else if(user.Employee_Role == EmployeeRole.Bartender)
+                else if (user.Employee_Role == EmployeeRole.Bartender)
                 {
                     this.Hide();
                     BarView barform = new BarView();

@@ -22,8 +22,6 @@ namespace ChapeauUI
             InitializeComponent();
             billService = new BillService();
             bill = new ChapeauModel.Bill();
-           
-         
         }
 
         private void btn_paidCard_Click(object sender, EventArgs e)
@@ -38,6 +36,7 @@ namespace ChapeauUI
 
         private void Bill_Load(object sender, EventArgs e)
         {
+            /*
             List<Order> items = billService.OrderItems();
             List<OrderItem> orderOverview = billService.OrderOverview();
 
@@ -55,6 +54,7 @@ namespace ChapeauUI
             lbl_total.Text = $"€{billService.CalculateBill()}";
             billService.GetBills();
             billService.AddtoPayment(bill);
+            */
         }
     }
 }
