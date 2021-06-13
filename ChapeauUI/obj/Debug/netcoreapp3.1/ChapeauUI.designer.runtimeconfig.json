@@ -6,13 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-<<<<<<< Updated upstream
-      "C:\\Users\\Conor\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Conor\\.nuget\\packages"
-=======
       "C:\\Users\\pablo\\.dotnet\\store\\|arch|\\|tfm|",
       "C:\\Users\\pablo\\.nuget\\packages"
->>>>>>> Stashed changes
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

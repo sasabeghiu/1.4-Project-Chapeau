@@ -37,12 +37,12 @@ namespace ChapeauUI
             this.label1 = new System.Windows.Forms.Label();
             this.btnMarkAsReadyKC = new System.Windows.Forms.Button();
             this.panelKitchenCurrent = new System.Windows.Forms.Panel();
-            this.btnMarkAsPreparingKC = new System.Windows.Forms.Button();
             this.listViewDetailsKC = new System.Windows.Forms.ListView();
             this.qty = new System.Windows.Forms.ColumnHeader();
             this.name = new System.Windows.Forms.ColumnHeader();
             this.comment = new System.Windows.Forms.ColumnHeader();
             this.state = new System.Windows.Forms.ColumnHeader();
+            this.btnMarkAsPreparingKC = new System.Windows.Forms.Button();
             this.btnPreviousK = new System.Windows.Forms.Button();
             this.lblDetailsKC = new System.Windows.Forms.Label();
             this.panelKitchenPrevious = new System.Windows.Forms.Panel();
@@ -125,6 +125,7 @@ namespace ChapeauUI
             // 
             // panelKitchenCurrent
             // 
+            this.panelKitchenCurrent.Controls.Add(this.listViewDetailsKC);
             this.panelKitchenCurrent.Controls.Add(this.btnMarkAsPreparingKC);
             this.panelKitchenCurrent.Controls.Add(this.btnPreviousK);
             this.panelKitchenCurrent.Controls.Add(this.btnMarkAsReadyKC);
@@ -138,16 +139,6 @@ namespace ChapeauUI
             this.panelKitchenCurrent.Size = new System.Drawing.Size(896, 481);
             this.panelKitchenCurrent.TabIndex = 5;
             // 
-            // btnMarkAsPreparingKC
-            // 
-            this.btnMarkAsPreparingKC.Location = new System.Drawing.Point(695, 436);
-            this.btnMarkAsPreparingKC.Name = "btnMarkAsPreparingKC";
-            this.btnMarkAsPreparingKC.Size = new System.Drawing.Size(172, 29);
-            this.btnMarkAsPreparingKC.TabIndex = 8;
-            this.btnMarkAsPreparingKC.Text = "Mark as preparing";
-            this.btnMarkAsPreparingKC.UseVisualStyleBackColor = true;
-            this.btnMarkAsPreparingKC.Click += new System.EventHandler(this.btnMarkAsPreparingKC_Click);
-            // 
             // listViewDetailsKC
             // 
             this.listViewDetailsKC.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -157,10 +148,10 @@ namespace ChapeauUI
             this.state});
             this.listViewDetailsKC.FullRowSelect = true;
             this.listViewDetailsKC.HideSelection = false;
-            this.listViewDetailsKC.Location = new System.Drawing.Point(527, 107);
+            this.listViewDetailsKC.Location = new System.Drawing.Point(527, 95);
             this.listViewDetailsKC.Name = "listViewDetailsKC";
-            this.listViewDetailsKC.Size = new System.Drawing.Size(340, 364);
-            this.listViewDetailsKC.TabIndex = 6;
+            this.listViewDetailsKC.Size = new System.Drawing.Size(340, 315);
+            this.listViewDetailsKC.TabIndex = 9;
             this.listViewDetailsKC.UseCompatibleStateImageBehavior = false;
             // 
             // qty
@@ -183,6 +174,16 @@ namespace ChapeauUI
             this.state.Text = "Status";
             this.state.Width = 80;
             // 
+            // btnMarkAsPreparingKC
+            // 
+            this.btnMarkAsPreparingKC.Location = new System.Drawing.Point(695, 436);
+            this.btnMarkAsPreparingKC.Name = "btnMarkAsPreparingKC";
+            this.btnMarkAsPreparingKC.Size = new System.Drawing.Size(172, 29);
+            this.btnMarkAsPreparingKC.TabIndex = 8;
+            this.btnMarkAsPreparingKC.Text = "Mark as preparing";
+            this.btnMarkAsPreparingKC.UseVisualStyleBackColor = true;
+            this.btnMarkAsPreparingKC.Click += new System.EventHandler(this.btnMarkAsPreparingKC_Click);
+            // 
             // btnPreviousK
             // 
             this.btnPreviousK.Location = new System.Drawing.Point(11, 436);
@@ -196,7 +197,7 @@ namespace ChapeauUI
             // lblDetailsKC
             // 
             this.lblDetailsKC.AutoSize = true;
-            this.lblDetailsKC.Location = new System.Drawing.Point(598, 72);
+            this.lblDetailsKC.Location = new System.Drawing.Point(600, 72);
             this.lblDetailsKC.Name = "lblDetailsKC";
             this.lblDetailsKC.Size = new System.Drawing.Size(189, 20);
             this.lblDetailsKC.TabIndex = 7;
@@ -204,7 +205,6 @@ namespace ChapeauUI
             // 
             // panelKitchenPrevious
             // 
-            this.panelKitchenPrevious.Controls.Add(this.listViewDetailsKC);
             this.panelKitchenPrevious.Controls.Add(this.listViewDetailsKP);
             this.panelKitchenPrevious.Controls.Add(this.btnCurrentK);
             this.panelKitchenPrevious.Controls.Add(this.btnMarkAsReadyKP);
@@ -227,7 +227,7 @@ namespace ChapeauUI
             this.listViewDetailsKP.HideSelection = false;
             this.listViewDetailsKP.Location = new System.Drawing.Point(527, 107);
             this.listViewDetailsKP.Name = "listViewDetailsKP";
-            this.listViewDetailsKP.Size = new System.Drawing.Size(340, 303);
+            this.listViewDetailsKP.Size = new System.Drawing.Size(340, 358);
             this.listViewDetailsKP.TabIndex = 7;
             this.listViewDetailsKP.UseCompatibleStateImageBehavior = false;
             // 
@@ -277,9 +277,10 @@ namespace ChapeauUI
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(337, 23);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(320, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 20);
+            this.label3.Size = new System.Drawing.Size(193, 22);
             this.label3.TabIndex = 2;
             this.label3.Text = "Kitchen Previous View";
             // 
@@ -361,16 +362,16 @@ namespace ChapeauUI
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ListView listViewDetailsKC;
-        private System.Windows.Forms.ColumnHeader qty;
-        private System.Windows.Forms.ColumnHeader name;
-        private System.Windows.Forms.ColumnHeader state;
         private System.Windows.Forms.ListView listViewDetailsKP;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label lblDetailsKC;
         private System.Windows.Forms.Button btnMarkAsPreparingKC;
+        private System.Windows.Forms.ListView listViewDetailsKC;
+        private System.Windows.Forms.ColumnHeader qty;
+        private System.Windows.Forms.ColumnHeader name;
         private System.Windows.Forms.ColumnHeader comment;
+        private System.Windows.Forms.ColumnHeader state;
     }
 }

@@ -30,6 +30,7 @@ namespace ChapeauUI
         private void InitializeComponent()
         {
             this.panelBarCurrent = new System.Windows.Forms.Panel();
+            this.btnMarkAsPreparingB = new System.Windows.Forms.Button();
             this.listViewDetailsBC = new System.Windows.Forms.ListView();
             this.qty = new System.Windows.Forms.ColumnHeader();
             this.name = new System.Windows.Forms.ColumnHeader();
@@ -57,7 +58,6 @@ namespace ChapeauUI
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.btnMarkAsPreparingB = new System.Windows.Forms.Button();
             this.panelBarCurrent.SuspendLayout();
             this.panelBarPrevious.SuspendLayout();
             this.SuspendLayout();
@@ -77,6 +77,16 @@ namespace ChapeauUI
             this.panelBarCurrent.Name = "panelBarCurrent";
             this.panelBarCurrent.Size = new System.Drawing.Size(896, 481);
             this.panelBarCurrent.TabIndex = 8;
+            // 
+            // btnMarkAsPreparingB
+            // 
+            this.btnMarkAsPreparingB.Location = new System.Drawing.Point(719, 436);
+            this.btnMarkAsPreparingB.Name = "btnMarkAsPreparingB";
+            this.btnMarkAsPreparingB.Size = new System.Drawing.Size(148, 29);
+            this.btnMarkAsPreparingB.TabIndex = 8;
+            this.btnMarkAsPreparingB.Text = "Mark as preparing";
+            this.btnMarkAsPreparingB.UseVisualStyleBackColor = true;
+            this.btnMarkAsPreparingB.Click += new System.EventHandler(this.btnMarkAsPreparingB_Click);
             // 
             // listViewDetailsBC
             // 
@@ -139,10 +149,10 @@ namespace ChapeauUI
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(319, 28);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(319, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 20);
+            this.label1.Size = new System.Drawing.Size(150, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Bar Current View";
             // 
@@ -210,7 +220,7 @@ namespace ChapeauUI
             this.listViewDetailsBP.HideSelection = false;
             this.listViewDetailsBP.Location = new System.Drawing.Point(527, 107);
             this.listViewDetailsBP.Name = "listViewDetailsBP";
-            this.listViewDetailsBP.Size = new System.Drawing.Size(340, 303);
+            this.listViewDetailsBP.Size = new System.Drawing.Size(340, 358);
             this.listViewDetailsBP.TabIndex = 6;
             this.listViewDetailsBP.UseCompatibleStateImageBehavior = false;
             // 
@@ -261,7 +271,7 @@ namespace ChapeauUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(319, 26);
+            this.label2.Location = new System.Drawing.Point(319, 19);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 22);
             this.label2.TabIndex = 2;
@@ -306,23 +316,13 @@ namespace ChapeauUI
             this.columnHeader6.Text = "Time";
             this.columnHeader6.Width = 150;
             // 
-            // btnMarkAsPreparingB
-            // 
-            this.btnMarkAsPreparingB.Location = new System.Drawing.Point(719, 436);
-            this.btnMarkAsPreparingB.Name = "btnMarkAsPreparingB";
-            this.btnMarkAsPreparingB.Size = new System.Drawing.Size(148, 29);
-            this.btnMarkAsPreparingB.TabIndex = 8;
-            this.btnMarkAsPreparingB.Text = "Mark as preparing";
-            this.btnMarkAsPreparingB.UseVisualStyleBackColor = true;
-            this.btnMarkAsPreparingB.Click += new System.EventHandler(this.btnMarkAsPreparingB_Click);
-            // 
             // BarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(896, 481);
-            this.Controls.Add(this.panelBarCurrent);
             this.Controls.Add(this.panelBarPrevious);
+            this.Controls.Add(this.panelBarCurrent);
             this.Name = "BarView";
             this.Text = "BarView";
             this.panelBarCurrent.ResumeLayout(false);

@@ -357,6 +357,7 @@
       "path": "runtime.win-arm64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -372,6 +373,7 @@
       "path": "runtime.win-x64.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -387,6 +389,7 @@
       "path": "runtime.win-x86.runtime.native.system.data.sqlclient.sni/4.4.0",
       "files": [
         ".nupkg.metadata",
+        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
@@ -764,36 +767,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< Updated upstream
-    "C:\\Users\\sasac\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
-=======
     "C:\\Users\\pablo\\.nuget\\packages\\": {}
->>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-      "projectName": "ChapeauDAL",
-      "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
-      "packagesPath": "C:\\Users\\sasac\\.nuget\\packages\\",
-      "outputPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauDAL\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
       "projectName": "ChapeauDAL",
       "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\ChapeauDAL.csproj",
       "packagesPath": "C:\\Users\\pablo\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
-<<<<<<< Updated upstream
-        "C:\\Users\\sasac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
         "C:\\Users\\pablo\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -807,13 +793,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-<<<<<<< Updated upstream
-            "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
-              "projectPath": "D:\\1NHOLLAND\\year1repeat\\project\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
-=======
             "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj": {
               "projectPath": "C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauModel\\ChapeauModel.csproj"
->>>>>>> Stashed changes
             }
           }
         }
@@ -855,5 +836,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problema al leer el archivo de caché C:\\Users\\pablo\\Desktop\\Chapeau\\ChapeauDAL\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
