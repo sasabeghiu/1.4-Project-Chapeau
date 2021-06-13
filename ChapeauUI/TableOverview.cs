@@ -50,7 +50,6 @@ namespace ChapeauUI
 
         private void GetOrderState()
         {
-
             List<Table> tables = tableService.GetTables();
             Label[] labels = { label1, label2, label3, label4, label5, label6, label7, label8, label9, label10 };
 

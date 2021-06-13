@@ -47,7 +47,30 @@ namespace ChapeauUI
         private void TableOrderView_Load(object sender, EventArgs e)
         {
             lbl_user.Text = "User: " + user.First_Name + user.Last_Name;
+            CheckAvailability();
 
+            OrderService orderService = new OrderService();
+            List<OrderItem> itemsList = orderService.GetOrderItemsById(table.Table_Number);
+
+            listViewOrders.Clear();
+            listViewOrders.View = View.Details;
+            listViewOrders.Columns.Add("Item");
+            listViewOrders.Columns.Add("Quantity");
+            listViewOrders.Columns.Add("Price");
+            listViewOrders.Columns.Add("State");
+
+            foreach(OrderItem o in itemsList)
+            {
+                ListViewItem li = new ListViewItem(new String[] { o.MenuItemID.Menu_Item_Name, o.Quantity.ToString(), o.MenuItemID.Menu_Item_Price.ToString(), o.Order_Status.ToString() });
+                listViewOrders.Items.Add(li);
+            }
+            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
+            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
+            
+        }
+
+        private void CheckAvailability()
+        {
 
             if (table.Table_Availability == Table_Availability.Occupied)
             {
@@ -64,24 +87,6 @@ namespace ChapeauUI
                 btn_pay.Enabled = false;
                 btn_addOrder.Enabled = false;
             }
-            
-            OrderService orderService = new OrderService();
-            List<OrderItem> itemsList = orderService.GetOrderItemsById(table.Table_Number);
-
-            listViewOrders.Clear();
-            listViewOrders.View = View.Details;
-            listViewOrders.Columns.Add("Item");
-            listViewOrders.Columns.Add("Quantity");
-            listViewOrders.Columns.Add("Price");
-
-            foreach(OrderItem o in itemsList)
-            {
-                ListViewItem li = new ListViewItem(new String[] {o.MenuItemID.Menu_Item_Name, o.Quantity.ToString(), o.MenuItemID.Menu_Item_Price.ToString() });
-                listViewOrders.Items.Add(li);
-            }
-            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent); //Auto resize colums to fit data
-            listViewOrders.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize); // Make sure headers fit
-            
         }
 
         //pay the bill
